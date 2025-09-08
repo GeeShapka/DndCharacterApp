@@ -60,9 +60,9 @@ namespace DndCharacterApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnXpUp_Click(object sender, EventArgs e)
+        private void btnLevelUp_Click(object sender, EventArgs e)
         {
-            int currentLevel = int.Parse(lblCharacterLevel.Text);
+            int currentLevel = Experience.XpToLevel(PlayerCharacter.Xp);
             if (currentLevel < 20)
             {
                 currentLevel++;
@@ -84,7 +84,7 @@ namespace DndCharacterApp
         /// <param name="e"></param>
         private void btnXpDown_Click(object sender, EventArgs e)
         {
-            int currentLevel = int.Parse(lblCharacterLevel.Text);
+            int currentLevel = Experience.XpToLevel(PlayerCharacter.Xp);
             if (currentLevel > 1)
             {
                 currentLevel--;

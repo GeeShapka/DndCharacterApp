@@ -10,7 +10,7 @@ namespace DndCharacterApp
         public List<char> PlayerName = new List<char>();
 
         public int Xp { get { return (_xp); } set { _xp = value; } }
-		private int _xp;
+		private int _xp = 1;
 
 
 
@@ -24,7 +24,7 @@ namespace DndCharacterApp
 		/// <param name="xp"></param>
 		public void AddXp(int xp)
 		{
-			_xp += xp;
+			_xp = xp;
 		}//end of method
 
 		public void AddCharacterNameLetter(char letter)

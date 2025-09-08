@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             lblCharacterXp = new Label();
-            btnXpUp = new Button();
-            btnXpDown = new Button();
+            btnLevelUp = new Button();
+            btnLevelDown = new Button();
             lblCharacterLevel = new Label();
             lblCharacterName = new Label();
             lblPlayerName = new Label();
@@ -47,25 +47,25 @@
             lblCharacterXp.TabIndex = 0;
             lblCharacterXp.Text = "lblCharacterXp";
             // 
-            // btnXpUp
+            // btnLevelUp
             // 
-            btnXpUp.Location = new Point(188, 24);
-            btnXpUp.Name = "btnXpUp";
-            btnXpUp.Size = new Size(94, 29);
-            btnXpUp.TabIndex = 1;
-            btnXpUp.Text = "/\\";
-            btnXpUp.UseVisualStyleBackColor = true;
-            btnXpUp.Click += btnXpUp_Click;
+            btnLevelUp.Location = new Point(188, 24);
+            btnLevelUp.Name = "btnLevelUp";
+            btnLevelUp.Size = new Size(94, 29);
+            btnLevelUp.TabIndex = 1;
+            btnLevelUp.Text = "/\\";
+            btnLevelUp.UseVisualStyleBackColor = true;
+            btnLevelUp.Click += btnLevelUp_Click;
             // 
-            // btnXpDown
+            // btnLevelDown
             // 
-            btnXpDown.Location = new Point(188, 62);
-            btnXpDown.Name = "btnXpDown";
-            btnXpDown.Size = new Size(94, 29);
-            btnXpDown.TabIndex = 2;
-            btnXpDown.Text = "\\/";
-            btnXpDown.UseVisualStyleBackColor = true;
-            btnXpDown.Click += btnXpDown_Click;
+            btnLevelDown.Location = new Point(188, 62);
+            btnLevelDown.Name = "btnLevelDown";
+            btnLevelDown.Size = new Size(94, 29);
+            btnLevelDown.TabIndex = 2;
+            btnLevelDown.Text = "\\/";
+            btnLevelDown.UseVisualStyleBackColor = true;
+            btnLevelDown.Click += btnXpDown_Click;
             // 
             // lblCharacterLevel
             // 
@@ -101,7 +101,7 @@
             txtCharacterName.Size = new Size(125, 27);
             txtCharacterName.TabIndex = 6;
             txtCharacterName.Text = "Character Name";
-            txtCharacterName.TextChanged += this.txtCharacterName_TextChanged;
+            txtCharacterName.TextChanged += txtCharacterName_TextChanged;
             // 
             // txtPlayerName
             // 
@@ -122,8 +122,8 @@
             Controls.Add(lblPlayerName);
             Controls.Add(lblCharacterName);
             Controls.Add(lblCharacterLevel);
-            Controls.Add(btnXpDown);
-            Controls.Add(btnXpUp);
+            Controls.Add(btnLevelDown);
+            Controls.Add(btnLevelUp);
             Controls.Add(lblCharacterXp);
             Name = "CharacterSheet";
             Text = "Form1";
@@ -135,8 +135,8 @@
         #endregion
 
         private Label lblCharacterXp;
-        private Button btnXpUp;
-        private Button btnXpDown;
+        private Button btnLevelUp;
+        private Button btnLevelDown;
         private Label lblCharacterLevel;
         private Label lblCharacterName;
         private Label lblPlayerName;
