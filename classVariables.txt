@@ -1,0 +1,165 @@
+Player
+	public string name
+	public int xp
+	public bool xp
+	public int hp;
+	public string alignment
+	public Background playerBackground
+	public Race playerRace
+	public list<Class> playerClass
+	public Stats playerStats
+	public int speed
+	public int deathSavesFail
+	public int deathSavesSuccess
+	public int attunement
+	public int initiative
+	public int age
+	public int height
+	public int weight
+	public string skin
+	public string eyes
+	public string hair
+	
+Class
+	public string hitDice
+	public string armorProficiencies
+	public string weaponProficiencies
+	public string toolProficiencies
+	public string saveingThrowProficiencies
+	public string skillProficiencies
+	public string startingEquipment
+
+Background
+
+Race
+
+Stats
+	public int Str
+	public bool profStr
+	public bool profAthletics
+	public bool expAthletics
+	public int addAthletics
+	public int Dex
+	public bool profDex
+	public bool profAcrobatics
+	public bool expAcrobatics
+	public int addAcrobatics
+	public bool profSleightOfHand
+	public bool expSleightOfHand
+	public int addSleightOfHand
+	public bool profStealth
+	public bool expStealth
+	public int addStealth
+	public int Con
+	public bool profCon
+	public int Int
+	public bool profInt
+	public bool profArcana
+	public bool expArcana
+	public int addArcana
+	public bool profHistory
+	public bool expHistory
+	public int addHistory
+	public bool profInvestigation
+	public bool expInvestigation
+	public int addInvestigation
+	public bool profNature
+	public bool expNature
+	public int addNature
+	public bool profReligion
+	public bool expReligion
+	public int addReligion
+	public int Wis
+	public bool profWis
+	public bool profAnimalHandling
+	public bool expAnimalHandling
+	public int addAnimalHandling
+	public bool profInsight
+	public bool expInsight
+	public int addInsight
+	public bool profMedicine
+	public bool expMedicine
+	public int addMedicine
+	public bool profPerception
+	public bool expPerception
+	public int addPerception
+	public bool profSurvival
+	public bool expSurvival
+	public int addSurvival
+	public int Cha
+	public bool profCha
+	public bool profDeception
+	public bool expDeception
+	public int addDeception
+	public bool profIntimidation
+	public bool expIntimidation
+	public int addIntimidation
+	public bool profPerformance
+	public bool expPerformance
+	public int addPerformance
+	public bool profPersuasion
+	public bool expPersuasion
+	public int addPersuasion
+	
+Items
+	public string name
+	public string source
+	public string description
+	public bool attunement
+	public int cost
+
+Weapon : Items
+	bool martial
+	public string damageDice
+	public string damageType
+	public string modifier
+	public list<String(WeaponProperties)> weaponProperties
+	public int normalRange
+	public int longRange
+
+WeaponProperties
+	public static string ammunition = "ammunition";
+	public static string finesse = "finesse";
+	public static string heavy = "heavy";
+	public static string light = "light";
+	public static string loading = "loading";
+	public static string range = "range";
+	public static string reach = "reach";
+	public static string special = "special";
+	public static string thrown = "thrown";
+	public static string twoHanded = "twoHanded";
+	public static string versatile = "versatile";
+	public static string improvisedWeapon = "improvisedWeapon";
+	public static string silveredWeapon = "silveredWeapon";
+	
+Armor : Items
+	public int ac
+	public list<String(Resistances)> resistances
+	
+Magic : Itemss
+	public string rarity
+	
+Rarity
+	public static string common = "common";
+	public static string uncommon = "uncommon";
+	public static string rare = "rare";
+	public static string veryRare = "veryRare";
+	public static string legendary = "legendary";
+	
+Resistances
+	public static string bludgeoning = "bludgeoning";
+	public static string bludgeoningMagic = "bludgeoningMagic";
+	public static string piercing = "piercing";
+	public static string piercingMagic = "piercingMagic";
+	public static string slashing = "slashing";
+	public static string slashingMagic = "slashingMagic";
+	public static string acid = "acid";
+	public static string cold = "cold";
+	public static string fire = "fire";
+	public static string lightning = "lightning";
+	public static string thunder = "thunder";
+	public static string force = "force";
+	public static string necrotic = "necrotic";
+	public static string radiant = "radiant";
+	public static string poison = "poison";
+	public static string psychic = "psychic";
