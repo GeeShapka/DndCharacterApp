@@ -1,3 +1,6 @@
+Not accurate, just used for brainstorming
+
+
 Player
 	public string name
 	public int xp

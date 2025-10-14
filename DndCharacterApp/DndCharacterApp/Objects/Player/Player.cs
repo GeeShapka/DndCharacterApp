@@ -16,8 +16,10 @@ namespace DndCharacterApp.Objects.Player
     {
 		//variables
 		public StringBuilder Name = new StringBuilder();
-		public int Xp;
-		public int Hp;
+		public int Xp = 0;
+		public int Level = 0;
+		public int Hp = 0;
+		public int Prof = 0;
 		public StringBuilder Alignment = new StringBuilder();
 		public Background Background = new Background();
 		public Race Race = new Race();
@@ -29,18 +31,63 @@ namespace DndCharacterApp.Objects.Player
 		public int ScoreWis = 0;
 		public int ScoreCha = 0;
 		public PlayerMods Mods = new PlayerMods();
-		public int Speed;
-		public int DeathSavesFail;
-		public int DeathSavesSuccess;
-		public int AttunementSlotsUsed;
-		public int InititiveBonus;
-		public int Age;
-		public int Weight;
-		public int Height;
+		public int Speed = 0;
+		public int DeathSavesFail = 0;
+		public int DeathSavesSuccess = 0;
+		public int AttunementSlotsUsed = 0;
+		public int InititiveBonus = 0;
+		public int Age = 0;
+		public int Weight = 0;
+		public int Height = 0;
 		public StringBuilder Skin = new StringBuilder();
 		public StringBuilder Eyes = new StringBuilder();
 		public StringBuilder Hair = new StringBuilder();
 
-    }//end of Player
+
+
+		//methods
+
+		/// <summary>
+		/// updates player level based on xp, and updates player pb bases on level
+		/// </summary>
+		public void UpdateLevel()
+		{
+			Level = Xp switch
+			{
+				< 300		=> 1,
+				< 900		=> 2,
+				< 2700		=> 3,
+				< 6500		=> 4,
+				< 14000		=> 5,
+				< 23000		=> 6,
+				< 34000		=> 7,
+				< 48000		=> 8,
+				< 64000		=> 9,
+				< 85000		=> 10,
+				< 100000	=> 11,
+				< 120000	=> 12,
+				< 140000	=> 13,
+				< 165000	=> 14,
+				< 195000	=> 15,
+				< 225000	=> 16,
+				< 265000	=> 17,
+				< 305000	=> 18,
+				< 355000	=> 19,
+				> 355000	=> 20,
+				_			=> 0	
+			};//end of switch
+
+			Prof = Level switch
+			{
+				< 5		=> 2,
+				< 9		=> 3,
+				< 13	=> 4,
+				< 17	=> 5,
+				> 17	=> 6,
+				_		=> 2
+			};//end of switch
+		}//end of UpdateLevel
+
+	}//end of Player
 
 }//end of DndCharacterApp.Objects
