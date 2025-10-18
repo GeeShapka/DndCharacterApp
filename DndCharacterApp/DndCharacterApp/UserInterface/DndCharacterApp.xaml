@@ -128,7 +128,7 @@
                                 </StackPanel>
                                 <!--Speed-->
                                 <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
-                                    <Label Content="Temp HP:" FontSize="20" VerticalAlignment="Top"/>
+                                    <Label Content="Speed:" FontSize="20" VerticalAlignment="Top"/>
                                     <TextBox x:Name="txtOverviewPlayerSpeed" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
                                 </StackPanel>
                                 <!--Proficency Bonus-->
