@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DndCharacterApp.Objects
+namespace DndCharacterApp.Objects.Parents
 {
     /*
 	 * FILE : Race.cs
@@ -12,7 +12,7 @@ namespace DndCharacterApp.Objects
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:26:18 PM
 	 */
-    internal class Race
+    internal class RaceParent
     {
 
     }//end of Race

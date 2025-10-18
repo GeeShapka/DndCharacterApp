@@ -1,0 +1,56 @@
+Bottom
+	lblBottomTotalHp
+
+Overview
+	txtOverviewPlayerHp
+	txtOverviewPlayerTempHp
+	txtOverviewPlayerAc
+	txtOverviewPlayerInitiative
+	txtOverviewPlayerSpeed
+	txtOverviewPlayerPb
+	
+	txtOverviewPlayerCp
+	txtOverviewPlayerSp
+	txtOverviewPlayerEp
+	txtOverviewPlayerGp
+	txtOverviewPlayerPp
+	
+	txtOverviewNotePad
+	
+	txtOverviewStrengthScore
+	lblOverviewStrengthModifier
+	txtOverviewDexterityScore
+	lblOverviewDexterityModifier
+	txtOverviewConstitutionScore
+	lblOverviewConstitutionModifier
+	txtOverviewIntelligenceScore
+	lblOverviewIntelligenceModifier
+	txtOverviewWisdomScore
+	lblOverviewWisdomModifier
+	txtOverviewCharismaScore
+	lblOverviewCharismaModifier
+	
+	lblOverviewStrengthSave
+	lblOverviewAthleticsSave
+	lblOverviewDexteritySave
+	lblOverviewAcrobaticsSave
+	lblOverviewSleightOfHandSave
+	lblOverviewStealthSave
+	lblOverviewConstitutionSave
+	lblOverviewIntelligenceSave
+	lblOverviewArcanaSave
+	lblOverviewHistorySave
+	lblOverviewInvestigationSave
+	lblOverviewNatureSave
+	lblOverviewReligionSave
+	lblOverviewWisdomSave
+	lblOverviewAnimalHandlingSave
+	lblOverviewInsightSave
+	lblOverviewMedicineSave
+	lblOverviewPerceptionSave
+	lblOverviewSurvivalSave
+	lblOverviewCharismaSave
+	lblOverviewDeceptionSave
+	lblOverviewIntimidationSave
+	lblOverviewPerformanceSave
+	lblOverviewPersuasionSave

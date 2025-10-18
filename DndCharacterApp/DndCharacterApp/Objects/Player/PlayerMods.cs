@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DndCharacterApp.Objects
+namespace DndCharacterApp.Objects.Player
 {
     /*
 	 * FILE : Playermods.cs
@@ -132,7 +132,7 @@ namespace DndCharacterApp.Objects
         /// <returns></returns>
         public static int ScoreToMod(int score)
         {
-            return ((score - 10) / 2);
+            return (score - 10) / 2;
         }//end of ScoreToMod
 
     }//end of PlayerStats

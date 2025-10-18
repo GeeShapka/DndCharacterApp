@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DndCharacterApp.Objects.Parents;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,9 @@ namespace DndCharacterApp.Objects.Player
 		public int Hp = 0;
 		public int Prof = 0;
 		public StringBuilder Alignment = new StringBuilder();
-		public Background Background = new Background();
-		public Race Race = new Race();
-		public List<Class> Classes = new List<Class>();
+		public BackgroundParent Background = new BackgroundParent();
+		public RaceParent Race = new RaceParent();
+		public List<ClassParent> Classes = new List<ClassParent>();
 		public int ScoreStr = 0;
 		public int ScoreDex = 0;
 		public int ScoreCon = 0;

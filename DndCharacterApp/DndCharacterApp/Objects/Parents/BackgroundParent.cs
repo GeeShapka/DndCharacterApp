@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DndCharacterApp.Objects
+namespace DndCharacterApp.Objects.Parents
 {
     /*
-	 * FILE : Class.cs
-	 * PROJECT : $safeprojectname$
+	 * FILE : Background.cs
+	 * PROJECT : DndCharacterApp
 	 * PROGRAMMER : George Shapka
-	 * FIRST VERSION : 10/13/2025 8:26:27 PM
+	 * FIRST VERSION : 10/13/2025 8:25:59 PM
 	 */
-    internal class Class
+    internal class BackgroundParent
     {
 
-    }//end of Class
+    }//end of Background
 
 }//end of DndCharacterApp.Objects
