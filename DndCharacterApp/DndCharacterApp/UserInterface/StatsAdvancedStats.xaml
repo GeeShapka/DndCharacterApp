@@ -1,0 +1,409 @@
+﻿<UserControl x:Class="DndCharacterApp.UserInterface.StatsAdvancedStats"
+             xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Strength-->
+        <Label Content="Strength Saving Throw" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsStrengthSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsStrengthSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsStrengthSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsStrengthSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsStrengthSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Athletics" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAthleticsSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsAthleticsSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAthleticsSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsAthleticsSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsAthleticsSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!--Dexterity-->
+        <Label Content="Dexterity Saving Throw" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsDexteritySaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsDexteritySaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsDexteritySavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsDexteritySaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsDexteritySaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Acrobatics" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAcrobaticsSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsAcrobaticsSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAcrobaticsSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsAcrobaticsSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsAcrobaticsSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Sleight of Hand" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsSleightOfHandSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsSleightOfHandSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsSleightOfHandSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsSleightOfHandSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsSleightOfHandSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Stealth" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsStealthSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsStealthSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsStealthSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsStealthSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsStealthSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!--Constitution-->
+        <Label Content="Constitution Saving Throw" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsConstitutionSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsConstitutionSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsConstitutionSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsConstitutionSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsConstitutionSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!--Intelligence-->
+        <Label Content="Intelligence Saving Throw" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsIntelligenceSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsIntelligenceSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsIntelligenceSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsIntelligenceSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsIntelligenceSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Arcana" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsArcanaSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsArcanaSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsArcanaSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsArcanaSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsArcanaSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="History" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsHistorySaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsHistorySaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsHistorySavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsHistorySaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsHistorySaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Investigation" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsInvestigationSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsInvestigationSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsInvestigationSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsInvestigationSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsInvestigationSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Nature" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsNatureSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsNatureSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsNatureSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsNatureSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsNatureSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Religion" Grid.Row="12" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsReligionSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsReligionSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsReligionSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsReligionSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsReligionSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!--Wisdom-->
+        <Label Content="Wisdom Saving Throw" Grid.Row="13" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="13" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsWisdomSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsWisdomSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsWisdomSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsWisdomSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsWisdomSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Animal Handling" Grid.Row="14" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="14" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAnimalHandlingSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsAnimalHandlingSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsAnimalHandlingSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsAnimalHandlingSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsAnimalHandlingSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Insight" Grid.Row="15" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="15" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsInsightSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsInsightSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsInsightSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsInsightSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsInsightSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Medicine" Grid.Row="16" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="16" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsMedicineSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsMedicineSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsMedicineSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsMedicineSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsMedicineSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Perception" Grid.Row="17" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="17" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPerceptionSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsPerceptionSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPerceptionSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsPerceptionSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsPerceptionSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Survival" Grid.Row="18" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="18" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsSurvivalSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsSurvivalSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsSurvivalSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsSurvivalSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsSurvivalSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <!--Charisma-->
+        <Label Content="Charisma Saving Throw" Grid.Row="19" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="19" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsCharismaSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsCharismaSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsCharismaSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsCharismaSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsCharismaSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Deception" Grid.Row="20" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="20" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsDeceptionSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsDeceptionSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsDeceptionSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsDeceptionSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsDeceptionSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Intimidation" Grid.Row="21" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="21" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsIntimidationSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsIntimidationSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsIntimidationSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsIntimidationSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsIntimidationSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Performance" Grid.Row="22" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="22" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPerformanceSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsPerformanceSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPerformanceSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsPerformanceSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsPerformanceSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+        <Label Content="Persuasion" Grid.Row="23" Grid.Column="0" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="23" Grid.Column="1" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPersuasionSaveProf" Content="Proficiency"/>
+                <RadioButton x:Name="radStatsPersuasionSaveExp" Content="Expertise"/>
+            </StackPanel>
+            <Label Content="   "/>
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="radStatsPersuasionSavePlus" Content="+"/>
+                <RadioButton x:Name="radStatsPersuasionSaveMinus" Content="-"/>
+            </StackPanel>
+            <Label/>
+            <TextBox x:Name="txtStatsPersuasionSaveExtra" Width="20" Height="20"/>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

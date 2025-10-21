@@ -1,9 +1,9 @@
-﻿<Window x:Class="DndCharacterApp.DndCharacterApp_Window"
+﻿<Window x:Class="DndCharacterApp.UserInterface.DndCharacterApp_Window"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:local="clr-namespace:DndCharacterApp"
+		xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
 		mc:Ignorable="d"
 		Title="DndCharacter" Height="960" Width="1080"
 		Closing="DndCharacter_Closing">
@@ -49,314 +49,38 @@
 				<ColumnDefinition Width="6*"/>
 			</Grid.ColumnDefinitions>
 
-            <!-- HP -->
-            <StackPanel Orientation="Horizontal" Grid.Column="0">
-                <Label Content="HP:"/>
-                <Label Name="lblBottomTotalHp" Content="sum of both"/>
-            </StackPanel>
+			<!-- HP -->
+			<StackPanel Orientation="Horizontal" Grid.Column="0">
+				<Label Content="HP:"/>
+				<Label Name="lblBottomTotalHp" Content="sum of both"/>
+			</StackPanel>
 
-            <!-- AC -->
-            <StackPanel Orientation="Horizontal" Grid.Column="1">
-                <Label Content="AC:"/>
-                <Label Content="{Binding Text, ElementName=txtOverviewPlayerAc}"/>
-            </StackPanel>
+			<!-- AC -->
+			<StackPanel Orientation="Horizontal" Grid.Column="1">
+				<Label Content="AC:"/>
+				<Label Content="{Binding Text, ElementName=txtOverviewPlayerAc}"/>
+			</StackPanel>
 
-            <!-- Speed -->
-            <StackPanel Orientation="Horizontal" Grid.Column="2">
-                <Label Content="Speed:"/>
-                <Label Content="{Binding Text, ElementName=txtOverviewPlayerSpeed}"/>
-            </StackPanel>
+			<!-- Speed -->
+			<StackPanel Orientation="Horizontal" Grid.Column="2">
+				<Label Content="Speed:"/>
+				<Label Content="{Binding Text, ElementName=txtOverviewPlayerSpeed}"/>
+			</StackPanel>
 
-        </Grid>
+		</Grid>
 		
 		<!-- tabs -->
 		<TabControl>
 			
 			<!-- overview tab -->
 			<TabItem Header="Overview">
-				<Grid ShowGridLines="True">
-					<Grid.RowDefinitions>
-						<RowDefinition Height="2*"/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-
-					<Grid ShowGridLines="True">
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition/>
-							<ColumnDefinition Width="2*"/>
-						</Grid.ColumnDefinitions>
-                        
-                        <!--top of overview-->
-                        <Grid ShowGridLines="True">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-
-                            <!--top left of overview-->
-                            <Grid ShowGridLines="True" Grid.Row="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-
-                                <!--HP-->
-                                <StackPanel Orientation="Vertical" Grid.Column="0">
-                                    <Label Content="HP:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerHp" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                                <!--temp hp-->
-                                <StackPanel Orientation="Vertical" Grid.Column="1">
-                                    <Label Content="Temp HP:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerTempHp" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                                <!--AC-->
-                                <StackPanel Orientation="Vertical" Grid.Column="2">
-                                    <Label Content="AC:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerAc" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                                <!--Initiative-->
-                                <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
-                                    <Label Content="Initiative:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerInitiative" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                                <!--Speed-->
-                                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
-                                    <Label Content="Speed:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerSpeed" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                                <!--Proficency Bonus-->
-                                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="1">
-                                    <Label Content="Prof Bonus:" FontSize="20" VerticalAlignment="Top"/>
-                                    <TextBox x:Name="txtOverviewPlayerPb" Text="50" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
-                                </StackPanel>
-                            </Grid>
-
-                            <!--not sure yet, maybe charges-->
-                            <Grid ShowGridLines="True" Grid.Row="1">
-
-                            </Grid>
-
-                            <!--money-->
-                            <Grid ShowGridLines="True" Grid.Row="2">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="6*"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Label Content="CP:" FontSize="20" Grid.Row="0"/>
-                                <TextBox x:Name="txtOverviewPlayerCp" Text="10" FontSize="20" Width="150" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <Label Content="SP:" FontSize="20" Grid.Row="1"/>
-                                <TextBox x:Name="txtOverviewPlayerSp" Text="10" FontSize="20" Width="150" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <Label Content="EP:" FontSize="20" Grid.Row="2"/>
-                                <TextBox x:Name="txtOverviewPlayerEp" Text="10" FontSize="20" Width="150" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <Label Content="GP:" FontSize="20" Grid.Row="3"/>
-                                <TextBox x:Name="txtOverviewPlayerGp" Text="10" FontSize="20" Width="150" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <Label Content="PP:" FontSize="20" Grid.Row="4"/>
-                                <TextBox x:Name="txtOverviewPlayerPp" Text="10" FontSize="20" Width="150" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                            </Grid>
-
-                        </Grid>
-                        
-                        <!--notes-->
-                        <DockPanel  Grid.Row="0" Grid.Column="1">
-                            <Label Content="Notes:" FontSize="30" DockPanel.Dock="Top"/>
-                            <TextBox x:Name="txtOverviewNotePad" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
-                        </DockPanel>
-
-                    </Grid>
-					
-                    <!--Modifiers-->
-                    <Grid Grid.Row="1" ShowGridLines="True">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="2.5*"/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-						
-                        <!--Strength-->
-                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                            <Label Content="Strength: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewStrengthScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewStrengthModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-                        <!--Dexterity-->
-                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                            <Label Content="Dexterity: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewDexterityScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewDexterityModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-                        <!--Constitution-->
-                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
-                            <Label Content="Constitution: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewConstitutionScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewConstitutionModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
-                        <!--Intelligence-->
-                        <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Horizontal">
-                            <Label Content="Intelligence: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewIntelligenceScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewIntelligenceModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3"/>
-                        <!--Wisdom-->
-                        <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal">
-                            <Label Content="Wisdom: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewWisdomScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewWisdomModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4"/>
-                        <!--Charisma-->
-                        <StackPanel Grid.Row="1" Grid.Column="5" Orientation="Horizontal">
-                            <Label Content="Charisma: " FontSize="20" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtOverviewCharismaScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Label x:Name="lblOverviewCharismaModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="5"/>
-
-                        <!--Strength abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewStrengthSave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewAthleticsSave" Content="+4"/>
-                                <Label Content="Athletics:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                        <!--Dexterity abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewDexteritySave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewAcrobaticsSave" Content="+4"/>
-                                <Label Content="Acrobatics:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewSleightOfHandSave" Content="+4"/>
-                                <Label Content="Sleight of Hand:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewStealthSave" Content="+4"/>
-                                <Label Content="Stealth:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                        <!--Constitution abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="2">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewConstitutionSave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                        <!--Intelligence abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="3">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewIntelligenceSave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewArcanaSave" Content="+4"/>
-                                <Label Content="Arcana:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewHistorySave" Content="+4"/>
-                                <Label Content="History:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewInvestigationSave" Content="+4"/>
-                                <Label Content="Investigation:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewNatureSave" Content="+4"/>
-                                <Label Content="Nature:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewReligionSave" Content="+4"/>
-                                <Label Content="Religion:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                        <!--Wisdom abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="4">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewWisdomSave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewAnimalHandlingSave" Content="+4"/>
-                                <Label Content="Animal Handling:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewInsightSave" Content="+4"/>
-                                <Label Content="Insight:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewMedicineSave" Content="+4"/>
-                                <Label Content="Medicine:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewPerceptionSave" Content="+4"/>
-                                <Label Content="Perception:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewSurvivalSave" Content="+4"/>
-                                <Label Content="Survival:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                        <!--Charisma abilities-->
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="5">
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewCharismaSave" Content="+4"/>
-                                <Label Content="Saving Throw:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewDeceptionSave" Content="+4"/>
-                                <Label Content="Deception:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewIntimidationSave" Content="+4"/>
-                                <Label Content="Intimidation:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewPerformanceSave" Content="+4"/>
-                                <Label Content="Performance:"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Label x:Name="lblOverviewPersuasionSave" Content="+4"/>
-                                <Label Content="Persuasion:"/>
-                            </StackPanel>
-                        </StackPanel>
-
-                    </Grid>
-                    
-				</Grid>
-
-			</TabItem>
+                <local:TabOverview/>
+            </TabItem>
+			
+			<!--Stats tab-->
+			<TabItem Header="Stats">
+                <local:TabStats/>
+            </TabItem>
 		</TabControl>
 	</DockPanel>
 </Window>

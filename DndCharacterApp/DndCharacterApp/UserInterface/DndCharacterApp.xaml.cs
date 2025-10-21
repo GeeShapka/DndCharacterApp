@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DndCharacterApp
+namespace DndCharacterApp.UserInterface
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -62,6 +62,11 @@ namespace DndCharacterApp
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DndCharacter_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
