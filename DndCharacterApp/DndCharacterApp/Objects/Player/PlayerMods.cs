@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,115 +13,135 @@ namespace DndCharacterApp.Objects.Player
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:27:05 PM
 	 */
-    internal class PlayerMods
+    internal static class PlayerMods
     {
         //variables as modifieres
-        public int Str;
-        public bool profStr = false;
 
-        public int Athletics = 0;
-        public bool profAthletics = false;
-        public bool expAthletics = false;
-        public int addAthletics;
+        //strength
+        public static int Str;
+        public static int StrSave;
+        public static bool profStr = false;
+        public static bool expStr = false;
 
-        public int Dex;
-        public bool profDex = false;
-        public int Acrobatics = 0;
-        public bool profAcrobatics = false;
-        public bool expAcrobatics = false;
-        public int addAcrobatics;
+        public static int Athletics = 0;
+        public static bool profAthletics = false;
+        public static bool expAthletics = false;
+        public static int addAthletics;
 
-        public int SleightOfHand = 0;
-        public bool profSleightOfHand = false;
-        public bool expSleightOfHand = false;
-        public int addSleightOfHand;
+        //dexterity
+        public static int Dex;
+        public static int DexSave;
+        public static bool profDex = false;
+        public static bool expDex = false;
 
-        public int Stealth = 0;
-        public bool profStealth = false;
-        public bool expStealth = false;
-        public int addStealth;
+        public static int Acrobatics = 0;
+        public static bool profAcrobatics = false;
+        public static bool expAcrobatics = false;
+        public static int addAcrobatics;
 
-        public int Con;
-        public bool profCon = false;
+        public static int SleightOfHand = 0;
+        public static bool profSleightOfHand = false;
+        public static bool expSleightOfHand = false;
+        public static int addSleightOfHand;
 
-        public int Int;
-        public bool profInt = false;
+        public static int Stealth = 0;
+        public static bool profStealth = false;
+        public static bool expStealth = false;
+        public static int addStealth;
 
-        public int Arcana = 0;
-        public bool profArcana = false;
-        public bool expArcana = false;
-        public int addArcana;
+        //constitution
+        public static int Con;
+        public static int ConSave;
+        public static bool profCon = false;
+        public static bool expCon = false;
 
-        public int History = 0;
-        public bool profHistory = false;
-        public bool expHistory = false;
-        public int addHistory;
+        //intelligence
+        public static int Int;
+        public static int IntSave;
+        public static bool profInt = false;
+        public static bool expInt = false;
 
-        public int Investigation = 0;
-        public bool profInvestigation = false;
-        public bool expInvestigation = false;
-        public int addInvestigation;
+        public static int Arcana = 0;
+        public static bool profArcana = false;
+        public static bool expArcana = false;
+        public static int addArcana;
 
-        public int Nature = 0;
-        public bool profNature = false;
-        public bool expNature = false;
-        public int addNature;
+        public static int History = 0;
+        public static bool profHistory = false;
+        public static bool expHistory = false;
+        public static int addHistory;
 
-        public int Religion = 0;
-        public bool profReligion = false;
-        public bool expReligion = false;
-        public int addReligion;
+        public static int Investigation = 0;
+        public static bool profInvestigation = false;
+        public static bool expInvestigation = false;
+        public static int addInvestigation;
 
-        public int Wis;
-        public bool profWis = false;
+        public static int Nature = 0;
+        public static bool profNature = false;
+        public static bool expNature = false;
+        public static int addNature;
 
-        public int AnimalHandling = 0;
-        public bool profAnimalHandling = false;
-        public bool expAnimalHandling = false;
-        public int addAnimalHandling;
+        public static int Religion = 0;
+        public static bool profReligion = false;
+        public static bool expReligion = false;
+        public static int addReligion;
 
-        public int Insight = 0;
-        public bool profInsight = false;
-        public bool expInsight = false;
-        public int addInsight;
+        //wisdom
+        public static int Wis;
+        public static int WisSave;
+        public static bool profWis = false;
+        public static bool expWis = false;
 
-        public int Medicine = 0;
-        public bool profMedicine = false;
-        public bool expMedicine = false;
-        public int addMedicine;
+        public static int AnimalHandling = 0;
+        public static bool profAnimalHandling = false;
+        public static bool expAnimalHandling = false;
+        public static int addAnimalHandling;
 
-        public int Perception = 0;
-        public bool profPerception = false;
-        public bool expPerception = false;
-        public int addPerception;
+        public static int Insight = 0;
+        public static bool profInsight = false;
+        public static bool expInsight = false;
+        public static int addInsight;
 
-        public int Survival = 0;
-        public bool profSurvival = false;
-        public bool expSurvival = false;
-        public int addSurvival;
+        public static int Medicine = 0;
+        public static bool profMedicine = false;
+        public static bool expMedicine = false;
+        public static int addMedicine;
 
-        public int Cha;
-        public bool profCha = false;
+        public static int Perception = 0;
+        public static bool profPerception = false;
+        public static bool expPerception = false;
+        public static int addPerception;
 
-        public int Deception = 0;
-        public bool profDeception = false;
-        public bool expDeception = false;
-        public int addDeception;
+        public static int Survival = 0;
+        public static bool profSurvival = false;
+        public static bool expSurvival = false;
+        public static int addSurvival;
 
-        public int Intimidation = 0;
-        public bool profIntimidation = false;
-        public bool expIntimidation = false;
-        public int addIntimidation;
+        //charisma
+        public static int Cha;
+        public static int ChaSave;
+        public static bool profCha = false;
+        public static bool expCha = false;
 
-        public int Performance = 0;
-        public bool profPerformance = false;
-        public bool expPerformance = false;
-        public int addPerformance;
+        public static int Deception = 0;
+        public static bool profDeception = false;
+        public static bool expDeception = false;
+        public static int addDeception;
 
-        public int Persuasion = 0;
-        public bool profPersuasion = false;
-        public bool expPersuasion = false;
-        public int addPersuasion;
+        public static int Intimidation = 0;
+        public static bool profIntimidation = false;
+        public static bool expIntimidation = false;
+        public static int addIntimidation;
+
+        public static int Performance = 0;
+        public static bool profPerformance = false;
+        public static bool expPerformance = false;
+        public static int addPerformance;
+
+        public static int Persuasion = 0;
+        public static bool profPersuasion = false;
+        public static bool expPersuasion = false;
+        public static int addPersuasion;
 
 
         //methods

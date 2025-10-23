@@ -15,43 +15,42 @@ namespace DndCharacterApp.Objects.Player
 	 */
     internal partial class Player
     {
-		//variables
-		public StringBuilder Name = new StringBuilder();
-		public int Xp = 0;
-		public int Level = 0;
-		public int Hp = 0;
-		public int Prof = 0;
-		public StringBuilder Alignment = new StringBuilder();
-		public BackgroundParent Background = new BackgroundParent();
-		public RaceParent Race = new RaceParent();
-		public List<ClassParent> Classes = new List<ClassParent>();
-		public int ScoreStr = 0;
-		public int ScoreDex = 0;
-		public int ScoreCon = 0;
-		public int ScoreInt = 0;
-		public int ScoreWis = 0;
-		public int ScoreCha = 0;
-		public PlayerMods Mods = new PlayerMods();
-		public int Speed = 0;
-		public int DeathSavesFail = 0;
-		public int DeathSavesSuccess = 0;
-		public int AttunementSlotsUsed = 0;
-		public int InititiveBonus = 0;
-		public int Age = 0;
-		public int Weight = 0;
-		public int Height = 0;
-		public StringBuilder Skin = new StringBuilder();
-		public StringBuilder Eyes = new StringBuilder();
-		public StringBuilder Hair = new StringBuilder();
+        //variables
+        public static StringBuilder Name = new StringBuilder();
+        public static int Xp = 0;
+        public static int Level = 0;
+        public static int Hp = 0;
+        public static int Prof = 3;
+        public static StringBuilder Alignment = new StringBuilder();
+        public static BackgroundParent Background = new BackgroundParent();
+        public static RaceParent Race = new RaceParent();
+        public static List<ClassParent> Classes = new List<ClassParent>();
+        public static int ScoreStr = 0;
+        public static int ScoreDex = 0;
+        public static int ScoreCon = 0;
+        public static int ScoreInt = 0;
+        public static int ScoreWis = 0;
+        public static int ScoreCha = 0;
+        public static int Speed = 0;
+        public static int DeathSavesFail = 0;
+        public static int DeathSavesSuccess = 0;
+        public static int AttunementSlotsUsed = 0;
+        public static int InititiveBonus = 0;
+        public static int Age = 0;
+        public static int Weight = 0;
+        public static int Height = 0;
+        public static StringBuilder Skin = new StringBuilder();
+        public static StringBuilder Eyes = new StringBuilder();
+        public static StringBuilder Hair = new StringBuilder();
 
 
 
-		//methods
+        //methods
 
-		/// <summary>
-		/// updates player level based on xp, and updates player pb bases on level
-		/// </summary>
-		public void UpdateLevel()
+        /// <summary>
+        /// updates player level based on xp, and updates player pb bases on level
+        /// </summary>
+        public static void UpdateLevel()
 		{
 			Level = Xp switch
 			{

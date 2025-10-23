@@ -74,13 +74,13 @@
 			
 			<!-- overview tab -->
 			<TabItem Header="Overview">
-                <local:TabOverview/>
-            </TabItem>
+				<local:TabOverview/>
+			</TabItem>
 			
 			<!--Stats tab-->
 			<TabItem Header="Stats">
-                <local:TabStats/>
-            </TabItem>
+				<local:TabStats/>
+			</TabItem>
 		</TabControl>
 	</DockPanel>
 </Window>

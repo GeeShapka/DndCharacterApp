@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using DndCharacterApp.Objects.Player;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,6 +17,7 @@ namespace DndCharacterApp.UserInterface
     /// </summary>
     public partial class DndCharacterApp_Window : Window
     {
+
         public DndCharacterApp_Window()
         {
             InitializeComponent();

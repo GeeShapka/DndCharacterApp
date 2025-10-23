@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
+             xmlns:player="clr-namespace:DndCharacterApp.Objects.Player"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="960" d:DesignWidth="1080">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -130,48 +131,48 @@
             <!--Strength-->
             <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                 <Label Content="Strength: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewStrengthScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewStrengthScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewStrengthScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewStrengthModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="lblOverviewStrengthModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
             <!--Dexterity-->
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
                 <Label Content="Dexterity: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewDexterityScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewDexterityScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewDexterityScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewDexterityModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+            <Label x:Name="lblOverviewDexterityModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
             <!--Constitution-->
             <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
-                <Label Content="Constitution: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewConstitutionScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <Label Content="Constitution:" FontSize="20" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewConstitutionScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewConstitutionScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewConstitutionModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
+            <Label x:Name="lblOverviewConstitutionModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
             <!--Intelligence-->
             <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Horizontal">
                 <Label Content="Intelligence: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewIntelligenceScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewIntelligenceScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewIntelligenceScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewIntelligenceModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3"/>
+            <Label x:Name="lblOverviewIntelligenceModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3"/>
             <!--Wisdom-->
             <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal">
                 <Label Content="Wisdom: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewWisdomScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewWisdomScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewWisdomScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewWisdomModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4"/>
+            <Label x:Name="lblOverviewWisdomModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4"/>
             <!--Charisma-->
             <StackPanel Grid.Row="1" Grid.Column="5" Orientation="Horizontal">
                 <Label Content="Charisma: " FontSize="20" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtOverviewCharismaScore" Text="20" Height="auto" FontSize="40" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtOverviewCharismaScore" Width="50" Height="auto" FontSize="40" VerticalAlignment="Center" MaxLength="2" TextChanged="txtOverviewCharismaScore_TextChanged"/>
             </StackPanel>
-            <Label x:Name="lblOverviewCharismaModifier" Content="+5" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="5"/>
+            <Label x:Name="lblOverviewCharismaModifier" FontSize="40" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="5"/>
 
             <!--Strength abilities-->
             <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="lblOverviewStrengthSave" Content="+4"/>
+                    <Label x:Name="lblOverviewStrengthSave"/>
                     <Label Content="Saving Throw"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="lblOverviewAthleticsSave" Content="+4"/>
+                    <Label x:Name="lblOverviewAthleticsSave"/>
                     <Label Content="Athletics"/>
                 </StackPanel>
             </StackPanel>

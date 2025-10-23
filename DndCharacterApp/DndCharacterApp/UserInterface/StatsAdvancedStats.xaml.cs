@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DndCharacterApp.Objects.Player;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace DndCharacterApp.UserInterface
         public StatsAdvancedStats()
         {
             InitializeComponent();
+        }
+
+        private void radStatsStrengthSaveProf_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerMods.profStr = true;
+            PlayerMods.expStr = false;
+        }
+
+        private void radStatsStrengthSaveExp_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerMods.expStr = true;
+            PlayerMods.profStr = false;
         }
     }
 }
