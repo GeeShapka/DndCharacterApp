@@ -37,5 +37,16 @@ namespace DndCharacterApp.UserInterface
             PlayerMods.expStr = true;
             PlayerMods.profStr = false;
         }
+
+        private void txtStatsStrengthSaveExtra_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtStatsStrengthSaveExtra.Foreground = Brushes.Black;
+            if (!int.TryParse(txtStatsStrengthSaveExtra.Text, out PlayerMods.addStr))
+            {
+                txtStatsStrengthSaveExtra.Foreground = Brushes.Red;
+                return;
+            }
+            Player.UpdateStr();
+        }
     }
 }

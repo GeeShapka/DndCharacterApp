@@ -24,6 +24,7 @@ namespace DndCharacterApp.UserInterface
         public TabOverview()
         {
             InitializeComponent();
+            txtOverviewPlayerPb.Text = Player.Prof.ToString();
         }
 
         private void txtOverviewStrengthScore_TextChanged(object sender, TextChangedEventArgs e)

@@ -20,7 +20,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+            <Label Content="Class for each level here"/>
         </Grid>
+        <Label Content="other stuff idk" Grid.Column="2"/>
     </Grid>
 </UserControl>

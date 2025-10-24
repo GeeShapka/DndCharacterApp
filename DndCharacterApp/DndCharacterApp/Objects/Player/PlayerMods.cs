@@ -19,14 +19,16 @@ namespace DndCharacterApp.Objects.Player
 
         //strength
         public static int Str;
+
         public static int StrSave;
         public static bool profStr = false;
         public static bool expStr = false;
+        public static int addStr = 0;
 
         public static int Athletics = 0;
         public static bool profAthletics = false;
         public static bool expAthletics = false;
-        public static int addAthletics;
+        public static int addAthletics = 0;
 
         //dexterity
         public static int Dex;

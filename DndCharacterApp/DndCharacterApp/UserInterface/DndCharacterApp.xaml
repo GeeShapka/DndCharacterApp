@@ -81,6 +81,12 @@
 			<TabItem Header="Stats">
 				<local:TabStats/>
 			</TabItem>
-		</TabControl>
+            <TabItem Header="one class"/>
+            <TabItem Header="another class"/>
+            <TabItem Header="Inventory"/>
+            <TabItem Header="character details">
+                <Label Content="race stuff, background, traits"/>
+            </TabItem>
+        </TabControl>
 	</DockPanel>
 </Window>

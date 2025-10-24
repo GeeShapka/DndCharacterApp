@@ -26,10 +26,12 @@ namespace DndCharacterApp.Objects.Player
             PlayerMods.StrSave = PlayerMods.Str;
             if (PlayerMods.profStr) PlayerMods.StrSave += Prof;
             if (PlayerMods.expStr) PlayerMods.StrSave += 2 * Prof;
+            PlayerMods.StrSave += PlayerMods.addStr;
 
             PlayerMods.Athletics = PlayerMods.Str;
             if (PlayerMods.profAthletics) PlayerMods.Athletics += Prof;
             if (PlayerMods.expAthletics) PlayerMods.Athletics += 2 * Prof;
+            PlayerMods.Athletics += PlayerMods.addAthletics;
         }//end of UpdateStr
 
 

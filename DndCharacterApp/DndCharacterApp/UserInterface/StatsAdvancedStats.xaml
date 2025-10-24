@@ -51,7 +51,7 @@
                 <RadioButton x:Name="radStatsStrengthSaveMinus" Content="-"/>
             </StackPanel>
             <Label/>
-            <TextBox x:Name="txtStatsStrengthSaveExtra" Width="20" Height="20"/>
+            <TextBox x:Name="txtStatsStrengthSaveExtra" MaxLength="2" Width="20" Height="20" TextChanged="txtStatsStrengthSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Athletics" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
