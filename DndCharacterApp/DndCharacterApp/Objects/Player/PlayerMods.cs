@@ -32,9 +32,11 @@ namespace DndCharacterApp.Objects.Player
 
         //dexterity
         public static int Dex;
+
         public static int DexSave;
         public static bool profDex = false;
         public static bool expDex = false;
+        public static int addDex = 0;
 
         public static int Acrobatics = 0;
         public static bool profAcrobatics = false;
@@ -53,15 +55,19 @@ namespace DndCharacterApp.Objects.Player
 
         //constitution
         public static int Con;
+
         public static int ConSave;
         public static bool profCon = false;
         public static bool expCon = false;
+        public static int addCon = 0;
 
         //intelligence
         public static int Int;
+
         public static int IntSave;
         public static bool profInt = false;
         public static bool expInt = false;
+        public static int addInt = 0;
 
         public static int Arcana = 0;
         public static bool profArcana = false;
@@ -90,9 +96,11 @@ namespace DndCharacterApp.Objects.Player
 
         //wisdom
         public static int Wis;
+
         public static int WisSave;
         public static bool profWis = false;
         public static bool expWis = false;
+        public static int addWis;
 
         public static int AnimalHandling = 0;
         public static bool profAnimalHandling = false;
@@ -121,9 +129,11 @@ namespace DndCharacterApp.Objects.Player
 
         //charisma
         public static int Cha;
+
         public static int ChaSave;
         public static bool profCha = false;
         public static bool expCha = false;
+        public static int addCha;
 
         public static int Deception = 0;
         public static bool profDeception = false;

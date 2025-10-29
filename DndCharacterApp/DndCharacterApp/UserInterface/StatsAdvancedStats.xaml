@@ -1,408 +1,338 @@
 ﻿<UserControl x:Class="DndCharacterApp.UserInterface.StatsAdvancedStats"
-             xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid ShowGridLines="True">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+			 xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 mc:Ignorable="d" 
+			 d:DesignHeight="450" d:DesignWidth="800">
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
 
         <!--Strength-->
         <Label Content="Strength Saving Throw" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsStrengthSave" IsChecked="True" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsStrengthSaveProf" Content="Proficiency" Click="radStatsStrengthSaveProf_Click"/>
-                <RadioButton x:Name="radStatsStrengthSaveExp" Content="Expertise" Click="radStatsStrengthSaveExp_Click"/>
+                <RadioButton x:Name="radStatsStrengthSaveProf" GroupName="radGroupStatsStrengthSave" Content="Proficiency" Click="radStatsStrengthSaveProf_Click"/>
+                <RadioButton x:Name="radStatsStrengthSaveExp" GroupName="radGroupStatsStrengthSave" Content="Expertise" Click="radStatsStrengthSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsStrengthSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsStrengthSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
+            <Label Content="Extra: "/>
             <TextBox x:Name="txtStatsStrengthSaveExtra" MaxLength="2" Width="20" Height="20" TextChanged="txtStatsStrengthSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Athletics" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsAthletics" IsChecked="True" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAthleticsSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsAthleticsSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsAthleticsSaveProf" GroupName="radGroupStatsAthletics" Content="Proficiency" Click="radStatsAthleticsSaveProf_Click"/>
+                <RadioButton x:Name="radStatsAthleticsSaveExp" GroupName="radGroupStatsAthletics" Content="Expertise" Click="radStatsAthleticsSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAthleticsSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsAthleticsSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsAthleticsSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsAthleticsSaveExtra" Width="20" Height="20" TextChanged="txtStatsAthleticsSaveExtra_TextChanged"/>
         </StackPanel>
 
         <!--Dexterity-->
         <Label Content="Dexterity Saving Throw" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsDexteritySave" IsChecked="True" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsDexteritySaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsDexteritySaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsDexteritySaveProf" GroupName="radGroupStatsDexteritySave" Content="Proficiency" Click="radStatsDexteritySaveProf_Click"/>
+                <RadioButton x:Name="radStatsDexteritySaveExp" GroupName="radGroupStatsDexteritySave" Content="Expertise" Click="radStatsDexteritySaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsDexteritySavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsDexteritySaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsDexteritySaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsDexteritySaveExtra" Width="20" Height="20" TextChanged="txtStatsDexteritySaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Acrobatics" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsAcrobatics" IsChecked="True" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAcrobaticsSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsAcrobaticsSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsAcrobaticsSaveProf" GroupName="radGroupStatsAcrobatics" Content="Proficiency" Click="radStatsAcrobaticsSaveProf_Click"/>
+                <RadioButton x:Name="radStatsAcrobaticsSaveExp" GroupName="radGroupStatsAcrobatics" Content="Expertise" Click="radStatsAcrobaticsSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAcrobaticsSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsAcrobaticsSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsAcrobaticsSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsAcrobaticsSaveExtra" Width="20" Height="20" TextChanged="txtStatsAcrobaticsSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Sleight of Hand" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsSleightOfHand" IsChecked="True" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsSleightOfHandSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsSleightOfHandSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsSleightOfHandSaveProf" GroupName="radGroupStatsSleightOfHand" Content="Proficiency" Click="radStatsSleightOfHandSaveProf_Click"/>
+                <RadioButton x:Name="radStatsSleightOfHandSaveExp" GroupName="radGroupStatsSleightOfHand" Content="Expertise" Click="radStatsSleightOfHandSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsSleightOfHandSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsSleightOfHandSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsSleightOfHandSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsSleightOfHandSaveExtra" Width="20" Height="20" TextChanged="txtStatsSleightOfHandSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Stealth" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsStealth" IsChecked="True" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsStealthSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsStealthSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsStealthSaveProf" GroupName="radGroupStatsStealth" Content="Proficiency" Click="radStatsStealthSaveProf_Click"/>
+                <RadioButton x:Name="radStatsStealthSaveExp" GroupName="radGroupStatsStealth" Content="Expertise" Click="radStatsStealthSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsStealthSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsStealthSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsStealthSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsStealthSaveExtra" Width="20" Height="20" TextChanged="txtStatsStealthSaveExtra_TextChanged"/>
         </StackPanel>
 
         <!--Constitution-->
         <Label Content="Constitution Saving Throw" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsConstitutionSave" IsChecked="True" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsConstitutionSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsConstitutionSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsConstitutionSaveProf" GroupName="radGroupStatsConstitutionSave" Content="Proficiency" Click="radStatsConstitutionSaveProf_Click"/>
+                <RadioButton x:Name="radStatsConstitutionSaveExp" GroupName="radGroupStatsConstitutionSave" Content="Expertise" Click="radStatsConstitutionSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsConstitutionSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsConstitutionSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsConstitutionSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsConstitutionSaveExtra" Width="20" Height="20" TextChanged="txtStatsConstitutionSaveExtra_TextChanged"/>
         </StackPanel>
 
         <!--Intelligence-->
         <Label Content="Intelligence Saving Throw" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsIntelligenceSave" IsChecked="True" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsIntelligenceSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsIntelligenceSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsIntelligenceSaveProf" GroupName="radGroupStatsIntelligenceSave" Content="Proficiency" Click="radStatsIntelligenceSaveProf_Click"/>
+                <RadioButton x:Name="radStatsIntelligenceSaveExp" GroupName="radGroupStatsIntelligenceSave" Content="Expertise" Click="radStatsIntelligenceSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsIntelligenceSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsIntelligenceSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsIntelligenceSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsIntelligenceSaveExtra" Width="20" Height="20" TextChanged="txtStatsIntelligenceSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Arcana" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsArcana" IsChecked="True" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsArcanaSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsArcanaSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsArcanaSaveProf" GroupName="radGroupStatsArcana" Content="Proficiency" Click="radStatsArcanaSaveProf_Click"/>
+                <RadioButton x:Name="radStatsArcanaSaveExp" GroupName="radGroupStatsArcana" Content="Expertise" Click="radStatsArcanaSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsArcanaSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsArcanaSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsArcanaSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsArcanaSaveExtra" Width="20" Height="20" TextChanged="txtStatsArcanaSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="History" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsHistory" IsChecked="True" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsHistorySaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsHistorySaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsHistorySaveProf" GroupName="radGroupStatsHistory" Content="Proficiency" Click="radStatsHistorySaveProf_Click"/>
+                <RadioButton x:Name="radStatsHistorySaveExp" GroupName="radGroupStatsHistory" Content="Expertise" Click="radStatsHistorySaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsHistorySavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsHistorySaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsHistorySaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsHistorySaveExtra" Width="20" Height="20" TextChanged="txtStatsHistorySaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Investigation" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsInvestigation" IsChecked="True" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsInvestigationSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsInvestigationSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsInvestigationSaveProf" GroupName="radGroupStatsInvestigation" Content="Proficiency" Click="radStatsInvestigationSaveProf_Click"/>
+                <RadioButton x:Name="radStatsInvestigationSaveExp" GroupName="radGroupStatsInvestigation" Content="Expertise" Click="radStatsInvestigationSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsInvestigationSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsInvestigationSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsInvestigationSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsInvestigationSaveExtra" Width="20" Height="20" TextChanged="txtStatsInvestigationSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Nature" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsNature" IsChecked="True" Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsNatureSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsNatureSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsNatureSaveProf" GroupName="radGroupStatsNature" Content="Proficiency" Click="radStatsNatureSaveProf_Click"/>
+                <RadioButton x:Name="radStatsNatureSaveExp" GroupName="radGroupStatsNature" Content="Expertise" Click="radStatsNatureSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsNatureSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsNatureSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsNatureSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsNatureSaveExtra" Width="20" Height="20" TextChanged="txtStatsNatureSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Religion" Grid.Row="12" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsReligion" IsChecked="True" Grid.Row="12" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsReligionSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsReligionSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsReligionSaveProf" GroupName="radGroupStatsReligion" Content="Proficiency" Click="radStatsReligionSaveProf_Click"/>
+                <RadioButton x:Name="radStatsReligionSaveExp" GroupName="radGroupStatsReligion" Content="Expertise" Click="radStatsReligionSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsReligionSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsReligionSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsReligionSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsReligionSaveExtra" Width="20" Height="20" TextChanged="txtStatsReligionSaveExtra_TextChanged"/>
         </StackPanel>
 
         <!--Wisdom-->
         <Label Content="Wisdom Saving Throw" Grid.Row="13" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsWisdomSave" IsChecked="True" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="13" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsWisdomSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsWisdomSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsWisdomSaveProf" GroupName="radGroupStatsWisdomSave" Content="Proficiency" Click="radStatsWisdomSaveProf_Click"/>
+                <RadioButton x:Name="radStatsWisdomSaveExp" GroupName="radGroupStatsWisdomSave" Content="Expertise" Click="radStatsWisdomSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsWisdomSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsWisdomSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsWisdomSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsWisdomSaveExtra" Width="20" Height="20" TextChanged="txtStatsWisdomSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Animal Handling" Grid.Row="14" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsAnimalHandling" IsChecked="True" Grid.Row="14" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="14" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAnimalHandlingSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsAnimalHandlingSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsAnimalHandlingSaveProf" GroupName="radGroupStatsAnimalHandling" Content="Proficiency" Click="radStatsAnimalHandlingSaveProf_Click"/>
+                <RadioButton x:Name="radStatsAnimalHandlingSaveExp" GroupName="radGroupStatsAnimalHandling" Content="Expertise" Click="radStatsAnimalHandlingSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsAnimalHandlingSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsAnimalHandlingSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsAnimalHandlingSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsAnimalHandlingSaveExtra" Width="20" Height="20" TextChanged="txtStatsAnimalHandlingSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Insight" Grid.Row="15" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsInsight" IsChecked="True" Grid.Row="15" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="15" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsInsightSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsInsightSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsInsightSaveProf" GroupName="radGroupStatsInsight" Content="Proficiency" Click="radStatsInsightSaveProf_Click"/>
+                <RadioButton x:Name="radStatsInsightSaveExp" GroupName="radGroupStatsInsight" Content="Expertise" Click="radStatsInsightSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsInsightSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsInsightSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsInsightSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsInsightSaveExtra" Width="20" Height="20" TextChanged="txtStatsInsightSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Medicine" Grid.Row="16" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsMedicine" IsChecked="True" Grid.Row="16" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="16" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsMedicineSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsMedicineSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsMedicineSaveProf" GroupName="radGroupStatsMedicine" Content="Proficiency" Click="radStatsMedicineSaveProf_Click"/>
+                <RadioButton x:Name="radStatsMedicineSaveExp" GroupName="radGroupStatsMedicine" Content="Expertise" Click="radStatsMedicineSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsMedicineSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsMedicineSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsMedicineSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsMedicineSaveExtra" Width="20" Height="20" TextChanged="txtStatsMedicineSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Perception" Grid.Row="17" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsPerception" IsChecked="True" Grid.Row="17" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="17" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPerceptionSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsPerceptionSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsPerceptionSaveProf" GroupName="radGroupStatsPerception" Content="Proficiency" Click="radStatsPerceptionSaveProf_Click"/>
+                <RadioButton x:Name="radStatsPerceptionSaveExp" GroupName="radGroupStatsPerception" Content="Expertise" Click="radStatsPerceptionSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPerceptionSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsPerceptionSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsPerceptionSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsPerceptionSaveExtra" Width="20" Height="20" TextChanged="txtStatsPerceptionSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Survival" Grid.Row="18" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsSurvival" IsChecked="True" Grid.Row="18" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="18" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsSurvivalSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsSurvivalSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsSurvivalSaveProf" GroupName="radGroupStatsSurvival" Content="Proficiency" Click="radStatsSurvivalSaveProf_Click"/>
+                <RadioButton x:Name="radStatsSurvivalSaveExp" GroupName="radGroupStatsSurvival" Content="Expertise" Click="radStatsSurvivalSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsSurvivalSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsSurvivalSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsSurvivalSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsSurvivalSaveExtra" Width="20" Height="20" TextChanged="txtStatsSurvivalSaveExtra_TextChanged"/>
         </StackPanel>
 
         <!--Charisma-->
         <Label Content="Charisma Saving Throw" Grid.Row="19" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsCharismaSave" IsChecked="True" Grid.Row="19" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="19" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsCharismaSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsCharismaSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsCharismaSaveProf" GroupName="radGroupStatsCharismaSave" Content="Proficiency" Click="radStatsCharismaSaveProf_Click"/>
+                <RadioButton x:Name="radStatsCharismaSaveExp" GroupName="radGroupStatsCharismaSave" Content="Expertise" Click="radStatsCharismaSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsCharismaSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsCharismaSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsCharismaSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsCharismaSaveExtra" Width="20" Height="20" TextChanged="txtStatsCharismaSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Deception" Grid.Row="20" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsDeception" IsChecked="True" Grid.Row="20" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="20" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsDeceptionSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsDeceptionSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsDeceptionSaveProf" GroupName="radGroupStatsDeception" Content="Proficiency" Click="radStatsDeceptionSaveProf_Click"/>
+                <RadioButton x:Name="radStatsDeceptionSaveExp" GroupName="radGroupStatsDeception" Content="Expertise" Click="radStatsDeceptionSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsDeceptionSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsDeceptionSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsDeceptionSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsDeceptionSaveExtra" Width="20" Height="20" TextChanged="txtStatsDeceptionSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Intimidation" Grid.Row="21" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsIntimidation" IsChecked="True" Grid.Row="21" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="21" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsIntimidationSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsIntimidationSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsIntimidationSaveProf" GroupName="radGroupStatsIntimidation" Content="Proficiency" Click="radStatsIntimidationSaveProf_Click"/>
+                <RadioButton x:Name="radStatsIntimidationSaveExp" GroupName="radGroupStatsIntimidation" Content="Expertise" Click="radStatsIntimidationSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsIntimidationSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsIntimidationSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsIntimidationSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsIntimidationSaveExtra" Width="20" Height="20" TextChanged="txtStatsIntimidationSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Performance" Grid.Row="22" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsPerformance" IsChecked="True" Grid.Row="22" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="22" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPerformanceSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsPerformanceSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsPerformanceSaveProf" GroupName="radGroupStatsPerformance" Content="Proficiency" Click="radStatsPerformanceSaveProf_Click"/>
+                <RadioButton x:Name="radStatsPerformanceSaveExp" GroupName="radGroupStatsPerformance" Content="Expertise" Click="radStatsPerformanceSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPerformanceSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsPerformanceSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsPerformanceSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsPerformanceSaveExtra" Width="20" Height="20" TextChanged="txtStatsPerformanceSaveExtra_TextChanged"/>
         </StackPanel>
 
         <Label Content="Persuasion" Grid.Row="23" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton GroupName="radGroupStatsPersuasion" IsChecked="True" Grid.Row="23" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="23" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPersuasionSaveProf" Content="Proficiency"/>
-                <RadioButton x:Name="radStatsPersuasionSaveExp" Content="Expertise"/>
+                <RadioButton x:Name="radStatsPersuasionSaveProf" GroupName="radGroupStatsPersuasion" Content="Proficiency" Click="radStatsPersuasionSaveProf_Click"/>
+                <RadioButton x:Name="radStatsPersuasionSaveExp" GroupName="radGroupStatsPersuasion" Content="Expertise" Click="radStatsPersuasionSaveExp_Click"/>
             </StackPanel>
             <Label Content="   "/>
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="radStatsPersuasionSavePlus" Content="+"/>
-                <RadioButton x:Name="radStatsPersuasionSaveMinus" Content="-"/>
-            </StackPanel>
-            <Label/>
-            <TextBox x:Name="txtStatsPersuasionSaveExtra" Width="20" Height="20"/>
+            <Label Content="Extra: "/>
+            <TextBox x:Name="txtStatsPersuasionSaveExtra" Width="20" Height="20" TextChanged="txtStatsPersuasionSaveExtra_TextChanged"/>
         </StackPanel>
+
+
 
 
     </Grid>

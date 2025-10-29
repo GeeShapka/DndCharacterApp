@@ -20,6 +20,8 @@ namespace DndCharacterApp.Objects.Player
         public static int Xp = 0;
         public static int Level = 0;
         public static int Hp = 0;
+        public static int TempHp = 0;
+        public static int ArmorClass = 0;
         public static int Prof = 3;
         public static StringBuilder Alignment = new StringBuilder();
         public static BackgroundParent Background = new BackgroundParent();

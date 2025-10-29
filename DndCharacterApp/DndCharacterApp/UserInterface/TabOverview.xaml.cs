@@ -51,6 +51,10 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateDex();
             lblOverviewDexterityModifier.Content = PlayerMods.Dex.ToString();
+            lblOverviewDexteritySave.Content = PlayerMods.DexSave.ToString();
+            lblOverviewAcrobaticsSave.Content = PlayerMods.Acrobatics.ToString();
+            lblOverviewSleightOfHandSave.Content = PlayerMods.SleightOfHand.ToString();
+            lblOverviewStealthSave.Content = PlayerMods.Stealth.ToString();
         }
 
         private void txtOverviewConstitutionScore_TextChanged(object sender, TextChangedEventArgs e)
@@ -63,6 +67,7 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateCon();
             lblOverviewConstitutionModifier.Content = PlayerMods.Con.ToString();
+            lblOverviewConstitutionSave.Content = PlayerMods.ConSave.ToString();
         }
 
         private void txtOverviewIntelligenceScore_TextChanged(object sender, TextChangedEventArgs e)
@@ -75,6 +80,12 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateInt();
             lblOverviewIntelligenceModifier.Content = PlayerMods.Int.ToString();
+            lblOverviewIntelligenceSave.Content = PlayerMods.IntSave.ToString();
+            lblOverviewArcanaSave.Content = PlayerMods.Arcana.ToString();
+            lblOverviewHistorySave.Content = PlayerMods.History.ToString();
+            lblOverviewInvestigationSave.Content = PlayerMods.Investigation.ToString();
+            lblOverviewNatureSave.Content = PlayerMods.Nature.ToString();
+            lblOverviewReligionSave.Content = PlayerMods.Religion.ToString();
         }
 
         private void txtOverviewWisdomScore_TextChanged(object sender, TextChangedEventArgs e)
@@ -87,6 +98,12 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateWis();
             lblOverviewWisdomModifier.Content = PlayerMods.Wis.ToString();
+            lblOverviewWisdomSave.Content = PlayerMods.WisSave.ToString();
+            lblOverviewAnimalHandlingSave.Content = PlayerMods.AnimalHandling.ToString();
+            lblOverviewInsightSave.Content = PlayerMods.Insight.ToString();
+            lblOverviewMedicineSave.Content = PlayerMods.Medicine.ToString();
+            lblOverviewPerceptionSave.Content = PlayerMods.Perception.ToString();
+            lblOverviewSurvivalSave.Content = PlayerMods.Survival.ToString();
         }
 
         private void txtOverviewCharismaScore_TextChanged(object sender, TextChangedEventArgs e)
@@ -99,6 +116,84 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateCha();
             lblOverviewCharismaModifier.Content = PlayerMods.Cha.ToString();
+            lblOverviewCharismaSave.Content = PlayerMods.ChaSave.ToString();
+            lblOverviewDeceptionSave.Content= PlayerMods.Deception.ToString();
+            lblOverviewIntimidationSave.Content = PlayerMods.Intimidation.ToString();
+            lblOverviewPerformanceSave.Content = PlayerMods.Performance.ToString();
+            lblOverviewPersuasionSave.Content = PlayerMods.Persuasion.ToString();
+        }
+
+
+        //update pb
+        private void txtOverviewPlayerPb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtOverviewPlayerPb.Foreground = Brushes.Black;
+            if (!int.TryParse(txtOverviewPlayerPb.Text, out Player.Prof))
+            {
+                txtOverviewPlayerPb.Foreground = Brushes.Red;
+                return;
+            }
+            Player.UpdateAll();
+            updateOverviewTab();
+        }
+
+        /// <summary>
+        /// update overview tab with latest data when loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            updateOverviewTab();
+        }
+
+        /// <summary>
+        /// updates the overview tab
+        /// </summary>
+        private void updateOverviewTab()
+        {
+            //main atribute stats and stuff
+            txtOverviewPlayerHp.Text = Player.Hp.ToString();
+            txtOverviewPlayerTempHp.Text = Player.TempHp.ToString();
+            txtOverviewPlayerAc.Text = Player.ArmorClass.ToString();
+            txtOverviewPlayerInitiative.Text = PlayerMods.Dex.ToString();
+            txtOverviewPlayerSpeed.Text = Player.Speed.ToString();
+            txtOverviewPlayerPb.Text = Player.Prof.ToString();
+
+            //update stats
+            Player.UpdateAll();
+
+            txtOverviewPlayerPb.Text = Player.Prof.ToString();
+            lblOverviewStrengthModifier.Content = PlayerMods.Str.ToString();
+            lblOverviewStrengthSave.Content = PlayerMods.StrSave.ToString();
+            lblOverviewAthleticsSave.Content = PlayerMods.Athletics.ToString();
+            lblOverviewDexterityModifier.Content = PlayerMods.Dex.ToString();
+            lblOverviewDexteritySave.Content = PlayerMods.DexSave.ToString();
+            lblOverviewAcrobaticsSave.Content = PlayerMods.Acrobatics.ToString();
+            lblOverviewSleightOfHandSave.Content = PlayerMods.SleightOfHand.ToString();
+            lblOverviewStealthSave.Content = PlayerMods.Stealth.ToString();
+            lblOverviewConstitutionModifier.Content = PlayerMods.Con.ToString();
+            lblOverviewConstitutionSave.Content = PlayerMods.ConSave.ToString();
+            lblOverviewIntelligenceModifier.Content = PlayerMods.Int.ToString();
+            lblOverviewIntelligenceSave.Content = PlayerMods.IntSave.ToString();
+            lblOverviewArcanaSave.Content = PlayerMods.Arcana.ToString();
+            lblOverviewHistorySave.Content = PlayerMods.History.ToString();
+            lblOverviewInvestigationSave.Content = PlayerMods.Investigation.ToString();
+            lblOverviewNatureSave.Content = PlayerMods.Nature.ToString();
+            lblOverviewReligionSave.Content = PlayerMods.Religion.ToString();
+            lblOverviewWisdomModifier.Content = PlayerMods.Wis.ToString();
+            lblOverviewWisdomSave.Content = PlayerMods.WisSave.ToString();
+            lblOverviewAnimalHandlingSave.Content = PlayerMods.AnimalHandling.ToString();
+            lblOverviewInsightSave.Content = PlayerMods.Insight.ToString();
+            lblOverviewMedicineSave.Content = PlayerMods.Medicine.ToString();
+            lblOverviewPerceptionSave.Content = PlayerMods.Perception.ToString();
+            lblOverviewSurvivalSave.Content = PlayerMods.Survival.ToString();
+            lblOverviewCharismaModifier.Content = PlayerMods.Cha.ToString();
+            lblOverviewCharismaSave.Content = PlayerMods.ChaSave.ToString();
+            lblOverviewDeceptionSave.Content = PlayerMods.Deception.ToString();
+            lblOverviewIntimidationSave.Content = PlayerMods.Intimidation.ToString();
+            lblOverviewPerformanceSave.Content = PlayerMods.Performance.ToString();
+            lblOverviewPersuasionSave.Content = PlayerMods.Persuasion.ToString();
         }
     }
 }

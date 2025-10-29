@@ -67,10 +67,5 @@ namespace DndCharacterApp.UserInterface
         {
 
         }
-
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }//end of DndCharacterApp_Window
 }//end of nameSpace
