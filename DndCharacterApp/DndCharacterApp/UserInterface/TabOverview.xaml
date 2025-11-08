@@ -43,17 +43,17 @@
                     <!--HP-->
                     <StackPanel Orientation="Vertical" Grid.Column="0">
                         <Label Content="HP:" FontSize="20" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtOverviewPlayerHp" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="txtOverviewPlayerHp" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch" TextChanged="txtOverviewPlayerHp_TextChanged"/>
                     </StackPanel>
                     <!--temp hp-->
                     <StackPanel Orientation="Vertical" Grid.Column="1">
                         <Label Content="Temp HP:" FontSize="20" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtOverviewPlayerTempHp" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="txtOverviewPlayerTempHp" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch" TextChanged="txtOverviewPlayerTempHp_TextChanged"/>
                     </StackPanel>
                     <!--AC-->
                     <StackPanel Orientation="Vertical" Grid.Column="2">
                         <Label Content="AC:" FontSize="20" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtOverviewPlayerAc" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="txtOverviewPlayerAc" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch" TextChanged="txtOverviewPlayerAc_TextChanged"/>
                     </StackPanel>
                     <!--Initiative-->
                     <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">

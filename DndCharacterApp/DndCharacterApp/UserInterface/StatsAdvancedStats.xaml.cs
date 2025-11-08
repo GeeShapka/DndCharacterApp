@@ -600,5 +600,11 @@ namespace DndCharacterApp.UserInterface
             }
             Player.UpdateCha();
         }
+
+        private void radStatsStrengthSaveNone_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerMods.expStr = false;
+            PlayerMods.profStr = false;
+        }
     }//end of class
 }

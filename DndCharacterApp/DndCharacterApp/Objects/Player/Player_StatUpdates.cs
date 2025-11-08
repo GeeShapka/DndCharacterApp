@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -192,6 +193,18 @@ namespace DndCharacterApp.Objects.Player
 
 
         /// <summary>
+        /// updates the total hp
+        /// </summary>
+        public static void UpdateTotalHp()
+        {
+            int newTotal = Hp + TempHp;
+            _totalHp = newTotal;
+            StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(TotalHp)));
+        }//end of UpdateTotalHp
+
+
+
+        /// <summary>
         /// Updates all ability and skill modifiers.
         /// </summary>
         public static void UpdateAll()
@@ -202,6 +215,7 @@ namespace DndCharacterApp.Objects.Player
             UpdateInt();
             UpdateWis();
             UpdateCha();
+            UpdateTotalHp();
         }//end of UpdateAll
 
     }//end of Player
