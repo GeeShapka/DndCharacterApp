@@ -21,6 +21,7 @@ namespace DndCharacterApp.UserInterface
         public DndCharacterApp_Window()
         {
             InitializeComponent();
+            Player.StaticPropertyChanged += UpdateStats;
         }
 
 

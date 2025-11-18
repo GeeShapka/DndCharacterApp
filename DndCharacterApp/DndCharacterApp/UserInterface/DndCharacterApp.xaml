@@ -17,9 +17,6 @@
         <CommandBinding Command="ApplicationCommands.Close"
 			Executed="CloseCommand_Executed"/>
     </Window.CommandBindings>
-    <Window.DataContext>
-        <local:PlayerListener/>
-    </Window.DataContext>
     <DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">
@@ -54,21 +51,18 @@
 
 			<!-- HP -->
 			<StackPanel Orientation="Horizontal" Grid.Column="0">
-				<Label Content="HP:"/>
-                <Label Content="{Binding TotalHp}"/>
-			</StackPanel>
+                <Label Name="lblBottomHp"/>
+            </StackPanel>
 
 			<!-- AC -->
 			<StackPanel Orientation="Horizontal" Grid.Column="1">
-				<Label Content="AC:"/>
-				<Label Content="{Binding ArmorClass}"/>
-			</StackPanel>
+                <Label Name="lblBottomAc"/>
+            </StackPanel>
 
 			<!-- Speed -->
 			<StackPanel Orientation="Horizontal" Grid.Column="2">
-				<Label Content="Speed:"/>
-				<Label Content="{Binding Text, ElementName=txtOverviewPlayerSpeed}"/>
-			</StackPanel>
+                <Label Name="lblBottomSpeed"/>
+            </StackPanel>
 
 		</Grid>
 		
