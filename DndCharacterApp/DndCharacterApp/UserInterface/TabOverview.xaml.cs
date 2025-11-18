@@ -25,6 +25,7 @@ namespace DndCharacterApp.UserInterface
 		{
 			InitializeComponent();
 			txtOverviewPlayerPb.Text = Player.Prof.ToString();
+			DndCharacterApp_Window.UpdateTabs += updateOverviewTab;
 		}
 
 		/// <summary>

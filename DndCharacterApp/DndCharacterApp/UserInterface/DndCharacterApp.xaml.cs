@@ -21,62 +21,175 @@ namespace DndCharacterApp.UserInterface
     /// </summary>
     public partial class DndCharacterApp_Window : Window
     {
-        private bool saveEnabled = true;
+        private bool saveEnabled = false;
+        private bool saveCanceled = false;
+        private string? fileName;
+        public static event Action? UpdateTabs;
 
         public DndCharacterApp_Window()
         {
             InitializeComponent();
             Player.StaticPropertyChanged += UpdateStats;
+            SaveCommand.IsEnabled = false;
         }
 
 
 
+        /// <summary>
+        /// clears all player data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            MessageBoxResult mbr = MessageBox.Show("Would you like to save your changes?", "Save", MessageBoxButton.YesNoCancel);
+            if (mbr == MessageBoxResult.Yes && saveEnabled)
+            {
+                SaveCommand_Executed(sender, e);
+            }
+            else if(mbr == MessageBoxResult.Yes && !saveEnabled)
+            {
+                SaveAsCommand_Executed(sender, e);
+            }
+            else if(mbr == MessageBoxResult.Cancel)
+            {
+                return;
+            }
+            Player.RemoveStats();
+            UpdateTabs?.Invoke();
         }
 
 
 
+        /// <summary>
+        /// saves player data without prompt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            
+            Save();
+        }
+        private void Save()
+        {
+            if (fileName == null)
+            {
+                return;
+            }
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Player_NonStatic));
+            try
+            {
+                using (FileStream file = new FileStream(fileName, FileMode.Create))
+                {
+                    using (StreamWriter sw = new StreamWriter(file))
+                    {
+                        serializer.Serialize(sw, new Player_NonStatic());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
+
+
+        /// <summary>
+        /// saves player data with a prompt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveAsCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            SaveAs();
+        }//end of save as command
+        private void SaveAs()
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "Save As";
-            if(Player.Name.ToString() == string.Empty)
+            if (Player.Name.ToString() == string.Empty)
             {
                 sfd.FileName = "idk";
             }
             else
             {
                 sfd.FileName = Player.Name.ToString();
-            }    
+            }
             sfd.Filter = "XML (.xml)|*.xml";
 
-            if(sfd.ShowDialog() != true)
+            if (sfd.ShowDialog() != true)
             {
+                saveCanceled = true;
                 return;
             }
 
-            string fileName = sfd.FileName;
+            fileName = sfd.FileName;
             XmlSerializer serializer = new XmlSerializer(typeof(Player_NonStatic));
 
-            FileStream file = new FileStream(fileName, FileMode.Create);
-            StreamWriter sw = new StreamWriter(file);
-            serializer.Serialize(sw, new Player_NonStatic());
-            sw.Close();
-            file.Close();
+            try
+            {
+                using (FileStream file = new FileStream(fileName, FileMode.Create))
+                {
+                    using (StreamWriter sw = new StreamWriter(file))
+                    {
+                        serializer.Serialize(sw, new Player_NonStatic());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            saveEnabled = true;
         }
 
 
 
+        /// <summary>
+        /// opens a file containing player data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Open";
+            ofd.Filter = "XML (.xml)|*.xml";
 
+            if (ofd.ShowDialog() != true)
+            {
+                return;
+            }
+
+            string fileName = ofd.FileName;
+            XmlSerializer serializer = new XmlSerializer(typeof(Player_NonStatic));
+
+            try
+            {
+                using (FileStream file = new FileStream(fileName, FileMode.Open))
+                {
+                    using (StreamReader sr = new StreamReader(file))
+                    {
+                        Player_NonStatic? player = (Player_NonStatic?)serializer.Deserialize(sr);
+                        if(player != null)
+                        {
+                            Player.ImportStats(player);
+                        }
+                        else
+                        {
+                            throw new Exception("Imported Character is Null");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            saveEnabled = true;
+            UpdateTabs?.Invoke();
         }
 
 
@@ -100,7 +213,26 @@ namespace DndCharacterApp.UserInterface
         /// <param name="e"></param>
         private void DndCharacter_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            MessageBoxResult mbr = MessageBox.Show("Would you like to save your changes?", "Save", MessageBoxButton.YesNoCancel);
+            if (mbr == MessageBoxResult.Yes && saveEnabled)
+            {
+                Save();
+            }
+            else if (mbr == MessageBoxResult.Yes && !saveEnabled)
+            {
+                SaveAs();
+                if(saveCanceled)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+            else if (mbr == MessageBoxResult.Cancel)
+            {
+                e.Cancel = true;
+                return;
+            }
+            saveCanceled = false;
         }
     }//end of DndCharacterApp_Window
 }//end of nameSpace

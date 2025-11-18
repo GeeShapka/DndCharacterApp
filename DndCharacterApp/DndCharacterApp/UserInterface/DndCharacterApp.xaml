@@ -26,7 +26,7 @@
 					Command="ApplicationCommands.New"/>
 				<MenuItem Header="_Open"
 					Command="ApplicationCommands.Open"/>
-				<MenuItem Header="_Save"
+				<MenuItem Header="_Save" Name="SaveCommand"
 					Command="ApplicationCommands.Save"/>
 				<MenuItem Header="Save _As"
 					Command="ApplicationCommands.SaveAs"/>
