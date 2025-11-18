@@ -58,12 +58,12 @@
                     <!--Initiative-->
                     <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
                         <Label Content="Initiative:" FontSize="20" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtOverviewPlayerInitiative" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="txtOverviewPlayerInitiative" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch" TextChanged="txtOverviewPlayerInitiative_TextChanged"/>
                     </StackPanel>
                     <!--Speed-->
                     <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
                         <Label Content="Speed:" FontSize="20" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtOverviewPlayerSpeed" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="txtOverviewPlayerSpeed" HorizontalAlignment="Left" Width="60" FontSize="20" VerticalAlignment="Stretch" TextChanged="txtOverviewPlayerSpeed_TextChanged"/>
                     </StackPanel>
                     <!--Proficency Bonus-->
                     <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="1">

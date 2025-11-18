@@ -39,7 +39,7 @@ namespace DndCharacterApp.UserInterface
             txtOverviewPlayerHp.Text = Player.Hp.ToString();
 			txtOverviewPlayerTempHp.Text = Player.TempHp.ToString();
 			txtOverviewPlayerAc.Text = Player.ArmorClass.ToString();
-			txtOverviewPlayerInitiative.Text = PlayerMods.Dex.ToString();
+			txtOverviewPlayerInitiative.Text = Player.InitiativeBonus.ToString();
 			txtOverviewPlayerSpeed.Text = Player.Speed.ToString();
 			txtOverviewPlayerPb.Text = Player.Prof.ToString();
 
@@ -203,13 +203,14 @@ namespace DndCharacterApp.UserInterface
 		/// <param name="e"></param>
 		private void txtOverviewPlayerHp_TextChanged(object sender, TextChangedEventArgs e)
 		{
+			int temp;
 			txtOverviewPlayerHp.Foreground = Brushes.Black;
-			if (!int.TryParse(txtOverviewPlayerHp.Text, out Player.Hp))
+			if (!int.TryParse(txtOverviewPlayerHp.Text, out temp))
 			{
 				txtOverviewPlayerHp.Foreground = Brushes.Red;
 				return;
             }
-            Player.UpdateTotalHp();
+            Player.Hp = temp;
         }
 
 		/// <summary>
@@ -219,14 +220,16 @@ namespace DndCharacterApp.UserInterface
 		/// <param name="e"></param>
 		private void txtOverviewPlayerTempHp_TextChanged(object sender, TextChangedEventArgs e)
 		{
+			int temp;
 			txtOverviewPlayerTempHp.Foreground = Brushes.Black;
-			if (!int.TryParse(txtOverviewPlayerTempHp.Text, out Player.TempHp))
+			if (!int.TryParse(txtOverviewPlayerTempHp.Text, out temp))
 			{
 				txtOverviewPlayerTempHp.Foreground = Brushes.Red;
 				return;
 			}
-			Player.UpdateTotalHp();
-		}
+			Player.TempHp = temp;
+
+        }
 
 		/// <summary>
 		/// sets the player ac
@@ -243,6 +246,40 @@ namespace DndCharacterApp.UserInterface
                 return;
             }
 			Player.ArmorClass = temp;
+        }
+
+		/// <summary>
+		/// sets the player initiative bonus
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void txtOverviewPlayerInitiative_TextChanged(object sender, TextChangedEventArgs e)
+        {
+			txtOverviewPlayerInitiative.Foreground = Brushes.Black;
+			int temp;
+			if(!int.TryParse(txtOverviewPlayerInitiative.Text, out temp))
+			{
+				txtOverviewPlayerInitiative.Foreground= Brushes.Red;
+				return;
+			}
+			Player.InitiativeBonus = temp;
+        }
+
+		/// <summary>
+		/// sets player speed
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void txtOverviewPlayerSpeed_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtOverviewPlayerSpeed.Foreground = Brushes.Black;
+            int temp;
+            if (!int.TryParse(txtOverviewPlayerSpeed.Text, out temp))
+            {
+                txtOverviewPlayerSpeed.Foreground = Brushes.Red;
+                return;
+            }
+            Player.Speed = temp;
         }
     }
 }

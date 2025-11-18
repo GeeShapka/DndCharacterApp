@@ -12,7 +12,7 @@ namespace DndCharacterApp.Objects.Parents
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:25:59 PM
 	 */
-    internal class BackgroundParent
+    public class BackgroundParent
     {
 
     }//end of Background

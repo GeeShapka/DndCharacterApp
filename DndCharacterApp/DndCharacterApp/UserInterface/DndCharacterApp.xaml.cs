@@ -1,4 +1,6 @@
 ﻿using DndCharacterApp.Objects.Player;
+using Microsoft.Win32;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace DndCharacterApp.UserInterface
 {
@@ -17,6 +21,7 @@ namespace DndCharacterApp.UserInterface
     /// </summary>
     public partial class DndCharacterApp_Window : Window
     {
+        private bool saveEnabled = true;
 
         public DndCharacterApp_Window()
         {
@@ -35,7 +40,36 @@ namespace DndCharacterApp.UserInterface
 
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            
+        }
 
+        private void SaveAsCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "Save As";
+            if(Player.Name.ToString() == string.Empty)
+            {
+                sfd.FileName = "idk";
+            }
+            else
+            {
+                sfd.FileName = Player.Name.ToString();
+            }    
+            sfd.Filter = "XML (.xml)|*.xml";
+
+            if(sfd.ShowDialog() != true)
+            {
+                return;
+            }
+
+            string fileName = sfd.FileName;
+            XmlSerializer serializer = new XmlSerializer(typeof(Player_NonStatic));
+
+            FileStream file = new FileStream(fileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(file);
+            serializer.Serialize(sw, new Player_NonStatic());
+            sw.Close();
+            file.Close();
         }
 
 

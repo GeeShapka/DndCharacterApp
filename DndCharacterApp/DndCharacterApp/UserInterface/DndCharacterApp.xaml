@@ -7,27 +7,31 @@
 		mc:Ignorable="d"
 		Title="DndCharacter" Height="960" Width="1080"
 		Closing="DndCharacter_Closing">
-    <Window.CommandBindings>
-        <CommandBinding Command="ApplicationCommands.New"
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.New"
 			Executed="NewCommand_Executed"/>
-        <CommandBinding Command="ApplicationCommands.Save"
+		<CommandBinding Command="ApplicationCommands.Save"
 			Executed="SaveCommand_Executed"/>
-        <CommandBinding Command="ApplicationCommands.Open"
+		<CommandBinding Command="ApplicationCommands.SaveAs"
+			Executed="SaveAsCommand_Executed"/>
+		<CommandBinding Command="ApplicationCommands.Open"
 			Executed="OpenCommand_Executed"/>
-        <CommandBinding Command="ApplicationCommands.Close"
+		<CommandBinding Command="ApplicationCommands.Close"
 			Executed="CloseCommand_Executed"/>
-    </Window.CommandBindings>
-    <DockPanel>
+	</Window.CommandBindings>
+	<DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">
 				<MenuItem Header="_New"
-			  Command="ApplicationCommands.New"/>
+					Command="ApplicationCommands.New"/>
 				<MenuItem Header="_Open"
-			  Command="ApplicationCommands.Open"/>
+					Command="ApplicationCommands.Open"/>
 				<MenuItem Header="_Save"
-			  Command="ApplicationCommands.Save"/>
+					Command="ApplicationCommands.Save"/>
+				<MenuItem Header="Save _As"
+					Command="ApplicationCommands.SaveAs"/>
 				<MenuItem Header="E_xit"
-			  Command="ApplicationCommands.Close"/>
+					Command="ApplicationCommands.Close"/>
 			</MenuItem>
 			<MenuItem Header="T_ools">
 			</MenuItem>
@@ -51,18 +55,18 @@
 
 			<!-- HP -->
 			<StackPanel Orientation="Horizontal" Grid.Column="0">
-                <Label Name="lblBottomHp"/>
-            </StackPanel>
+				<Label Name="lblBottomHp" Content="HP: 0"/>
+			</StackPanel>
 
 			<!-- AC -->
 			<StackPanel Orientation="Horizontal" Grid.Column="1">
-                <Label Name="lblBottomAc"/>
-            </StackPanel>
+				<Label Name="lblBottomAc" Content="AC: 0"/>
+			</StackPanel>
 
 			<!-- Speed -->
 			<StackPanel Orientation="Horizontal" Grid.Column="2">
-                <Label Name="lblBottomSpeed"/>
-            </StackPanel>
+				<Label Name="lblBottomSpeed" Content="Speed: 0"/>
+			</StackPanel>
 
 		</Grid>
 		
@@ -78,12 +82,12 @@
 			<TabItem Header="Stats">
 				<local:TabStats/>
 			</TabItem>
-            <TabItem Header="one class"/>
-            <TabItem Header="another class"/>
-            <TabItem Header="Inventory"/>
-            <TabItem Header="character details">
-                <Label Content="race stuff, background, traits"/>
-            </TabItem>
-        </TabControl>
+			<TabItem Header="one class"/>
+			<TabItem Header="another class"/>
+			<TabItem Header="Inventory"/>
+			<TabItem Header="character details">
+				<Label Content="race stuff, background, traits"/>
+			</TabItem>
+		</TabControl>
 	</DockPanel>
 </Window>

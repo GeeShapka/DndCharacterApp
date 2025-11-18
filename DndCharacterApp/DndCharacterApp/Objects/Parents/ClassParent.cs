@@ -12,7 +12,7 @@ namespace DndCharacterApp.Objects.Parents
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:26:27 PM
 	 */
-    internal class ClassParent
+    public class ClassParent
     {
 
     }//end of Class
