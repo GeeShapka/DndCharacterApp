@@ -17,7 +17,7 @@ namespace DndCharacterApp.Objects.Player
 	{
 		public Player_NonStatic()
 		{
-			Name = Player.Name.ToString();
+			Name = Player.Name;
 			Xp = Player.Xp;
 			Level = Player.Level;
 			Hp = Player.Hp;
@@ -46,6 +46,8 @@ namespace DndCharacterApp.Objects.Player
 			Skin = Player.Skin.ToString();
 			Eyes = Player.Eyes.ToString();
 			Hair = Player.Hair.ToString();
+
+			NotePad = Player.NotePad;
 
 			Str = PlayerMods.Str;
 			StrSave = PlayerMods.StrSave;
@@ -151,7 +153,7 @@ namespace DndCharacterApp.Objects.Player
 			addPersuasion = PlayerMods.addPersuasion;
 		}
 
-		public String Name;
+		public string? Name;
 		public int Xp;
 		public int Level;
 		public int Hp;
@@ -180,6 +182,8 @@ namespace DndCharacterApp.Objects.Player
 		public string? Skin;
 		public string? Eyes;
 		public string? Hair;
+
+		public string? NotePad;
 
 		//player mods variables
 		// strength

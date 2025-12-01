@@ -19,7 +19,7 @@ namespace DndCharacterApp.Objects.Player
 	internal partial class Player
 	{
 		//variables
-		public static StringBuilder Name = new StringBuilder();
+		public static string? Name;
 		public static int			Xp = 0;
 		public static int			Level = 0;
 		private static int			_hp;
@@ -73,7 +73,7 @@ namespace DndCharacterApp.Objects.Player
 		public static int			Prof = 0;
 		public static StringBuilder Alignment = new StringBuilder();
 		public static BackgroundParent? Background = new BackgroundParent();
-		public static RaceParent? Race = new RaceParent();
+		public static RaceParent?   Race = new RaceParent();
 		public static List<ClassParent> Classes = new List<ClassParent>();
 		public static int			ScoreStr = 0;
 		public static int			ScoreDex = 0;
@@ -101,6 +101,8 @@ namespace DndCharacterApp.Objects.Player
 		public static StringBuilder Skin = new StringBuilder();
 		public static StringBuilder Eyes = new StringBuilder();
 		public static StringBuilder Hair = new StringBuilder();
+
+        public static string?       NotePad;
 
 		public static event PropertyChangedEventHandler? StaticPropertyChanged;
 
@@ -155,8 +157,7 @@ namespace DndCharacterApp.Objects.Player
 		/// <param name="player"></param>
 		public static void ImportStats(Player_NonStatic player)
 		{
-			Name.Clear();
-			Name.Append(player.Name);
+			Name = player.Name;
 			Xp = player.Xp;
 			Level = player.Level;
 			Hp = player.Hp;
@@ -189,6 +190,8 @@ namespace DndCharacterApp.Objects.Player
 			Eyes.Append(player.Eyes);
 			Hair.Clear();
 			Hair.Append(player.Hair);
+
+            NotePad = player.NotePad;
 
 			PlayerMods.Str = player.Str;
 			PlayerMods.StrSave = player.StrSave;
@@ -300,7 +303,7 @@ namespace DndCharacterApp.Objects.Player
 
         public static void RemoveStats()
 		{
-            Name.Clear();
+            Name = string.Empty;
             Xp = 0;
             Level = 0;
             Hp = 0;
@@ -329,6 +332,8 @@ namespace DndCharacterApp.Objects.Player
             Skin.Clear();
             Eyes.Clear();
             Hair.Clear();
+
+            NotePad = string.Empty;
 
             PlayerMods.Str = 0;
             PlayerMods.StrSave = 0;

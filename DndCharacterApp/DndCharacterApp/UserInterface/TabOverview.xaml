@@ -108,7 +108,7 @@
             <!--notes-->
             <DockPanel  Grid.Row="0" Grid.Column="1">
                 <Label Content="Notes:" FontSize="30" DockPanel.Dock="Top"/>
-                <TextBox x:Name="txtOverviewNotePad" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
+                <TextBox x:Name="txtOverviewNotePad" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" TextChanged="txtOverviewNotePad_TextChanged"/>
             </DockPanel>
 
         </Grid>

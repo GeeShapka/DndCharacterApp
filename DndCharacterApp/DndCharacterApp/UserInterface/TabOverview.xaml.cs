@@ -44,6 +44,8 @@ namespace DndCharacterApp.UserInterface
 			txtOverviewPlayerSpeed.Text = Player.Speed.ToString();
 			txtOverviewPlayerPb.Text = Player.Prof.ToString();
 
+			txtOverviewNotePad.Text = Player.NotePad;
+
 			//update stats
 			lblOverviewStrengthModifier.Content = PlayerMods.Str.ToString();
 			lblOverviewStrengthSave.Content = PlayerMods.StrSave.ToString();
@@ -281,6 +283,11 @@ namespace DndCharacterApp.UserInterface
                 return;
             }
             Player.Speed = temp;
+        }
+
+        private void txtOverviewNotePad_TextChanged(object sender, TextChangedEventArgs e)
+        {
+			Player.NotePad = txtOverviewNotePad.Text;
         }
     }
 }
