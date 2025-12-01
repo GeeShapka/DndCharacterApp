@@ -52,7 +52,7 @@
         </StackPanel>
 
         <Label Content="Athletics" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsAthletics" IsChecked="True" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsAthletics" x:Name="radStatsAthleticsSaveNone" IsChecked="True" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsAthleticsSaveProf" GroupName="radGroupStatsAthletics" Content="Proficiency" Click="radStatsAthleticsSaveProf_Click"/>
@@ -65,7 +65,7 @@
 
         <!--Dexterity-->
         <Label Content="Dexterity Saving Throw" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsDexteritySave" IsChecked="True" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsDexteritySave" x:Name="radStatsDexteritySaveNone" IsChecked="True" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsDexteritySaveProf" GroupName="radGroupStatsDexteritySave" Content="Proficiency" Click="radStatsDexteritySaveProf_Click"/>
@@ -77,7 +77,7 @@
         </StackPanel>
 
         <Label Content="Acrobatics" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsAcrobatics" IsChecked="True" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsAcrobatics" x:Name="radStatsAcrobaticsSaveNone" IsChecked="True" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsAcrobaticsSaveProf" GroupName="radGroupStatsAcrobatics" Content="Proficiency" Click="radStatsAcrobaticsSaveProf_Click"/>
@@ -89,7 +89,7 @@
         </StackPanel>
 
         <Label Content="Sleight of Hand" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsSleightOfHand" IsChecked="True" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsSleightOfHand" x:Name="radStatsSleightOfHandSaveNone" IsChecked="True" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsSleightOfHandSaveProf" GroupName="radGroupStatsSleightOfHand" Content="Proficiency" Click="radStatsSleightOfHandSaveProf_Click"/>
@@ -101,7 +101,7 @@
         </StackPanel>
 
         <Label Content="Stealth" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsStealth" IsChecked="True" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsStealth" x:Name="radStatsStealthSaveNone" IsChecked="True" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsStealthSaveProf" GroupName="radGroupStatsStealth" Content="Proficiency" Click="radStatsStealthSaveProf_Click"/>
@@ -114,7 +114,7 @@
 
         <!--Constitution-->
         <Label Content="Constitution Saving Throw" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsConstitutionSave" IsChecked="True" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsConstitutionSave" x:Name="radStatsConstitutionSaveNone" IsChecked="True" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsConstitutionSaveProf" GroupName="radGroupStatsConstitutionSave" Content="Proficiency" Click="radStatsConstitutionSaveProf_Click"/>
@@ -127,7 +127,7 @@
 
         <!--Intelligence-->
         <Label Content="Intelligence Saving Throw" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsIntelligenceSave" IsChecked="True" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsIntelligenceSave" x:Name="radStatsIntelligenceSaveNone" IsChecked="True" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsIntelligenceSaveProf" GroupName="radGroupStatsIntelligenceSave" Content="Proficiency" Click="radStatsIntelligenceSaveProf_Click"/>
@@ -139,7 +139,7 @@
         </StackPanel>
 
         <Label Content="Arcana" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsArcana" IsChecked="True" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsArcana" x:Name="radStatsArcanaSaveNone" IsChecked="True" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsArcanaSaveProf" GroupName="radGroupStatsArcana" Content="Proficiency" Click="radStatsArcanaSaveProf_Click"/>
@@ -151,7 +151,7 @@
         </StackPanel>
 
         <Label Content="History" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsHistory" IsChecked="True" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsHistory" x:Name="radStatsHistorySaveNone" IsChecked="True" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsHistorySaveProf" GroupName="radGroupStatsHistory" Content="Proficiency" Click="radStatsHistorySaveProf_Click"/>
@@ -163,7 +163,7 @@
         </StackPanel>
 
         <Label Content="Investigation" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsInvestigation" IsChecked="True" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsInvestigation" x:Name="radStatsInvestigationSaveNone" IsChecked="True" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsInvestigationSaveProf" GroupName="radGroupStatsInvestigation" Content="Proficiency" Click="radStatsInvestigationSaveProf_Click"/>
@@ -175,7 +175,7 @@
         </StackPanel>
 
         <Label Content="Nature" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsNature" IsChecked="True" Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsNature" x:Name="radStatsNatureSaveNone" IsChecked="True" Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsNatureSaveProf" GroupName="radGroupStatsNature" Content="Proficiency" Click="radStatsNatureSaveProf_Click"/>
@@ -187,7 +187,7 @@
         </StackPanel>
 
         <Label Content="Religion" Grid.Row="12" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsReligion" IsChecked="True" Grid.Row="12" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsReligion" x:Name="radStatsReligionSaveNone" IsChecked="True" Grid.Row="12" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsReligionSaveProf" GroupName="radGroupStatsReligion" Content="Proficiency" Click="radStatsReligionSaveProf_Click"/>
@@ -200,7 +200,7 @@
 
         <!--Wisdom-->
         <Label Content="Wisdom Saving Throw" Grid.Row="13" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsWisdomSave" IsChecked="True" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsWisdomSave" x:Name="radStatsWisdomSaveNone" IsChecked="True" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="13" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsWisdomSaveProf" GroupName="radGroupStatsWisdomSave" Content="Proficiency" Click="radStatsWisdomSaveProf_Click"/>
@@ -212,7 +212,7 @@
         </StackPanel>
 
         <Label Content="Animal Handling" Grid.Row="14" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsAnimalHandling" IsChecked="True" Grid.Row="14" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsAnimalHandling" x:Name="radStatsAnimalHandlingSaveNone" IsChecked="True" Grid.Row="14" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="14" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsAnimalHandlingSaveProf" GroupName="radGroupStatsAnimalHandling" Content="Proficiency" Click="radStatsAnimalHandlingSaveProf_Click"/>
@@ -224,7 +224,7 @@
         </StackPanel>
 
         <Label Content="Insight" Grid.Row="15" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsInsight" IsChecked="True" Grid.Row="15" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsInsight" x:Name="radStatsInsightSaveNone" IsChecked="True" Grid.Row="15" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="15" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsInsightSaveProf" GroupName="radGroupStatsInsight" Content="Proficiency" Click="radStatsInsightSaveProf_Click"/>
@@ -236,7 +236,7 @@
         </StackPanel>
 
         <Label Content="Medicine" Grid.Row="16" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsMedicine" IsChecked="True" Grid.Row="16" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsMedicine" x:Name="radStatsMedicineSaveNone" IsChecked="True" Grid.Row="16" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="16" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsMedicineSaveProf" GroupName="radGroupStatsMedicine" Content="Proficiency" Click="radStatsMedicineSaveProf_Click"/>
@@ -248,7 +248,7 @@
         </StackPanel>
 
         <Label Content="Perception" Grid.Row="17" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsPerception" IsChecked="True" Grid.Row="17" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsPerception" x:Name="radStatsPerceptionSaveNone" IsChecked="True" Grid.Row="17" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="17" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsPerceptionSaveProf" GroupName="radGroupStatsPerception" Content="Proficiency" Click="radStatsPerceptionSaveProf_Click"/>
@@ -260,7 +260,7 @@
         </StackPanel>
 
         <Label Content="Survival" Grid.Row="18" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsSurvival" IsChecked="True" Grid.Row="18" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsSurvival" x:Name="radStatsSurvivalSaveNone" IsChecked="True" Grid.Row="18" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="18" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsSurvivalSaveProf" GroupName="radGroupStatsSurvival" Content="Proficiency" Click="radStatsSurvivalSaveProf_Click"/>
@@ -273,7 +273,7 @@
 
         <!--Charisma-->
         <Label Content="Charisma Saving Throw" Grid.Row="19" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsCharismaSave" IsChecked="True" Grid.Row="19" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsCharismaSave" x:Name="radStatsCharismaSaveNone" IsChecked="True" Grid.Row="19" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="19" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsCharismaSaveProf" GroupName="radGroupStatsCharismaSave" Content="Proficiency" Click="radStatsCharismaSaveProf_Click"/>
@@ -285,7 +285,7 @@
         </StackPanel>
 
         <Label Content="Deception" Grid.Row="20" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsDeception" IsChecked="True" Grid.Row="20" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsDeception" x:Name="radStatsDeceptionSaveNone" IsChecked="True" Grid.Row="20" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="20" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsDeceptionSaveProf" GroupName="radGroupStatsDeception" Content="Proficiency" Click="radStatsDeceptionSaveProf_Click"/>
@@ -297,7 +297,7 @@
         </StackPanel>
 
         <Label Content="Intimidation" Grid.Row="21" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsIntimidation" IsChecked="True" Grid.Row="21" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsIntimidation" x:Name="radStatsIntimidationSaveNone" IsChecked="True" Grid.Row="21" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="21" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsIntimidationSaveProf" GroupName="radGroupStatsIntimidation" Content="Proficiency" Click="radStatsIntimidationSaveProf_Click"/>
@@ -309,7 +309,7 @@
         </StackPanel>
 
         <Label Content="Performance" Grid.Row="22" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsPerformance" IsChecked="True" Grid.Row="22" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsPerformance" x:Name="radStatsPerformanceSaveNone" IsChecked="True" Grid.Row="22" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="22" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsPerformanceSaveProf" GroupName="radGroupStatsPerformance" Content="Proficiency" Click="radStatsPerformanceSaveProf_Click"/>
@@ -321,7 +321,7 @@
         </StackPanel>
 
         <Label Content="Persuasion" Grid.Row="23" Grid.Column="0" VerticalAlignment="Center"/>
-        <RadioButton GroupName="radGroupStatsPersuasion" IsChecked="True" Grid.Row="23" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+        <RadioButton GroupName="radGroupStatsPersuasion" x:Name="radStatsPersuasionSaveNone" IsChecked="True" Grid.Row="23" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <StackPanel Orientation="Horizontal" Grid.Row="23" Grid.Column="1" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <RadioButton x:Name="radStatsPersuasionSaveProf" GroupName="radGroupStatsPersuasion" Content="Proficiency" Click="radStatsPersuasionSaveProf_Click"/>
@@ -331,6 +331,7 @@
             <Label Content="Extra: "/>
             <TextBox x:Name="txtStatsPersuasionSaveExtra" Width="20" Height="20" TextChanged="txtStatsPersuasionSaveExtra_TextChanged"/>
         </StackPanel>
+
 
 
 

@@ -24,6 +24,7 @@ namespace DndCharacterApp.UserInterface
         public StatsAdvancedStats()
         {
             InitializeComponent();
+            DndCharacterApp_Window.UpdateTabs += UpdateAdvancedStatsTab;
         }
 
         //strength
@@ -605,6 +606,370 @@ namespace DndCharacterApp.UserInterface
         {
             PlayerMods.expStr = false;
             PlayerMods.profStr = false;
+        }
+
+        private void UpdateAdvancedStatsTab()
+        {
+            // STR
+            if (PlayerMods.profStr)
+            {
+                radStatsStrengthSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expStr)
+            {
+                radStatsStrengthSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsStrengthSaveNone.IsChecked = true;
+            }
+            txtStatsStrengthSaveExtra.Text = PlayerMods.addStr.ToString();
+
+            // Athletics
+            if (PlayerMods.profAthletics)
+            {
+                radStatsAthleticsSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expAthletics)
+            {
+                radStatsAthleticsSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsAthleticsSaveNone.IsChecked = true;
+            }
+            txtStatsAthleticsSaveExtra.Text = PlayerMods.addAthletics.ToString();
+
+            // DEX
+            if (PlayerMods.profDex)
+            {
+                radStatsDexteritySaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expDex)
+            {
+                radStatsDexteritySaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsDexteritySaveNone.IsChecked = true;
+            }
+            txtStatsDexteritySaveExtra.Text = PlayerMods.addDex.ToString();
+
+            // Acrobatics
+            if (PlayerMods.profAcrobatics)
+            {
+                radStatsAcrobaticsSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expAcrobatics)
+            {
+                radStatsAcrobaticsSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsAcrobaticsSaveNone.IsChecked = true;
+            }
+            txtStatsAcrobaticsSaveExtra.Text = PlayerMods.addAcrobatics.ToString();
+
+            // Sleight of Hand
+            if (PlayerMods.profSleightOfHand)
+            {
+                radStatsSleightOfHandSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expSleightOfHand)
+            {
+                radStatsSleightOfHandSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsSleightOfHandSaveNone.IsChecked = true;
+            }
+            txtStatsSleightOfHandSaveExtra.Text = PlayerMods.addSleightOfHand.ToString();
+
+            // Stealth
+            if (PlayerMods.profStealth)
+            {
+                radStatsStealthSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expStealth)
+            {
+                radStatsStealthSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsStealthSaveNone.IsChecked = true;
+            }
+            txtStatsStealthSaveExtra.Text = PlayerMods.addStealth.ToString();
+
+            // CON
+            if (PlayerMods.profCon)
+            {
+                radStatsConstitutionSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expCon)
+            {
+                radStatsConstitutionSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsConstitutionSaveNone.IsChecked = true;
+            }
+            txtStatsConstitutionSaveExtra.Text = PlayerMods.addCon.ToString();
+
+            // INT
+            if (PlayerMods.profInt)
+            {
+                radStatsIntelligenceSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expInt)
+            {
+                radStatsIntelligenceSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsIntelligenceSaveNone.IsChecked = true;
+            }
+            txtStatsIntelligenceSaveExtra.Text = PlayerMods.addInt.ToString();
+
+            // Arcana
+            if (PlayerMods.profArcana)
+            {
+                radStatsArcanaSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expArcana)
+            {
+                radStatsArcanaSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsArcanaSaveNone.IsChecked = true;
+            }
+            txtStatsArcanaSaveExtra.Text = PlayerMods.addArcana.ToString();
+
+            // History
+            if (PlayerMods.profHistory)
+            {
+                radStatsHistorySaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expHistory)
+            {
+                radStatsHistorySaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsHistorySaveNone.IsChecked = true;
+            }
+            txtStatsHistorySaveExtra.Text = PlayerMods.addHistory.ToString();
+
+            // Investigation
+            if (PlayerMods.profInvestigation)
+            {
+                radStatsInvestigationSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expInvestigation)
+            {
+                radStatsInvestigationSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsInvestigationSaveNone.IsChecked = true;
+            }
+            txtStatsInvestigationSaveExtra.Text = PlayerMods.addInvestigation.ToString();
+
+            // Nature
+            if (PlayerMods.profNature)
+            {
+                radStatsNatureSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expNature)
+            {
+                radStatsNatureSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsNatureSaveNone.IsChecked = true;
+            }
+            txtStatsNatureSaveExtra.Text = PlayerMods.addNature.ToString();
+
+            // Religion
+            if (PlayerMods.profReligion)
+            {
+                radStatsReligionSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expReligion)
+            {
+                radStatsReligionSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsReligionSaveNone.IsChecked = true;
+            }
+            txtStatsReligionSaveExtra.Text = PlayerMods.addReligion.ToString();
+
+            // WIS
+            if (PlayerMods.profWis)
+            {
+                radStatsWisdomSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expWis)
+            {
+                radStatsWisdomSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsWisdomSaveNone.IsChecked = true;
+            }
+            txtStatsWisdomSaveExtra.Text = PlayerMods.addWis.ToString();
+
+            // Animal Handling
+            if (PlayerMods.profAnimalHandling)
+            {
+                radStatsAnimalHandlingSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expAnimalHandling)
+            {
+                radStatsAnimalHandlingSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsAnimalHandlingSaveNone.IsChecked = true;
+            }
+            txtStatsAnimalHandlingSaveExtra.Text = PlayerMods.addAnimalHandling.ToString();
+
+            // Insight
+            if (PlayerMods.profInsight)
+            {
+                radStatsInsightSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expInsight)
+            {
+                radStatsInsightSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsInsightSaveNone.IsChecked = true;
+            }
+            txtStatsInsightSaveExtra.Text = PlayerMods.addInsight.ToString();
+
+            // Medicine
+            if (PlayerMods.profMedicine)
+            {
+                radStatsMedicineSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expMedicine)
+            {
+                radStatsMedicineSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsMedicineSaveNone.IsChecked = true;
+            }
+            txtStatsMedicineSaveExtra.Text = PlayerMods.addMedicine.ToString();
+
+            // Perception
+            if (PlayerMods.profPerception)
+            {
+                radStatsPerceptionSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expPerception)
+            {
+                radStatsPerceptionSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsPerceptionSaveNone.IsChecked = true;
+            }
+            txtStatsPerceptionSaveExtra.Text = PlayerMods.addPerception.ToString();
+
+            // Survival
+            if (PlayerMods.profSurvival)
+            {
+                radStatsSurvivalSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expSurvival)
+            {
+                radStatsSurvivalSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsSurvivalSaveNone.IsChecked = true;
+            }
+            txtStatsSurvivalSaveExtra.Text = PlayerMods.addSurvival.ToString();
+
+            // CHA
+            if (PlayerMods.profCha)
+            {
+                radStatsCharismaSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expCha)
+            {
+                radStatsCharismaSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsCharismaSaveNone.IsChecked = true;
+            }
+            txtStatsCharismaSaveExtra.Text = PlayerMods.addCha.ToString();
+
+            // Deception
+            if (PlayerMods.profDeception)
+            {
+                radStatsDeceptionSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expDeception)
+            {
+                radStatsDeceptionSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsDeceptionSaveNone.IsChecked = true;
+            }
+            txtStatsDeceptionSaveExtra.Text = PlayerMods.addDeception.ToString();
+
+            // Intimidation
+            if (PlayerMods.profIntimidation)
+            {
+                radStatsIntimidationSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expIntimidation)
+            {
+                radStatsIntimidationSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsIntimidationSaveNone.IsChecked = true;
+            }
+            txtStatsIntimidationSaveExtra.Text = PlayerMods.addIntimidation.ToString();
+
+            // Performance
+            if (PlayerMods.profPerformance)
+            {
+                radStatsPerformanceSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expPerformance)
+            {
+                radStatsPerformanceSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsPerformanceSaveNone.IsChecked = true;
+            }
+            txtStatsPerformanceSaveExtra.Text = PlayerMods.addPerformance.ToString();
+
+            // Persuasion
+            if (PlayerMods.profPersuasion)
+            {
+                radStatsPersuasionSaveProf.IsChecked = true;
+            }
+            else if (PlayerMods.expPersuasion)
+            {
+                radStatsPersuasionSaveExp.IsChecked = true;
+            }
+            else
+            {
+                radStatsPersuasionSaveNone.IsChecked = true;
+            }
+            txtStatsPersuasionSaveExtra.Text = PlayerMods.addPersuasion.ToString();
+
         }
     }//end of class
 }
