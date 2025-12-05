@@ -82,7 +82,9 @@
 			<TabItem Header="Stats">
 				<local:TabStats/>
 			</TabItem>
-			<TabItem Header="one class"/>
+            <TabItem Header="Class">
+                <local:TabClass/>
+            </TabItem>
 			<TabItem Header="another class"/>
 			<TabItem Header="Inventory"/>
 			<TabItem Header="character details">
