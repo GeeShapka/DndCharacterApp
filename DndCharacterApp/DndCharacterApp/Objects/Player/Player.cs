@@ -75,6 +75,21 @@ namespace DndCharacterApp.Objects.Player
 		public static BackgroundParent? Background = new BackgroundParent();
 		public static RaceParent?   Race = new RaceParent();
 		public static List<ClassParent> Classes = new List<ClassParent>();
+
+        private static int _druidLevels = 0;
+        public static int DruidLevels
+        {
+            get { return _druidLevels; }
+            set
+            {
+                if( _druidLevels != value)
+                {
+                    _druidLevels= value;
+                    StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidLevels)));
+                }
+            }
+        }
+
 		public static int			ScoreStr = 0;
 		public static int			ScoreDex = 0;
 		public static int			ScoreCon = 0;

@@ -85,7 +85,9 @@
             <TabItem Header="Class">
                 <local:TabClass/>
             </TabItem>
-			<TabItem Header="another class"/>
+            <TabItem Header="Druid">
+                <local:TabDruid/>
+            </TabItem>
 			<TabItem Header="Inventory"/>
 			<TabItem Header="character details">
 				<Label Content="race stuff, background, traits"/>
