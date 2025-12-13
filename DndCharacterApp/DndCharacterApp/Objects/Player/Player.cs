@@ -89,6 +89,16 @@ namespace DndCharacterApp.Objects.Player
                 }
             }
         }
+        private static string _druidSubclass = "";
+        public static string DruidSubclass
+        {
+            get { return _druidSubclass; }
+            set
+            {
+                _druidSubclass= value;
+                StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidSubclass)));
+            }
+        }
 
 		public static int			ScoreStr = 0;
 		public static int			ScoreDex = 0;

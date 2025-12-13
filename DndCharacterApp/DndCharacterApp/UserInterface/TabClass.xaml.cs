@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DndCharacterApp.Objects.Player;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -27,11 +28,53 @@ namespace DndCharacterApp.UserInterface
             InitializeComponent();
         }
 
-        private void comboClassLevel1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboClassLevel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string theClass = comboClassLevel1.SelectedItem.ToString() ?? "NULL";
-            theClass = theClass.Remove(0, 38);
-            MessageBox.Show(theClass);
+            //set all levels to 0
+            Player.DruidLevels = 0;
+
+            //initiallize array
+            string[] classes = new string[20];
+
+            //get all classes
+            string class1 = "";
+            string class2 = "";
+            string class3 = "";
+
+            if(comboClassLevel1.SelectedItem != null)
+            {
+                class1 = comboClassLevel1.SelectedItem.ToString() ?? "NULL";
+                class1 = class1.Remove(0, 38);
+            }
+            if(comboClassLevel2.SelectedItem != null)
+            {
+                class2 = comboClassLevel2.SelectedItem.ToString() ?? "NULL";
+                class2 = class2.Remove(0, 38);
+            }
+            if(comboClassLevel3.SelectedItem != null)
+            {
+                class3 = comboClassLevel3.SelectedItem.ToString() ?? "NULL";
+                class3 = class3.Remove(0, 38);
+            }
+
+
+            classes[0] = class1;
+            classes[1] = class2;
+            classes[2] = class3;
+
+
+            foreach (string s in classes)
+            {
+                switch (s)
+                {
+                    case "Druid":
+                        Player.DruidLevels++;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
         }
     }
 }

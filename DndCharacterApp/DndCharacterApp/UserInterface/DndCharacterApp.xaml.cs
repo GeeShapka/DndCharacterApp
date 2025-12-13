@@ -30,6 +30,7 @@ namespace DndCharacterApp.UserInterface
         {
             InitializeComponent();
             Player.StaticPropertyChanged += UpdateStats;
+            Player.StaticPropertyChanged += ShowClassTabs;
             SaveCommand.IsEnabled = false;
         }
 
@@ -109,13 +110,13 @@ namespace DndCharacterApp.UserInterface
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "Save As";
-            if (Player.Name.ToString() == string.Empty)
+            if (Player.Name == string.Empty)
             {
                 sfd.FileName = "idk";
             }
             else
             {
-                sfd.FileName = Player.Name.ToString();
+                sfd.FileName = Player.Name;
             }
             sfd.Filter = "XML (.xml)|*.xml";
 

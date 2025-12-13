@@ -69,9 +69,44 @@
 
             <Label Content="1st" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
             <Label Content="+2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
-            <ComboBox Grid.Column="2" Margin="2" x:Name="comboClassLevel1" SelectionChanged="comboClassLevel1_SelectionChanged">
-                <ComboBoxItem Content="barbarian"/>
-                <ComboBoxItem Content="bard"/>
+            <ComboBox Grid.Column="2" Margin="2" Name="comboClassLevel1" SelectionChanged="comboClassLevel_SelectionChanged">
+                <ComboBoxItem Content="Barbarian"/>
+                <ComboBoxItem Content="Bard"/>
+                <ComboBoxItem Content="Druid"/>
+                <!--...-->
+            </ComboBox>
+        </Grid>
+        <!--Level 2-->
+        <Grid Grid.Row="3" Grid.Column="0" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="2nd" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
+            <Label Content="+2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
+            <ComboBox Grid.Column="2" Margin="2" Name="comboClassLevel2" SelectionChanged="comboClassLevel_SelectionChanged">
+                <ComboBoxItem Content="Barbarian"/>
+                <ComboBoxItem Content="Bard"/>
+                <ComboBoxItem Content="Druid"/>
+                <!--...-->
+            </ComboBox>
+        </Grid>
+        <!--Level 3-->
+        <Grid Grid.Row="5" Grid.Column="0" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="3rd" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
+            <Label Content="+2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="20"/>
+            <ComboBox Grid.Column="2" Margin="2" Name="comboClassLevel3" SelectionChanged="comboClassLevel_SelectionChanged">
+                <ComboBoxItem Content="Barbarian"/>
+                <ComboBoxItem Content="Bard"/>
+                <ComboBoxItem Content="Druid"/>
                 <!--...-->
             </ComboBox>
         </Grid>

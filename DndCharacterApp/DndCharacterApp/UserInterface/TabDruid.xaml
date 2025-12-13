@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Grid ShowGridLines="True">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -32,17 +32,17 @@
             <!--1st-->
             <StackPanel Name="stkDruid1st" Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Background="LightGray">
                 <Label Content="1st Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidDruidic" Content="Druidic" Margin="10" Padding="5" Click="btnDruidDruidic_Click"/>
-                <Button Name="btnDruidSpellcasting" Content="Spellcasting" Margin="10" Padding="5" Click="btnDruidSpellcasting_Click"/>
+                <Button Name="btnDruidDruidic" Content="Druidic" Margin="5, 10" Padding="5" Click="btnDruidDruidic_Click"/>
+                <Button Name="btnDruidSpellcasting" Content="Spellcasting" Margin="5, 10" Padding="5" Click="btnDruidSpellcasting_Click"/>
             </StackPanel>
             
             <!--2nd-->
             <StackPanel Name="stkDruid2nd" Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Background="LightGray">
                 <Label Content="2nd Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidWildShape" Content="Wild Shape" Margin="10" Padding="5" Click="btnDruidWildShape_Click"/>
+                <Button Name="btnDruidWildShape" Content="Wild Shape" Margin="5, 10" Padding="5" Click="btnDruidWildShape_Click"/>
                 <StackPanel>
                     <Label  Content="Druidic Circle" Padding="30, 10, 30, 0"/>
-                    <ComboBox Name="DruidSubClass" Margin="10">
+                    <ComboBox Name="comboDruidSubClass" Margin="5, 10" SelectionChanged="comboDruidSubClass_SelectionChanged">
                         <ComboBoxItem Content="Dreams"/>
                         <ComboBoxItem Content="Land"/>
                         <ComboBoxItem Content="Moon"/>
@@ -52,9 +52,14 @@
                         <ComboBoxItem Content="Wildfire"/>
                     </ComboBox>
                 </StackPanel>
-                <Button Name="btnDruidWildCompanion" Margin="10" Padding="5">
+                <Button Name="btnDruidWildCompanion" Margin="5, 10" Padding="5" Click="btnDruidWildCompanion_Click">
                     <TextBlock Text="Wild Companion (Optional)" TextAlignment="Center" TextWrapping="Wrap" Width="100"/>
                 </Button>
+                
+                <!--spores-->
+                <Button Name="btnDruidSporesCircleSpells" Content="Circle Spells" Margin="5, 10" Padding="5" Visibility="Hidden" Click="btnDruidSporesCircleSpells_Click"/>
+                <Button Name="btnDruidSporesHaloOfSpores" Content="Halo of Spores" Margin="5, 10" Padding="5" Visibility="Hidden" Click="btnDruidSporesHaloOfSpores_Click"/>
+                <Button Name="btnDruidSporesSymbioticEntity" Content="Symbiotic Entity" Margin="5, 10" Padding="5" Visibility="Hidden" Click="btnDruidSporesSymbioticEntity_Click"/>
             </StackPanel>
             
             <!--3rd-->
@@ -65,11 +70,11 @@
             <!--4th-->
             <StackPanel Name="stkDruid4th" Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Background="LightGray">
                 <Label Content="4th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidWildShapeImprovement" Margin="10" Padding="5">
+                <Button Name="btnDruidWildShapeImprovement" Margin="5, 10" Padding="5" Click="btnDruidWildShape_Click">
                     <TextBlock Text="Wild Shape Imporvement" TextWrapping="Wrap" Width="80" TextAlignment="Center"/>
                 </Button>
-                <Button Name="btnDruidAsi" Content="ASI / Feat" Margin="10" Padding="5"/>
-                <Button Name="btnDruidCantripVersatility" Margin="10" Padding="5">
+                <Button Name="btnDruidAsi" Content="ASI / Feat" Margin="5, 10" Padding="5" Click="btnDruidAsi_Click"/>
+                <Button Name="btnDruidCantripVersatility" Margin="5, 10" Padding="5" Click="btnDruidCantripVersatility_Click">
                     <TextBlock Text="Cantrip Versatility (Optional)" TextWrapping="Wrap" Width="70" TextAlignment="Center"/>
                 </Button>
             </StackPanel>
@@ -81,7 +86,7 @@
             <!--6th-->
             <StackPanel Name="stkDruid6th" Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Background="LightGray">
                 <Label Content="6th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidSubclassFeature6" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+                <Button Name="btnDruidSubclassFeature6" Content="Druid Circle Feature" Margin="5, 10" Padding="5"/>
             </StackPanel>
 
             <!--7th-->
@@ -92,8 +97,8 @@
             <!--8th-->
             <StackPanel Name="stkDruid8th" Orientation="Horizontal" Grid.Row="7" Grid.Column="0" Background="LightGray">
                 <Label Content="8th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidAsi8" Content="ASI / Feat" Margin="10" Padding="5"/>
-                <Button Name="btnDruidWildShapeImprovement8" Content="Wild Shape Improvement" Margin="10" Padding="5"/>
+                <Button Name="btnDruidAsi8" Content="ASI / Feat" Margin="5, 10" Padding="5" Click="btnDruidAsi_Click"/>
+                <Button Name="btnDruidWildShapeImprovement8" Content="Wild Shape Improvement" Margin="5, 10" Padding="5" Click="btnDruidWildShape_Click"/>
             </StackPanel>
 
             <!--9th-->
@@ -104,7 +109,7 @@
             <!--10th-->
             <StackPanel Name="stkDruid10th" Orientation="Horizontal" Grid.Row="9" Grid.Column="0" Background="LightGray">
                 <Label Content="10th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidSubclassFeature10" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+                <Button Name="btnDruidSubclassFeature10" Content="Druid Circle Feature" Margin="5, 10" Padding="5"/>
             </StackPanel>
 
             <!--11th-->
@@ -115,7 +120,7 @@
             <!--12th-->
             <StackPanel Name="stkDruid12th" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Background="LightGray">
                 <Label Content="12th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidAsi12" Content="ASI / Feat" Margin="10" Padding="5"/>
+                <Button Name="btnDruidAsi12" Content="ASI / Feat" Margin="5, 10" Padding="5" Click="btnDruidAsi_Click"/>
             </StackPanel>
 
             <!--13th-->
@@ -126,7 +131,7 @@
             <!--14th-->
             <StackPanel Name="stkDruid14th" Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Background="LightGray">
                 <Label Content="14th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidSubclassFeature14" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+                <Button Name="btnDruidSubclassFeature14" Content="Druid Circle Feature" Margin="5, 10" Padding="5"/>
             </StackPanel>
 
             <!--15th-->
@@ -137,7 +142,7 @@
             <!--16th-->
             <StackPanel Name="stkDruid16th" Orientation="Horizontal" Grid.Row="5" Grid.Column="1" Background="LightGray">
                 <Label Content="16th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidAsi16" Content="ASI / Feat" Margin="10" Padding="5"/>
+                <Button Name="btnDruidAsi16" Content="ASI / Feat" Margin="5, 10" Padding="5" Click="btnDruidAsi_Click"/>
             </StackPanel>
 
             <!--17th-->
@@ -148,73 +153,76 @@
             <!--18th-->
             <StackPanel Name="stkDruid18th" Orientation="Horizontal" Grid.Row="7" Grid.Column="1" Background="LightGray">
                 <Label Content="18th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidTimelessBody" Content="Timeless Body" Margin="10" Padding="5"/>
-                <Button Name="btnDruidBeastSpells" Content="Beast Spells" Margin="10" Padding="5"/>
+                <Button Name="btnDruidTimelessBody" Content="Timeless Body" Margin="5, 10" Padding="5" Click="btnDruidTimelessBody_Click"/>
+                <Button Name="btnDruidBeastSpells" Content="Beast Spells" Margin="5, 10" Padding="5" Click="btnDruidBeastSpells_Click"/>
             </StackPanel>
 
             <!--19th-->
             <StackPanel Name="stkDruid19th" Orientation="Horizontal" Grid.Row="8" Grid.Column="1" Background="LightGray">
                 <Label Content="19th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidAsi19" Content="ASI / Feat" Margin="10" Padding="5"/>
+                <Button Name="btnDruidAsi19" Content="ASI / Feat" Margin="5, 10" Padding="5" Click="btnDruidAsi_Click"/>
             </StackPanel>
 
             <!--20th-->
             <StackPanel Name="stkDruid20th" Orientation="Horizontal" Grid.Row="9" Grid.Column="1" Background="LightGray">
                 <Label Content="20th Level" VerticalAlignment="Center"/>
-                <Button Name="btnDruidArchdruid" Content="Archdruid" Margin="10" Padding="5"/>
+                <Button Name="btnDruidArchdruid" Content="Archdruid" Margin="5, 10" Padding="5" Click="btnDruidArchdruid_Click"/>
             </StackPanel>
         </Grid>
+        
+        
+        <!--spell slots-->
         <StackPanel Orientation="Horizontal" Height="50" Grid.Row="1">
-            <Label Content="Spell Slots: " FontSize="20" VerticalAlignment="Center"/>
+            <Label Content="Total Spell Slots: " FontSize="20" VerticalAlignment="Center"/>
             <Label Content="         "/>
             <StackPanel Orientation="Vertical">
                 <Label Content="Cantrip" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruidCantrip" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="1st" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid1stSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="2nd" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid2ndSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="3rd" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid3rdSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="4th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid4thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="5th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid5thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="6th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid6thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="7th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid7thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="8th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid8thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
             <Label Content="         "/>
             <StackPanel>
                 <Label Content="9th" FontSize="20" Padding="0"/>
-                <Label Content="1" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
+                <Label Name="lblDruid9thSS" Content="0" FontSize="20" Padding="0" HorizontalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
     </Grid>

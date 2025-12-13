@@ -23,6 +23,16 @@ namespace DndCharacterApp.UserInterface
 			lblBottomAc.Content = "AC: " + Player.ArmorClass.ToString();
 			lblBottomSpeed.Content = "Speed: " + Player.Speed.ToString();
 		}//end of UpdateStats
+
+		private void ShowClassTabs(object? sender, PropertyChangedEventArgs e)
+		{
+			tabDruid.Visibility = Visibility.Collapsed;
+			if(Player.DruidLevels > 0)
+			{
+                tabDruid.Visibility = Visibility.Visible;
+            }
+        }
+
 	}//end of DndCharacterApp_Window_EventHandling
 
 }//end of DndCharacterApp.UserInterface

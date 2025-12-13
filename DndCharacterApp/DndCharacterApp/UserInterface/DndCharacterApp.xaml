@@ -85,7 +85,7 @@
             <TabItem Header="Class">
                 <local:TabClass/>
             </TabItem>
-            <TabItem Header="Druid">
+            <TabItem Header="Druid" Name="tabDruid" Visibility="Collapsed">
                 <local:TabDruid/>
             </TabItem>
 			<TabItem Header="Inventory"/>
