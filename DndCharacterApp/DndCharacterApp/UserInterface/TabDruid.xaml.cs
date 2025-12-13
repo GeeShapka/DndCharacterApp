@@ -104,6 +104,7 @@ namespace DndCharacterApp.UserInterface
 					case "Shepherd":
 						break;
 					case "Spores":
+						comboDruidSubClass.SelectedIndex = 4;
 						btnDruidSporesCircleSpells.Visibility = Visibility.Visible;
 						btnDruidSporesHaloOfSpores.Visibility = Visibility.Visible;
 						btnDruidSporesSymbioticEntity.Visibility = Visibility.Visible;
@@ -111,6 +112,9 @@ namespace DndCharacterApp.UserInterface
 					case "Stars":
 						break;
 					case "Wildfire":
+						break;
+					default:
+						comboDruidSubClass.SelectedIndex = -1;
 						break;
 				}
 
@@ -290,8 +294,8 @@ namespace DndCharacterApp.UserInterface
 					lblDruid9thSS.Content = "1";
 					break;
 			}
-
 		}
+
 		private void btnDruidDruidic_Click(object sender, RoutedEventArgs e)
 		{
 			MessageBox.Show("You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.");
@@ -340,9 +344,12 @@ namespace DndCharacterApp.UserInterface
 
 		private void comboDruidSubClass_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			string theSubClass = comboDruidSubClass.SelectedItem.ToString() ?? "NULL";
-			theSubClass = theSubClass.Remove(0, 38);
-			Player.DruidSubclass = theSubClass;
+			if(comboDruidSubClass.SelectedItem != null)
+            {
+                string theSubClass = comboDruidSubClass.SelectedItem.ToString() ?? "NULL";
+                theSubClass = theSubClass.Remove(0, 38);
+                Player.DruidSubclass = theSubClass;
+            }
 		}
 
 

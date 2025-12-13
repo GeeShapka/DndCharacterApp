@@ -29,6 +29,8 @@ namespace DndCharacterApp.Objects.Player
 			Background = Player.Background;
 			Race = Player.Race;
 			Classes = Player.Classes;
+			DruidLevels = Player.DruidLevels;
+			DruidSubclass = Player.DruidSubclass;
 			ScoreStr = Player.ScoreStr;
 			ScoreDex = Player.ScoreDex;
 			ScoreCon = Player.ScoreCon;
@@ -165,6 +167,8 @@ namespace DndCharacterApp.Objects.Player
 		public BackgroundParent? Background;
 		public RaceParent? Race;
 		public List<ClassParent>? Classes;
+		public int DruidLevels;
+		public string DruidSubclass = "";
 		public int ScoreStr;
 		public int ScoreDex;
 		public int ScoreCon;

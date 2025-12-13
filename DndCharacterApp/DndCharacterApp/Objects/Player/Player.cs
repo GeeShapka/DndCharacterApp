@@ -20,10 +20,10 @@ namespace DndCharacterApp.Objects.Player
 	{
 		//variables
 		public static string? Name;
-		public static int			Xp = 0;
-		public static int			Level = 0;
-		private static int			_hp;
-		public static int			Hp
+		public static int Xp = 0;
+		public static int Level = 0;
+		private static int _hp;
+		public static int Hp
 		{
 			get { return _hp; }
 			set
@@ -34,8 +34,8 @@ namespace DndCharacterApp.Objects.Player
 			}
 		}
 
-		private static int			_tempHp;
-		public static int			TempHp
+		private static int _tempHp;
+		public static int TempHp
 		{
 			get { return _tempHp; }
 			set
@@ -46,8 +46,8 @@ namespace DndCharacterApp.Objects.Player
 			}
 		}
 
-		private static int			_totalHp;
-		public static int			TotalHp
+		private static int _totalHp;
+		public static int TotalHp
 		{
 			get { return _totalHp; }
 			set
@@ -57,10 +57,10 @@ namespace DndCharacterApp.Objects.Player
 			}
 		}
 
-		private static int			_armorClass = 0;
-		public static int			ArmorClass
+		private static int _armorClass = 0;
+		public static int ArmorClass
 		{
-			get { return			_armorClass ; }
+			get { return _armorClass ; }
 			set
 			{
 				if(_armorClass != value)
@@ -70,64 +70,64 @@ namespace DndCharacterApp.Objects.Player
 				}
 			}
 		}
-		public static int			Prof = 0;
+		public static int Prof = 0;
 		public static StringBuilder Alignment = new StringBuilder();
 		public static BackgroundParent? Background = new BackgroundParent();
-		public static RaceParent?   Race = new RaceParent();
+		public static RaceParent? Race = new RaceParent();
 		public static List<ClassParent> Classes = new List<ClassParent>();
 
-        private static int _druidLevels = 0;
-        public static int DruidLevels
-        {
-            get { return _druidLevels; }
-            set
-            {
-                if( _druidLevels != value)
-                {
-                    _druidLevels= value;
-                    StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidLevels)));
-                }
-            }
-        }
-        private static string _druidSubclass = "";
-        public static string DruidSubclass
-        {
-            get { return _druidSubclass; }
-            set
-            {
-                _druidSubclass= value;
-                StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidSubclass)));
-            }
-        }
+		private static int _druidLevels = 0;
+		public static int DruidLevels
+		{
+			get { return _druidLevels; }
+			set
+			{
+				if( _druidLevels != value)
+				{
+					_druidLevels= value;
+					StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidLevels)));
+				}
+			}
+		}
+		private static string _druidSubclass = "";
+		public static string DruidSubclass
+		{
+			get { return _druidSubclass; }
+			set
+			{
+				_druidSubclass= value;
+				StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(DruidSubclass)));
+			}
+		}
 
-		public static int			ScoreStr = 0;
-		public static int			ScoreDex = 0;
-		public static int			ScoreCon = 0;
-		public static int			ScoreInt = 0;
-		public static int			ScoreWis = 0;
-		public static int			ScoreCha = 0;
+		public static int ScoreStr = 0;
+		public static int ScoreDex = 0;
+		public static int ScoreCon = 0;
+		public static int ScoreInt = 0;
+		public static int ScoreWis = 0;
+		public static int ScoreCha = 0;
 		private static int _speed;
-		public static int			Speed
+		public static int Speed
 		{
 			get { return _speed; }
 			set
 			{
 				_speed = value;
-                StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(Speed)));
-            }
+				StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(nameof(Speed)));
+			}
 		}
-		public static int			DeathSavesFail = 0;
-		public static int			DeathSavesSuccess = 0;
-		public static int			AttunementSlotsUsed = 0;
-		public static int			InitiativeBonus = 0;
-		public static int			Age = 0;
-		public static int			Weight = 0;
-		public static int           Height = 0;
+		public static int DeathSavesFail = 0;
+		public static int DeathSavesSuccess = 0;
+		public static int AttunementSlotsUsed = 0;
+		public static int InitiativeBonus = 0;
+		public static int Age = 0;
+		public static int Weight = 0;
+		public static int Height = 0;
 		public static StringBuilder Skin = new StringBuilder();
 		public static StringBuilder Eyes = new StringBuilder();
 		public static StringBuilder Hair = new StringBuilder();
 
-        public static string?       NotePad;
+		public static string? NotePad;
 
 		public static event PropertyChangedEventHandler? StaticPropertyChanged;
 
@@ -195,6 +195,8 @@ namespace DndCharacterApp.Objects.Player
 			Background = player.Background;
 			Race = player.Race;
 			Classes = player.Classes ?? new List<ClassParent>();
+			DruidLevels = player.DruidLevels;
+			DruidSubclass = player.DruidSubclass;
 			ScoreStr = player.ScoreStr;
 			ScoreDex = player.ScoreDex;
 			ScoreCon = player.ScoreCon;
@@ -216,256 +218,258 @@ namespace DndCharacterApp.Objects.Player
 			Hair.Clear();
 			Hair.Append(player.Hair);
 
-            NotePad = player.NotePad;
+			NotePad = player.NotePad;
 
 			PlayerMods.Str = player.Str;
 			PlayerMods.StrSave = player.StrSave;
-            PlayerMods.Str = player.Str;
-            PlayerMods.StrSave = player.StrSave;
-            PlayerMods.profStr = player.profStr;
-            PlayerMods.expStr = player.expStr;
-            PlayerMods.addStr = player.addStr;
-            PlayerMods.Athletics = player.Athletics;
-            PlayerMods.profAthletics = player.profAthletics;
-            PlayerMods.expAthletics = player.expAthletics;
-            PlayerMods.addAthletics = player.addAthletics;
-            PlayerMods.Dex = player.Dex;
-            PlayerMods.DexSave = player.DexSave;
-            PlayerMods.profDex = player.profDex;
-            PlayerMods.expDex = player.expDex;
-            PlayerMods.addDex = player.addDex;
-            PlayerMods.Acrobatics = player.Acrobatics;
-            PlayerMods.profAcrobatics = player.profAcrobatics;
-            PlayerMods.expAcrobatics = player.expAcrobatics;
-            PlayerMods.addAcrobatics = player.addAcrobatics;
-            PlayerMods.SleightOfHand = player.SleightOfHand;
-            PlayerMods.profSleightOfHand = player.profSleightOfHand;
-            PlayerMods.expSleightOfHand = player.expSleightOfHand;
-            PlayerMods.addSleightOfHand = player.addSleightOfHand;
-            PlayerMods.Stealth = player.Stealth;
-            PlayerMods.profStealth = player.profStealth;
-            PlayerMods.expStealth = player.expStealth;
-            PlayerMods.addStealth = player.addStealth;
-            PlayerMods.Con = player.Con;
-            PlayerMods.ConSave = player.ConSave;
-            PlayerMods.profCon = player.profCon;
-            PlayerMods.expCon = player.expCon;
-            PlayerMods.addCon = player.addCon;
-            PlayerMods.Int = player.Int;
-            PlayerMods.IntSave = player.IntSave;
-            PlayerMods.profInt = player.profInt;
-            PlayerMods.expInt = player.expInt;
-            PlayerMods.addInt = player.addInt;
-            PlayerMods.Arcana = player.Arcana;
-            PlayerMods.profArcana = player.profArcana;
-            PlayerMods.expArcana = player.expArcana;
-            PlayerMods.addArcana = player.addArcana;
-            PlayerMods.History = player.History;
-            PlayerMods.profHistory = player.profHistory;
-            PlayerMods.expHistory = player.expHistory;
-            PlayerMods.addHistory = player.addHistory;
-            PlayerMods.Investigation = player.Investigation;
-            PlayerMods.profInvestigation = player.profInvestigation;
-            PlayerMods.expInvestigation = player.expInvestigation;
-            PlayerMods.addInvestigation = player.addInvestigation;
-            PlayerMods.Nature = player.Nature;
-            PlayerMods.profNature = player.profNature;
-            PlayerMods.expNature = player.expNature;
-            PlayerMods.addNature = player.addNature;
-            PlayerMods.Religion = player.Religion;
-            PlayerMods.profReligion = player.profReligion;
-            PlayerMods.expReligion = player.expReligion;
-            PlayerMods.addReligion = player.addReligion;
-            PlayerMods.Wis = player.Wis;
-            PlayerMods.WisSave = player.WisSave;
-            PlayerMods.profWis = player.profWis;
-            PlayerMods.expWis = player.expWis;
-            PlayerMods.addWis = player.addWis;
-            PlayerMods.AnimalHandling = player.AnimalHandling;
-            PlayerMods.profAnimalHandling = player.profAnimalHandling;
-            PlayerMods.expAnimalHandling = player.expAnimalHandling;
-            PlayerMods.addAnimalHandling = player.addAnimalHandling;
-            PlayerMods.Insight = player.Insight;
-            PlayerMods.profInsight = player.profInsight;
-            PlayerMods.expInsight = player.expInsight;
-            PlayerMods.addInsight = player.addInsight;
-            PlayerMods.Medicine = player.Medicine;
-            PlayerMods.profMedicine = player.profMedicine;
-            PlayerMods.expMedicine = player.expMedicine;
-            PlayerMods.addMedicine = player.addMedicine;
-            PlayerMods.Perception = player.Perception;
-            PlayerMods.profPerception = player.profPerception;
-            PlayerMods.expPerception = player.expPerception;
-            PlayerMods.addPerception = player.addPerception;
-            PlayerMods.Survival = player.Survival;
-            PlayerMods.profSurvival = player.profSurvival;
-            PlayerMods.expSurvival = player.expSurvival;
-            PlayerMods.addSurvival = player.addSurvival;
-            PlayerMods.Cha = player.Cha;
-            PlayerMods.ChaSave = player.ChaSave;
-            PlayerMods.profCha = player.profCha;
-            PlayerMods.expCha = player.expCha;
-            PlayerMods.addCha = player.addCha;
-            PlayerMods.Deception = player.Deception;
-            PlayerMods.profDeception = player.profDeception;
-            PlayerMods.expDeception = player.expDeception;
-            PlayerMods.addDeception = player.addDeception;
-            PlayerMods.Intimidation = player.Intimidation;
-            PlayerMods.profIntimidation = player.profIntimidation;
-            PlayerMods.expIntimidation = player.expIntimidation;
-            PlayerMods.addIntimidation = player.addIntimidation;
-            PlayerMods.Performance = player.Performance;
-            PlayerMods.profPerformance = player.profPerformance;
-            PlayerMods.expPerformance = player.expPerformance;
-            PlayerMods.addPerformance = player.addPerformance;
-            PlayerMods.Persuasion = player.Persuasion;
-            PlayerMods.profPersuasion = player.profPersuasion;
-            PlayerMods.expPersuasion = player.expPersuasion;
-            PlayerMods.addPersuasion = player.addPersuasion;
+			PlayerMods.Str = player.Str;
+			PlayerMods.StrSave = player.StrSave;
+			PlayerMods.profStr = player.profStr;
+			PlayerMods.expStr = player.expStr;
+			PlayerMods.addStr = player.addStr;
+			PlayerMods.Athletics = player.Athletics;
+			PlayerMods.profAthletics = player.profAthletics;
+			PlayerMods.expAthletics = player.expAthletics;
+			PlayerMods.addAthletics = player.addAthletics;
+			PlayerMods.Dex = player.Dex;
+			PlayerMods.DexSave = player.DexSave;
+			PlayerMods.profDex = player.profDex;
+			PlayerMods.expDex = player.expDex;
+			PlayerMods.addDex = player.addDex;
+			PlayerMods.Acrobatics = player.Acrobatics;
+			PlayerMods.profAcrobatics = player.profAcrobatics;
+			PlayerMods.expAcrobatics = player.expAcrobatics;
+			PlayerMods.addAcrobatics = player.addAcrobatics;
+			PlayerMods.SleightOfHand = player.SleightOfHand;
+			PlayerMods.profSleightOfHand = player.profSleightOfHand;
+			PlayerMods.expSleightOfHand = player.expSleightOfHand;
+			PlayerMods.addSleightOfHand = player.addSleightOfHand;
+			PlayerMods.Stealth = player.Stealth;
+			PlayerMods.profStealth = player.profStealth;
+			PlayerMods.expStealth = player.expStealth;
+			PlayerMods.addStealth = player.addStealth;
+			PlayerMods.Con = player.Con;
+			PlayerMods.ConSave = player.ConSave;
+			PlayerMods.profCon = player.profCon;
+			PlayerMods.expCon = player.expCon;
+			PlayerMods.addCon = player.addCon;
+			PlayerMods.Int = player.Int;
+			PlayerMods.IntSave = player.IntSave;
+			PlayerMods.profInt = player.profInt;
+			PlayerMods.expInt = player.expInt;
+			PlayerMods.addInt = player.addInt;
+			PlayerMods.Arcana = player.Arcana;
+			PlayerMods.profArcana = player.profArcana;
+			PlayerMods.expArcana = player.expArcana;
+			PlayerMods.addArcana = player.addArcana;
+			PlayerMods.History = player.History;
+			PlayerMods.profHistory = player.profHistory;
+			PlayerMods.expHistory = player.expHistory;
+			PlayerMods.addHistory = player.addHistory;
+			PlayerMods.Investigation = player.Investigation;
+			PlayerMods.profInvestigation = player.profInvestigation;
+			PlayerMods.expInvestigation = player.expInvestigation;
+			PlayerMods.addInvestigation = player.addInvestigation;
+			PlayerMods.Nature = player.Nature;
+			PlayerMods.profNature = player.profNature;
+			PlayerMods.expNature = player.expNature;
+			PlayerMods.addNature = player.addNature;
+			PlayerMods.Religion = player.Religion;
+			PlayerMods.profReligion = player.profReligion;
+			PlayerMods.expReligion = player.expReligion;
+			PlayerMods.addReligion = player.addReligion;
+			PlayerMods.Wis = player.Wis;
+			PlayerMods.WisSave = player.WisSave;
+			PlayerMods.profWis = player.profWis;
+			PlayerMods.expWis = player.expWis;
+			PlayerMods.addWis = player.addWis;
+			PlayerMods.AnimalHandling = player.AnimalHandling;
+			PlayerMods.profAnimalHandling = player.profAnimalHandling;
+			PlayerMods.expAnimalHandling = player.expAnimalHandling;
+			PlayerMods.addAnimalHandling = player.addAnimalHandling;
+			PlayerMods.Insight = player.Insight;
+			PlayerMods.profInsight = player.profInsight;
+			PlayerMods.expInsight = player.expInsight;
+			PlayerMods.addInsight = player.addInsight;
+			PlayerMods.Medicine = player.Medicine;
+			PlayerMods.profMedicine = player.profMedicine;
+			PlayerMods.expMedicine = player.expMedicine;
+			PlayerMods.addMedicine = player.addMedicine;
+			PlayerMods.Perception = player.Perception;
+			PlayerMods.profPerception = player.profPerception;
+			PlayerMods.expPerception = player.expPerception;
+			PlayerMods.addPerception = player.addPerception;
+			PlayerMods.Survival = player.Survival;
+			PlayerMods.profSurvival = player.profSurvival;
+			PlayerMods.expSurvival = player.expSurvival;
+			PlayerMods.addSurvival = player.addSurvival;
+			PlayerMods.Cha = player.Cha;
+			PlayerMods.ChaSave = player.ChaSave;
+			PlayerMods.profCha = player.profCha;
+			PlayerMods.expCha = player.expCha;
+			PlayerMods.addCha = player.addCha;
+			PlayerMods.Deception = player.Deception;
+			PlayerMods.profDeception = player.profDeception;
+			PlayerMods.expDeception = player.expDeception;
+			PlayerMods.addDeception = player.addDeception;
+			PlayerMods.Intimidation = player.Intimidation;
+			PlayerMods.profIntimidation = player.profIntimidation;
+			PlayerMods.expIntimidation = player.expIntimidation;
+			PlayerMods.addIntimidation = player.addIntimidation;
+			PlayerMods.Performance = player.Performance;
+			PlayerMods.profPerformance = player.profPerformance;
+			PlayerMods.expPerformance = player.expPerformance;
+			PlayerMods.addPerformance = player.addPerformance;
+			PlayerMods.Persuasion = player.Persuasion;
+			PlayerMods.profPersuasion = player.profPersuasion;
+			PlayerMods.expPersuasion = player.expPersuasion;
+			PlayerMods.addPersuasion = player.addPersuasion;
 
-            UpdateAll();
-        }//end of ImportStats
+			UpdateAll();
+		}//end of ImportStats
 
-        public static void RemoveStats()
+		public static void RemoveStats()
 		{
-            Name = string.Empty;
-            Xp = 0;
-            Level = 0;
-            Hp = 0;
-            TempHp = 0;
-            TotalHp = 0;
-            ArmorClass = 0;
-            Prof = 0;
-            Alignment.Clear();
-            Background = null;
-            Race = null;
-            Classes.Clear();
-            ScoreStr = 0;
-            ScoreDex = 0;
-            ScoreCon = 0;
-            ScoreInt = 0;
-            ScoreWis = 0;
-            ScoreCha = 0;
-            Speed = 0;
-            DeathSavesFail = 0;
-            DeathSavesSuccess = 0;
-            AttunementSlotsUsed = 0;
-            InitiativeBonus = 0;
-            Age = 0;
-            Weight = 0;
-            Height = 0;
-            Skin.Clear();
-            Eyes.Clear();
-            Hair.Clear();
+			Name = string.Empty;
+			Xp = 0;
+			Level = 0;
+			Hp = 0;
+			TempHp = 0;
+			TotalHp = 0;
+			ArmorClass = 0;
+			Prof = 0;
+			Alignment.Clear();
+			Background = null;
+			Race = null;
+			Classes.Clear();
+			DruidLevels = 0;
+			DruidSubclass = "";
+			ScoreStr = 0;
+			ScoreDex = 0;
+			ScoreCon = 0;
+			ScoreInt = 0;
+			ScoreWis = 0;
+			ScoreCha = 0;
+			Speed = 0;
+			DeathSavesFail = 0;
+			DeathSavesSuccess = 0;
+			AttunementSlotsUsed = 0;
+			InitiativeBonus = 0;
+			Age = 0;
+			Weight = 0;
+			Height = 0;
+			Skin.Clear();
+			Eyes.Clear();
+			Hair.Clear();
 
-            NotePad = string.Empty;
+			NotePad = string.Empty;
 
-            PlayerMods.Str = 0;
-            PlayerMods.StrSave = 0;
-            PlayerMods.profStr = false;
-            PlayerMods.expStr = false;
-            PlayerMods.addStr = 0;
-            PlayerMods.Athletics = 0;
-            PlayerMods.profAthletics = false;
-            PlayerMods.expAthletics = false;
-            PlayerMods.addAthletics = 0;
-            PlayerMods.Dex = 0;
-            PlayerMods.DexSave = 0;
-            PlayerMods.profDex = false;
-            PlayerMods.expDex = false;
-            PlayerMods.addDex = 0;
-            PlayerMods.Acrobatics = 0;
-            PlayerMods.profAcrobatics = false;
-            PlayerMods.expAcrobatics = false;
-            PlayerMods.addAcrobatics = 0;
-            PlayerMods.SleightOfHand = 0;
-            PlayerMods.profSleightOfHand = false;
-            PlayerMods.expSleightOfHand = false;
-            PlayerMods.addSleightOfHand = 0;
-            PlayerMods.Stealth = 0;
-            PlayerMods.profStealth = false;
-            PlayerMods.expStealth = false;
-            PlayerMods.addStealth = 0;
-            PlayerMods.Con = 0;
-            PlayerMods.ConSave = 0;
-            PlayerMods.profCon = false;
-            PlayerMods.expCon = false;
-            PlayerMods.addCon = 0;
-            PlayerMods.Int = 0;
-            PlayerMods.IntSave = 0;
-            PlayerMods.profInt = false;
-            PlayerMods.expInt = false;
-            PlayerMods.addInt = 0;
-            PlayerMods.Arcana = 0;
-            PlayerMods.profArcana = false;
-            PlayerMods.expArcana = false;
-            PlayerMods.addArcana = 0;
-            PlayerMods.History = 0;
-            PlayerMods.profHistory = false;
-            PlayerMods.expHistory = false;
-            PlayerMods.addHistory = 0;
-            PlayerMods.Investigation = 0;
-            PlayerMods.profInvestigation = false;
-            PlayerMods.expInvestigation = false;
-            PlayerMods.addInvestigation = 0;
-            PlayerMods.Nature = 0;
-            PlayerMods.profNature = false;
-            PlayerMods.expNature = false;
-            PlayerMods.addNature = 0;
-            PlayerMods.Religion = 0;
-            PlayerMods.profReligion = false;
-            PlayerMods.expReligion = false;
-            PlayerMods.addReligion = 0;
-            PlayerMods.Wis = 0;
-            PlayerMods.WisSave = 0;
-            PlayerMods.profWis = false;
-            PlayerMods.expWis = false;
-            PlayerMods.addWis = 0;
-            PlayerMods.AnimalHandling = 0;
-            PlayerMods.profAnimalHandling = false;
-            PlayerMods.expAnimalHandling = false;
-            PlayerMods.addAnimalHandling = 0;
-            PlayerMods.Insight = 0;
-            PlayerMods.profInsight = false;
-            PlayerMods.expInsight = false;
-            PlayerMods.addInsight = 0;
-            PlayerMods.Medicine = 0;
-            PlayerMods.profMedicine = false;
-            PlayerMods.expMedicine = false;
-            PlayerMods.addMedicine = 0;
-            PlayerMods.Perception = 0;
-            PlayerMods.profPerception = false;
-            PlayerMods.expPerception = false;
-            PlayerMods.addPerception = 0;
-            PlayerMods.Survival = 0;
-            PlayerMods.profSurvival = false;
-            PlayerMods.expSurvival = false;
-            PlayerMods.addSurvival = 0;
-            PlayerMods.Cha = 0;
-            PlayerMods.ChaSave = 0;
-            PlayerMods.profCha = false;
-            PlayerMods.expCha = false;
-            PlayerMods.addCha = 0;
-            PlayerMods.Deception = 0;
-            PlayerMods.profDeception = false;
-            PlayerMods.expDeception = false;
-            PlayerMods.addDeception = 0;
-            PlayerMods.Intimidation = 0;
-            PlayerMods.profIntimidation = false;
-            PlayerMods.expIntimidation = false;
-            PlayerMods.addIntimidation = 0;
-            PlayerMods.Performance = 0;
-            PlayerMods.profPerformance = false;
-            PlayerMods.expPerformance = false;
-            PlayerMods.addPerformance = 0;
-            PlayerMods.Persuasion = 0;
-            PlayerMods.profPersuasion = false;
-            PlayerMods.expPersuasion = false;
-            PlayerMods.addPersuasion = 0;
+			PlayerMods.Str = 0;
+			PlayerMods.StrSave = 0;
+			PlayerMods.profStr = false;
+			PlayerMods.expStr = false;
+			PlayerMods.addStr = 0;
+			PlayerMods.Athletics = 0;
+			PlayerMods.profAthletics = false;
+			PlayerMods.expAthletics = false;
+			PlayerMods.addAthletics = 0;
+			PlayerMods.Dex = 0;
+			PlayerMods.DexSave = 0;
+			PlayerMods.profDex = false;
+			PlayerMods.expDex = false;
+			PlayerMods.addDex = 0;
+			PlayerMods.Acrobatics = 0;
+			PlayerMods.profAcrobatics = false;
+			PlayerMods.expAcrobatics = false;
+			PlayerMods.addAcrobatics = 0;
+			PlayerMods.SleightOfHand = 0;
+			PlayerMods.profSleightOfHand = false;
+			PlayerMods.expSleightOfHand = false;
+			PlayerMods.addSleightOfHand = 0;
+			PlayerMods.Stealth = 0;
+			PlayerMods.profStealth = false;
+			PlayerMods.expStealth = false;
+			PlayerMods.addStealth = 0;
+			PlayerMods.Con = 0;
+			PlayerMods.ConSave = 0;
+			PlayerMods.profCon = false;
+			PlayerMods.expCon = false;
+			PlayerMods.addCon = 0;
+			PlayerMods.Int = 0;
+			PlayerMods.IntSave = 0;
+			PlayerMods.profInt = false;
+			PlayerMods.expInt = false;
+			PlayerMods.addInt = 0;
+			PlayerMods.Arcana = 0;
+			PlayerMods.profArcana = false;
+			PlayerMods.expArcana = false;
+			PlayerMods.addArcana = 0;
+			PlayerMods.History = 0;
+			PlayerMods.profHistory = false;
+			PlayerMods.expHistory = false;
+			PlayerMods.addHistory = 0;
+			PlayerMods.Investigation = 0;
+			PlayerMods.profInvestigation = false;
+			PlayerMods.expInvestigation = false;
+			PlayerMods.addInvestigation = 0;
+			PlayerMods.Nature = 0;
+			PlayerMods.profNature = false;
+			PlayerMods.expNature = false;
+			PlayerMods.addNature = 0;
+			PlayerMods.Religion = 0;
+			PlayerMods.profReligion = false;
+			PlayerMods.expReligion = false;
+			PlayerMods.addReligion = 0;
+			PlayerMods.Wis = 0;
+			PlayerMods.WisSave = 0;
+			PlayerMods.profWis = false;
+			PlayerMods.expWis = false;
+			PlayerMods.addWis = 0;
+			PlayerMods.AnimalHandling = 0;
+			PlayerMods.profAnimalHandling = false;
+			PlayerMods.expAnimalHandling = false;
+			PlayerMods.addAnimalHandling = 0;
+			PlayerMods.Insight = 0;
+			PlayerMods.profInsight = false;
+			PlayerMods.expInsight = false;
+			PlayerMods.addInsight = 0;
+			PlayerMods.Medicine = 0;
+			PlayerMods.profMedicine = false;
+			PlayerMods.expMedicine = false;
+			PlayerMods.addMedicine = 0;
+			PlayerMods.Perception = 0;
+			PlayerMods.profPerception = false;
+			PlayerMods.expPerception = false;
+			PlayerMods.addPerception = 0;
+			PlayerMods.Survival = 0;
+			PlayerMods.profSurvival = false;
+			PlayerMods.expSurvival = false;
+			PlayerMods.addSurvival = 0;
+			PlayerMods.Cha = 0;
+			PlayerMods.ChaSave = 0;
+			PlayerMods.profCha = false;
+			PlayerMods.expCha = false;
+			PlayerMods.addCha = 0;
+			PlayerMods.Deception = 0;
+			PlayerMods.profDeception = false;
+			PlayerMods.expDeception = false;
+			PlayerMods.addDeception = 0;
+			PlayerMods.Intimidation = 0;
+			PlayerMods.profIntimidation = false;
+			PlayerMods.expIntimidation = false;
+			PlayerMods.addIntimidation = 0;
+			PlayerMods.Performance = 0;
+			PlayerMods.profPerformance = false;
+			PlayerMods.expPerformance = false;
+			PlayerMods.addPerformance = 0;
+			PlayerMods.Persuasion = 0;
+			PlayerMods.profPersuasion = false;
+			PlayerMods.expPersuasion = false;
+			PlayerMods.addPersuasion = 0;
 
-            UpdateAll();
-        }
+			UpdateAll();
+		}
 
-    }//end of Player
+	}//end of Player
 
 }//end of DndCharacterApp.Objects

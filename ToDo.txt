@@ -1,0 +1,2 @@
+- add varaible for each levels class so i can import class tab
+	- add update class tab for importing and clearing
