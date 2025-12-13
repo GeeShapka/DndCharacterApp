@@ -30,17 +30,138 @@
             </Grid.RowDefinitions>
 
             <!--1st-->
-            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+            <StackPanel Name="stkDruid1st" Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Background="LightGray">
                 <Label Content="1st Level" VerticalAlignment="Center"/>
-                <Button Content="Druidic" Margin="10"/>
-                <Button Content="Spellcasting" Margin="10"/>
+                <Button Name="btnDruidDruidic" Content="Druidic" Margin="10" Padding="5" Click="btnDruidDruidic_Click"/>
+                <Button Name="btnDruidSpellcasting" Content="Spellcasting" Margin="10" Padding="5" Click="btnDruidSpellcasting_Click"/>
             </StackPanel>
+            
             <!--2nd-->
-            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+            <StackPanel Name="stkDruid2nd" Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Background="LightGray">
                 <Label Content="2nd Level" VerticalAlignment="Center"/>
-                <Button Content="Wild Shape" Margin="10"/>
-                <Button Content="Druidic Circle" Margin="10"/>
-                <Button Content="Wild Companion" Margin="10"/>
+                <Button Name="btnDruidWildShape" Content="Wild Shape" Margin="10" Padding="5" Click="btnDruidWildShape_Click"/>
+                <StackPanel>
+                    <Label  Content="Druidic Circle" Padding="30, 10, 30, 0"/>
+                    <ComboBox Name="DruidSubClass" Margin="10">
+                        <ComboBoxItem Content="Dreams"/>
+                        <ComboBoxItem Content="Land"/>
+                        <ComboBoxItem Content="Moon"/>
+                        <ComboBoxItem Content="Shepherd"/>
+                        <ComboBoxItem Content="Spores"/>
+                        <ComboBoxItem Content="Stars"/>
+                        <ComboBoxItem Content="Wildfire"/>
+                    </ComboBox>
+                </StackPanel>
+                <Button Name="btnDruidWildCompanion" Margin="10" Padding="5">
+                    <TextBlock Text="Wild Companion (Optional)" TextAlignment="Center" TextWrapping="Wrap" Width="100"/>
+                </Button>
+            </StackPanel>
+            
+            <!--3rd-->
+            <StackPanel Name="stkDruid3rd" Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Background="LightGray">
+                <Label Content="3rd Level" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+            <!--4th-->
+            <StackPanel Name="stkDruid4th" Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Background="LightGray">
+                <Label Content="4th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidWildShapeImprovement" Margin="10" Padding="5">
+                    <TextBlock Text="Wild Shape Imporvement" TextWrapping="Wrap" Width="80" TextAlignment="Center"/>
+                </Button>
+                <Button Name="btnDruidAsi" Content="ASI / Feat" Margin="10" Padding="5"/>
+                <Button Name="btnDruidCantripVersatility" Margin="10" Padding="5">
+                    <TextBlock Text="Cantrip Versatility (Optional)" TextWrapping="Wrap" Width="70" TextAlignment="Center"/>
+                </Button>
+            </StackPanel>
+            <!--5th-->
+            <StackPanel Name="stkDruid5th" Orientation="Horizontal" Grid.Row="4" Grid.Column="0" Background="LightGray">
+                <Label Content="5th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--6th-->
+            <StackPanel Name="stkDruid6th" Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Background="LightGray">
+                <Label Content="6th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidSubclassFeature6" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--7th-->
+            <StackPanel Name="stkDruid7th" Orientation="Horizontal" Grid.Row="6" Grid.Column="0" Background="LightGray">
+                <Label Content="7th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--8th-->
+            <StackPanel Name="stkDruid8th" Orientation="Horizontal" Grid.Row="7" Grid.Column="0" Background="LightGray">
+                <Label Content="8th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidAsi8" Content="ASI / Feat" Margin="10" Padding="5"/>
+                <Button Name="btnDruidWildShapeImprovement8" Content="Wild Shape Improvement" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--9th-->
+            <StackPanel Name="stkDruid9th" Orientation="Horizontal" Grid.Row="8" Grid.Column="0" Background="LightGray">
+                <Label Content="9th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--10th-->
+            <StackPanel Name="stkDruid10th" Orientation="Horizontal" Grid.Row="9" Grid.Column="0" Background="LightGray">
+                <Label Content="10th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidSubclassFeature10" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--11th-->
+            <StackPanel Name="stkDruid11th" Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Background="LightGray">
+                <Label Content="11th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--12th-->
+            <StackPanel Name="stkDruid12th" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Background="LightGray">
+                <Label Content="12th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidAsi12" Content="ASI / Feat" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--13th-->
+            <StackPanel Name="stkDruid13th" Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Background="LightGray">
+                <Label Content="13th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--14th-->
+            <StackPanel Name="stkDruid14th" Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Background="LightGray">
+                <Label Content="14th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidSubclassFeature14" Content="Druid Circle Feature" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--15th-->
+            <StackPanel Name="stkDruid15th" Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Background="LightGray">
+                <Label Content="15th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--16th-->
+            <StackPanel Name="stkDruid16th" Orientation="Horizontal" Grid.Row="5" Grid.Column="1" Background="LightGray">
+                <Label Content="16th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidAsi16" Content="ASI / Feat" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--17th-->
+            <StackPanel Name="stkDruid17th" Orientation="Horizontal" Grid.Row="6" Grid.Column="1" Background="LightGray">
+                <Label Content="17th Level" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!--18th-->
+            <StackPanel Name="stkDruid18th" Orientation="Horizontal" Grid.Row="7" Grid.Column="1" Background="LightGray">
+                <Label Content="18th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidTimelessBody" Content="Timeless Body" Margin="10" Padding="5"/>
+                <Button Name="btnDruidBeastSpells" Content="Beast Spells" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--19th-->
+            <StackPanel Name="stkDruid19th" Orientation="Horizontal" Grid.Row="8" Grid.Column="1" Background="LightGray">
+                <Label Content="19th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidAsi19" Content="ASI / Feat" Margin="10" Padding="5"/>
+            </StackPanel>
+
+            <!--20th-->
+            <StackPanel Name="stkDruid20th" Orientation="Horizontal" Grid.Row="9" Grid.Column="1" Background="LightGray">
+                <Label Content="20th Level" VerticalAlignment="Center"/>
+                <Button Name="btnDruidArchdruid" Content="Archdruid" Margin="10" Padding="5"/>
             </StackPanel>
         </Grid>
         <StackPanel Orientation="Horizontal" Height="50" Grid.Row="1">

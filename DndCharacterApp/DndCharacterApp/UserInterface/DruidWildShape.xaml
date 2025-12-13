@@ -1,0 +1,99 @@
+﻿<Window x:Class="DndCharacterApp.UserInterface.DruidWildShape"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:DndCharacterApp.UserInterface"
+		mc:Ignorable="d"
+		Title="DruidWildShape" Height="900" Width="520"
+        ResizeMode="NoResize">
+	<DockPanel>
+		<TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Padding="10" Text="Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest. Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed."/>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Beast Shapes" Background="Goldenrod"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Level" Grid.Row="0" Grid.Column="0" Background="Goldenrod" BorderThickness="0, 1"/>
+                <Label Content="Max. CR" Grid.Row="0" Grid.Column="1" Background="Goldenrod" BorderThickness="0, 1"/>
+                <Label Content="Max. CR (Circle of the Moon)" Grid.Row="0" Grid.Column="2" Background="Goldenrod" BorderThickness="0, 1"/>
+                <Label Content="Limitations" Grid.Row="0" Grid.Column="3" Background="Goldenrod" BorderThickness="0, 1"/>
+
+                <Label Content="2nd" Grid.Row="1" Grid.Column="0"/>
+                <Label Content="4th" Grid.Row="2" Grid.Column="0" BorderThickness="0, 1" BorderBrush="Gray"/>
+                <Label Content="6th" Grid.Row="3" Grid.Column="0"/>
+                <Label Content="8th" Grid.Row="4" Grid.Column="0" BorderThickness="0, 1" BorderBrush="Gray"/>
+
+                <Label Content="1/4" Grid.Row="1" Grid.Column="1"/>
+                <Label Content="1/2" Grid.Row="2" Grid.Column="1" BorderThickness="0, 1" BorderBrush="Gray"/>
+                <Label Content="1/2" Grid.Row="3" Grid.Column="1"/>
+                <Label Content="1" Grid.Row="4" Grid.Column="1" BorderThickness="0, 1" BorderBrush="Gray"/>
+
+                <Label Content="1" Grid.Row="1" Grid.Column="2"/>
+                <Label Content="1" Grid.Row="2" Grid.Column="2" BorderThickness="0, 1" BorderBrush="Gray"/>
+                <Label Content="Level / 3, rounded down" Grid.Row="3" Grid.Column="2"/>
+                <Label Content="Level / 3, rounded down" Grid.Row="4" Grid.Column="2" BorderThickness="0, 1" BorderBrush="Gray"/>
+
+                <Label Content="No flying or swimming speed" Grid.Row="1" Grid.Column="3"/>
+                <Label Content="No flying speed" Grid.Row="2" Grid.Column="3" BorderThickness="0, 1" BorderBrush="Gray"/>
+                <Label Content="No flying speed" Grid.Row="3" Grid.Column="3"/>
+                <Label Content="" Grid.Row="4" Grid.Column="3" BorderThickness="0, 1" BorderBrush="Gray"/>
+            </Grid>
+        </Grid>
+
+        <RichTextBox DockPanel.Dock="Top">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die."/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="While you are transformed, the following rules apply:"/>
+                </Paragraph>
+                <List>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them."/>
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form, For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious."/>
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as Call Lightning, that you've already cast."/>
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense."/>
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."/>
+                        </Paragraph>
+                    </ListItem>
+                </List>
+            </FlowDocument>
+        </RichTextBox>
+
+        <Button Name="DruidWildShapeClose" Width="60" Height="20" Content="OK" Click="DruidWildShapeClose_Click"/>
+    </DockPanel>
+</Window>
