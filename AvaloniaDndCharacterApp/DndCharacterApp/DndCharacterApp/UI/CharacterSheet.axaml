@@ -1,0 +1,127 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="1080" d:DesignHeight="928"
+		Width="1080"
+		Height="928"
+		x:Class="DndCharacterApp.UI.CharacterSheet"
+		Title="DndCharacterApp">
+
+	<DockPanel VerticalAlignment="Top" LastChildFill="True">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="File"/>
+			<MenuItem Header="Edit"/>
+		</Menu>
+		<TabControl>
+			<TabItem Header="Main">
+				<Grid ShowGridLines="True">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+
+					<Grid Grid.Row="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition Width="1.5*"/>
+						</Grid.ColumnDefinitions>
+
+						<StackPanel Grid.Column="0" Margin="10, 10, 0, 10">
+							<Label Content="WaddleGee's 5e Character Sheet"
+								   HorizontalAlignment="Right"
+								   FontSize="20"
+								   FontWeight="Bold"/>
+							<Border BorderThickness="1" BorderBrush="Black">
+								<StackPanel>
+									<TextBox Margin="5" x:Name="txtCharacterName" Background="LightGray"/>
+									<Label Content="Character Name"/>
+								</StackPanel>
+							</Border>
+						</StackPanel>
+
+						<Border BorderThickness="2"
+								BorderBrush="Black"
+								Grid.Column="1"
+								Margin="0, 10, 10, 10">
+							<Grid Margin="5" ShowGridLines="False">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="2*"/>
+									<RowDefinition/>
+									<RowDefinition Height="2*"/>
+									<RowDefinition/>
+								</Grid.RowDefinitions>
+
+								<!--Top txt-->
+								<Grid Grid.Row="0" ShowGridLines="False">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<TextBox Grid.Column="0" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="1" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="2" Margin="0, 0, 5, 0" Background="LightGray"/>
+								</Grid>
+
+								<!--top labels-->
+								<Grid Grid.Row="1" ShowGridLines="False">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<Label Grid.Column="0" Content="CLASS &amp; LEVEL"/>
+									<Label Grid.Column="1" Content="BACKGROUND"/>
+									<Label Grid.Column="2" Content="PLAYER NAME"/>
+								</Grid>
+
+								<!--bottom txt-->
+								<Grid Grid.Row="2" ShowGridLines="False">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<TextBox Grid.Column="0" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="1" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="2" Margin="0, 0, 5, 0" Background="LightGray"/>
+								</Grid>
+
+								<!--bottom lables-->
+								<Grid Grid.Row="3" ShowGridLines="False">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<Label Grid.Column="0" Content="RACE"/>
+									<Label Grid.Column="1" Content="ALIGNMENT"/>
+									<Label Grid.Column="2" Content="EXPERIENCE POINTS"/>
+								</Grid>
+
+							</Grid>
+						</Border>
+					</Grid>
+
+
+
+
+					<Grid Grid.Row="1" ShowGridLines="True">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+					</Grid>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Spells">
+				
+			</TabItem>
+		</TabControl>
+
+	</DockPanel>
+
+
+</Window>

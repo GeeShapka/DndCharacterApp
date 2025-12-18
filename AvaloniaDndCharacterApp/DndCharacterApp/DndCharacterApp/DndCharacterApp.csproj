@@ -18,4 +18,10 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\CharacterSheet.axaml.cs">
+      <DependentUpon>CharacterSheet.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
