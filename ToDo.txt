@@ -1,2 +1,5 @@
+- redo UI, i dont like it
+	- make it more like an actual character sheet
+
 - add varaible for each levels class so i can import class tab
 	- add update class tab for importing and clearing
