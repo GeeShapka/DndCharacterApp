@@ -15,18 +15,21 @@
 		</Menu>
 		<TabControl>
 			<TabItem Header="Main">
+				<!--split header and body-->
 				<Grid ShowGridLines="True">
 					<Grid.RowDefinitions>
 						<RowDefinition/>
 						<RowDefinition/>
 					</Grid.RowDefinitions>
 
+					<!--header grid-->
 					<Grid Grid.Row="0">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition/>
 							<ColumnDefinition Width="1.5*"/>
 						</Grid.ColumnDefinitions>
 
+						<!--character name and watermark-->
 						<StackPanel Grid.Column="0" Margin="10, 10, 0, 10">
 							<Label Content="WaddleGee's 5e Character Sheet"
 								   HorizontalAlignment="Right"
@@ -40,6 +43,7 @@
 							</Border>
 						</StackPanel>
 
+						<!--class, race, etc-->
 						<Border BorderThickness="2"
 								BorderBrush="Black"
 								Grid.Column="1"
@@ -71,7 +75,7 @@
 										<ColumnDefinition/>
 										<ColumnDefinition/>
 									</Grid.ColumnDefinitions>
-									<Label Grid.Column="0" Content="CLASS &amp; LEVEL"/>
+									<Label Grid.Column="0" Content="CLASS"/>
 									<Label Grid.Column="1" Content="BACKGROUND"/>
 									<Label Grid.Column="2" Content="PLAYER NAME"/>
 								</Grid>
@@ -85,7 +89,24 @@
 									</Grid.ColumnDefinitions>
 									<TextBox Grid.Column="0" Margin="0, 0, 5, 0" Background="LightGray"/>
 									<TextBox Grid.Column="1" Margin="0, 0, 5, 0" Background="LightGray"/>
-									<TextBox Grid.Column="2" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<Grid Grid.Column="2" Margin="0, 0, 5, 0">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="5*"/>
+											<ColumnDefinition/>
+										</Grid.ColumnDefinitions>
+										<TextBox Grid.Column="0" Background="LightGray"/>
+										<Button Grid.Column="1" 
+												Content="?"
+												HorizontalContentAlignment="Center"
+												VerticalContentAlignment="Center"
+												FontWeight="Bold"
+												Margin="2, 0, 0, 0" 
+												VerticalAlignment="Stretch"
+												HorizontalAlignment="Stretch"
+												BorderBrush="Gray" 
+												BorderThickness="1"
+												Click="btnExpPerLevel_Click"/>
+									</Grid>
 								</Grid>
 
 								<!--bottom lables-->

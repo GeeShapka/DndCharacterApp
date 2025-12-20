@@ -8,5 +8,11 @@ namespace DndCharacterApp.UI
         {
             InitializeComponent();
         }
+
+        private void btnExpPerLevel_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            ExpPerLevel epl = new ExpPerLevel();
+            epl.Show();
+        }
     }
 }

@@ -1,0 +1,177 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="530"
+		Height="530"
+		Width="300"
+		CanResize="False"
+		x:Class="DndCharacterApp.ExpPerLevel"
+		Title="ExpPerLevel">
+	<StackPanel>
+		<Label Content="Experience Points Per Level"
+			   HorizontalAlignment="Center"
+			   Margin="0, 10, 0, 0"
+			   FontWeight="Bold"
+			   FontSize="16"/>
+		<Border Margin="10, 0, 10, 0" BorderBrush="Black" BorderThickness="2">
+			<Grid ShowGridLines="False" Margin="5">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="0">
+					<Label Content="Experience Points" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="0">
+					<Label Content="Level" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="1">
+					<Label Content="0" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="1">
+					<Label Content="1" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="2">
+					<Label Content="300" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="2">
+					<Label Content="2" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="3">
+					<Label Content="900" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="3">
+					<Label Content="3" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="4">
+					<Label Content="2700" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="4">
+					<Label Content="4" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="5">
+					<Label Content="6500" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="5">
+					<Label Content="5" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="6">
+					<Label Content="14000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="6">
+					<Label Content="6" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="7">
+					<Label Content="23000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="7">
+					<Label Content="7" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="8">
+					<Label Content="34000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="8">
+					<Label Content="8" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="9">
+					<Label Content="48000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="9">
+					<Label Content="9" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="10">
+					<Label Content="64000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="10">
+					<Label Content="10" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="11">
+					<Label Content="85000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="11">
+					<Label Content="11" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="12">
+					<Label Content="100000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="12">
+					<Label Content="12" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="13">
+					<Label Content="120000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="13">
+					<Label Content="13" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="14">
+					<Label Content="140000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="14">
+					<Label Content="14" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="15">
+					<Label Content="165000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="15">
+					<Label Content="15" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="16">
+					<Label Content="195000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="16">
+					<Label Content="16" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="17">
+					<Label Content="225000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="17">
+					<Label Content="17" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="18">
+					<Label Content="265000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="18">
+					<Label Content="18" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 0" Grid.Column="0" Grid.Row="19">
+					<Label Content="305000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 0" Grid.Column="1" Grid.Row="19">
+					<Label Content="19" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 0, 1" Grid.Column="0" Grid.Row="20">
+					<Label Content="355000" FontSize="10"/>
+				</Border>
+				<Border BorderBrush="Black" BorderThickness="1, 1, 1, 1" Grid.Column="1" Grid.Row="20">
+					<Label Content="20" FontSize="10"/>
+				</Border>
+			</Grid>
+		</Border>
+		<Button Content="OK" HorizontalAlignment="Center" Margin="0, 5, 0, 0" Width="60" HorizontalContentAlignment="Center" Click="CloseWindow"/>
+	</StackPanel>
+
+</Window>
