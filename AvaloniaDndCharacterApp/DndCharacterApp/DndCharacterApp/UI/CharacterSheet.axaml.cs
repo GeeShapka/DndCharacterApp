@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Avalonia.Media;
 
 namespace DndCharacterApp.UI
 {
@@ -12,7 +13,11 @@ namespace DndCharacterApp.UI
         private void btnExpPerLevel_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             ExpPerLevel epl = new ExpPerLevel();
-            epl.Show();
+            epl.Show(this);
+        }
+
+        private void Label_ActualThemeVariantChanged(object? sender, System.EventArgs e)
+        {
         }
     }
 }

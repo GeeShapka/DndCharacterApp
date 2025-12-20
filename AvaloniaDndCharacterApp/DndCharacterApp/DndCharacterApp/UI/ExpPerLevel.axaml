@@ -6,6 +6,7 @@
 		Height="530"
 		Width="300"
 		CanResize="False"
+		WindowStartupLocation="CenterOwner"
 		x:Class="DndCharacterApp.ExpPerLevel"
 		Title="ExpPerLevel">
 	<StackPanel>

@@ -8,7 +8,7 @@
 		x:Class="DndCharacterApp.UI.CharacterSheet"
 		Title="DndCharacterApp">
 
-	<DockPanel VerticalAlignment="Top" LastChildFill="True">
+	<DockPanel LastChildFill="True">
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="File"/>
 			<MenuItem Header="Edit"/>
@@ -19,7 +19,7 @@
 				<Grid ShowGridLines="True">
 					<Grid.RowDefinitions>
 						<RowDefinition/>
-						<RowDefinition/>
+						<RowDefinition Height="4.7*"/>
 					</Grid.RowDefinitions>
 
 					<!--header grid-->
@@ -63,9 +63,9 @@
 										<ColumnDefinition/>
 										<ColumnDefinition/>
 									</Grid.ColumnDefinitions>
-									<TextBox Grid.Column="0" Margin="0, 0, 5, 0" Background="LightGray"/>
-									<TextBox Grid.Column="1" Margin="0, 0, 5, 0" Background="LightGray"/>
-									<TextBox Grid.Column="2" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="0" Classes="CBPRAE"/>
+									<TextBox Grid.Column="1" Classes="CBPRAE"/>
+									<TextBox Grid.Column="2" Classes="CBPRAE"/>
 								</Grid>
 
 								<!--top labels-->
@@ -75,9 +75,9 @@
 										<ColumnDefinition/>
 										<ColumnDefinition/>
 									</Grid.ColumnDefinitions>
-									<Label Grid.Column="0" Content="CLASS"/>
-									<Label Grid.Column="1" Content="BACKGROUND"/>
-									<Label Grid.Column="2" Content="PLAYER NAME"/>
+									<Label Grid.Column="0" Content="CLASS" Classes="CBPRAE"/>
+									<Label Grid.Column="1" Content="BACKGROUND" Classes="CBPRAE"/>
+									<Label Grid.Column="2" Content="PLAYER NAME" Classes="CBPRAE"/>
 								</Grid>
 
 								<!--bottom txt-->
@@ -87,23 +87,23 @@
 										<ColumnDefinition/>
 										<ColumnDefinition/>
 									</Grid.ColumnDefinitions>
-									<TextBox Grid.Column="0" Margin="0, 0, 5, 0" Background="LightGray"/>
-									<TextBox Grid.Column="1" Margin="0, 0, 5, 0" Background="LightGray"/>
+									<TextBox Grid.Column="0" Classes="CBPRAE"/>
+									<TextBox Grid.Column="1" Classes="CBPRAE"/>
 									<Grid Grid.Column="2" Margin="0, 0, 5, 0">
 										<Grid.ColumnDefinitions>
 											<ColumnDefinition Width="5*"/>
 											<ColumnDefinition/>
 										</Grid.ColumnDefinitions>
-										<TextBox Grid.Column="0" Background="LightGray"/>
-										<Button Grid.Column="1" 
+										<TextBox Grid.Column="0" Classes="CBPRAE"/>
+										<Button Grid.Column="1"
 												Content="?"
 												HorizontalContentAlignment="Center"
 												VerticalContentAlignment="Center"
 												FontWeight="Bold"
-												Margin="2, 0, 0, 0" 
+												Margin="2, 3, 0, 3"
 												VerticalAlignment="Stretch"
 												HorizontalAlignment="Stretch"
-												BorderBrush="Gray" 
+												BorderBrush="Gray"
 												BorderThickness="1"
 												Click="btnExpPerLevel_Click"/>
 									</Grid>
@@ -116,32 +116,299 @@
 										<ColumnDefinition/>
 										<ColumnDefinition/>
 									</Grid.ColumnDefinitions>
-									<Label Grid.Column="0" Content="RACE"/>
-									<Label Grid.Column="1" Content="ALIGNMENT"/>
-									<Label Grid.Column="2" Content="EXPERIENCE POINTS"/>
+									<Label Grid.Column="0" Content="RACE" Classes="CBPRAE"/>
+									<Label Grid.Column="1" Content="ALIGNMENT" Classes="CBPRAE"/>
+									<Label Grid.Column="2" Content="EXPERIENCE POINTS" Classes="CBPRAE"/>
 								</Grid>
-
 							</Grid>
 						</Border>
 					</Grid>
 
-
-
-
-					<Grid Grid.Row="1" ShowGridLines="True">
+					<!--body grid-->
+					<Grid Grid.Row="1" ShowGridLines="False">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition/>
 							<ColumnDefinition/>
 							<ColumnDefinition/>
 						</Grid.ColumnDefinitions>
+
+						<!--stats-->
+						<Border Grid.Column="0" Background="LightGray" Margin="5">
+							<Border BorderBrush="White" BorderThickness="2" Margin="3">
+								<StackPanel Margin="3">
+									<!--stats and abilitys-->
+									<Grid ShowGridLines="True">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition/>
+											<ColumnDefinition Width="2*"/>
+										</Grid.ColumnDefinitions>
+										<Grid.RowDefinitions>
+											<RowDefinition/>
+											<RowDefinition/>
+											<RowDefinition/>
+											<RowDefinition/>
+											<RowDefinition/>
+											<RowDefinition/>
+										</Grid.RowDefinitions>
+
+										<!--Strength-->
+										<Grid Grid.Row="0" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Strength"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+
+										<Grid Grid.Row="0" Grid.Column="1" Margin="0, 5, 0, 0">
+											<StackPanel Spacing="1">
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Saving Throw" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Athletics" Classes="Ability"/>
+												</StackPanel>
+											</StackPanel>
+										</Grid>
+
+										<!--Dexterity-->
+										<Grid Grid.Row="1" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Dexterity"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+
+										<Grid Grid.Row="1" Grid.Column="1" Margin="0, 5, 0, 0">
+											<StackPanel Spacing="1">
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Saving Throw" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Acrobatics" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Sleight Of hand" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Stealth" Classes="Ability"/>
+												</StackPanel>
+											</StackPanel>
+										</Grid>
+
+										<!--Constitution-->
+										<Grid Grid.Row="2" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Constitution"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+										
+										<Grid Grid.Row="2" Grid.Column="1" Margin="0, 5, 0, 0">
+											<StackPanel Spacing="1">
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Saving Throw" Classes="Ability"/>
+												</StackPanel>
+											</StackPanel>
+										</Grid>
+
+										<!--Intelligence-->
+										<Grid Grid.Row="3" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Intelligence"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+										
+										<Grid Grid.Row="3" Grid.Column="1" Margin="0, 5, 0, 0">
+											<StackPanel Spacing="1">
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Saving Throw" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Arcana" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="History" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Investigation" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Nature" Classes="Ability"/>
+												</StackPanel>
+												<StackPanel Orientation="Horizontal" Classes="Ability">
+													<ToggleButton Classes="Ability"/>
+													<TextBox Classes="Ability"/>
+													<Label Content="Religion" Classes="Ability"/>
+												</StackPanel>
+											</StackPanel>
+										</Grid>
+
+										<!--Wisdom-->
+										<Grid Grid.Row="4" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Wisdom"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+
+										<!--Charisma-->
+										<Grid Grid.Row="5" Grid.Column="0" Margin="0, 5">
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="70" Width="80"
+													VerticalAlignment="Top"
+													CornerRadius="10"
+													Margin="3">
+												<TextBox Classes="StatMod"/>
+											</Border>
+											<Label Content="Charisma"
+												   HorizontalAlignment="Center"
+												   VerticalAlignment="Bottom"
+												   Padding="0"
+												   Margin="0, 0, 0, 3" FontSize="10"/>
+
+											<Border Background="White"
+													BorderThickness="2"
+													BorderBrush="Black"
+													Height="30" Width="35"
+													VerticalAlignment="Top"
+													CornerRadius="5">
+												<TextBox Classes="StatScore"/>
+											</Border>
+										</Grid>
+									</Grid>
+								</StackPanel>
+							</Border>
+						</Border>
+
 					</Grid>
 				</Grid>
 			</TabItem>
 			<TabItem Header="Spells">
-				
+
 			</TabItem>
 		</TabControl>
-
 	</DockPanel>
 
 

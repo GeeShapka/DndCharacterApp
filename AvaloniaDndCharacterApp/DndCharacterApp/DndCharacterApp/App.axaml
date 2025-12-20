@@ -1,10 +1,89 @@
 <Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="DndCharacterApp.App"
-             RequestedThemeVariant="Light">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="DndCharacterApp.App"
+			 RequestedThemeVariant="Light">
+	<!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
-    <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+	<Application.Styles>
+		<FluentTheme />
+		<Style Selector="TextBox.StatScore">
+			<Setter Property="MinHeight" Value="1"/>
+			<Setter Property="MinWidth" Value="1"/>
+			<Setter Property="Width" Value="25"/>
+			<Setter Property="Height" Value="20"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="Background" Value="#FAFAFA"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="FontSize" Value="12"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="TextBox.StatMod">
+			<Setter Property="MinHeight" Value="1"/>
+			<Setter Property="MinWidth" Value="1"/>
+			<Setter Property="Width" Value="60"/>
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+			<Setter Property="Background" Value="#FAFAFA"/>
+			<Setter Property="Margin" Value="0, 0, 0, 10"/>
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="IsReadOnly" Value="True"/>
+		</Style>
+		<Style Selector="TextBox.CBPRAE">
+			<Setter Property="Margin" Value="0, 0, 5, 0"/>
+			<Setter Property="Background" Value="LightGray"/>
+			<Setter Property="Height" Value="10"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="Label.CBPRAE">
+			<Setter Property="Padding" Value="5, 0, 0, 0"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="TextBox.Ability">
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Stretch"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="FontSize" Value="10"/>
+			<Setter Property="Height" Value="12"/>
+			<Setter Property="Width" Value="40"/>
+			<Setter Property="MinHeight" Value="1"/>
+			<Setter Property="MinWidth" Value="1"/>
+		</Style>
+		<Style Selector="Label.Ability">
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="10"/>
+			<Setter Property="Padding" Value="0, -2"/>
+		</Style>
+		<Style Selector="ToggleButton.Ability">
+			<Setter Property="Height" Value="11"/>
+			<Setter Property="Width" Value="11"/>
+			<Setter Property="Margin" Value="5, 0, 0, 0"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="IsThreeState" Value="True"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Style Selector="^:checked /template/ ContentPresenter#PART_ContentPresenter">
+				<Setter Property="Background" Value="#FF0078D4"/>
+				<Setter Property="BorderThickness" Value="1"/>
+				<Setter Property="BorderBrush" Value="Black"/>
+			</Style>
+			<Style Selector="^:indeterminate /template/ ContentPresenter#PART_ContentPresenter">
+				<Setter Property="Background" Value="Red"/>
+				<Setter Property="BorderThickness" Value="1"/>
+				<Setter Property="BorderBrush" Value="Black"/>
+			</Style>
+		</Style>
+		<Style Selector="StackPanel.Ability">
+			<Setter Property="Spacing" Value="2"/>
+		</Style>
+
+	</Application.Styles>
 </Application>
