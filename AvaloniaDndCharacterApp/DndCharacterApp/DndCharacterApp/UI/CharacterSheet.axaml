@@ -137,7 +137,7 @@
 							<Border BorderBrush="White" BorderThickness="2" Margin="3">
 								<StackPanel Margin="3">
 									<!--stats and abilitys-->
-									<Grid ShowGridLines="True">
+									<Grid ShowGridLines="False">
 										<Grid.ColumnDefinitions>
 											<ColumnDefinition/>
 											<ColumnDefinition Width="2*"/>
@@ -179,20 +179,21 @@
 										</Grid>
 
 										<Grid Grid.Row="0" Grid.Column="1" Margin="0, 5, 0, 0">
-											<StackPanel Spacing="1">
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Saving Throw" Classes="Ability"/>
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Athletics" Classes="Ability"/>
+													</StackPanel>
 												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Athletics" Classes="Ability"/>
-												</StackPanel>
-											</StackPanel>
+											</Border>
 										</Grid>
-
 										<!--Dexterity-->
 										<Grid Grid.Row="1" Grid.Column="0" Margin="0, 5">
 											<Border Background="White"
@@ -221,28 +222,30 @@
 										</Grid>
 
 										<Grid Grid.Row="1" Grid.Column="1" Margin="0, 5, 0, 0">
-											<StackPanel Spacing="1">
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Saving Throw" Classes="Ability"/>
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Acrobatics" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Sleight Of hand" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Stealth" Classes="Ability"/>
+													</StackPanel>
 												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Acrobatics" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Sleight Of hand" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Stealth" Classes="Ability"/>
-												</StackPanel>
-											</StackPanel>
+											</Border>
 										</Grid>
 
 										<!--Constitution-->
@@ -271,15 +274,16 @@
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
-										
 										<Grid Grid.Row="2" Grid.Column="1" Margin="0, 5, 0, 0">
-											<StackPanel Spacing="1">
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Saving Throw" Classes="Ability"/>
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
 												</StackPanel>
-											</StackPanel>
+											</Border>
 										</Grid>
 
 										<!--Intelligence-->
@@ -308,40 +312,42 @@
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
-										
+
 										<Grid Grid.Row="3" Grid.Column="1" Margin="0, 5, 0, 0">
-											<StackPanel Spacing="1">
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Saving Throw" Classes="Ability"/>
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Arcana" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="History" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Investigation" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Nature" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Religion" Classes="Ability"/>
+													</StackPanel>
 												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Arcana" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="History" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Investigation" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Nature" Classes="Ability"/>
-												</StackPanel>
-												<StackPanel Orientation="Horizontal" Classes="Ability">
-													<ToggleButton Classes="Ability"/>
-													<TextBox Classes="Ability"/>
-													<Label Content="Religion" Classes="Ability"/>
-												</StackPanel>
-											</StackPanel>
+											</Border>
 										</Grid>
 
 										<!--Wisdom-->
@@ -371,6 +377,43 @@
 											</Border>
 										</Grid>
 
+										<Grid Grid.Row="4" Grid.Column="1" Margin="0, 5, 0, 0">
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Animal Handling" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Insight" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Medicine" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Perception" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Survival" Classes="Ability"/>
+													</StackPanel>
+												</StackPanel>
+											</Border>
+										</Grid>
+
 										<!--Charisma-->
 										<Grid Grid.Row="5" Grid.Column="0" Margin="0, 5">
 											<Border Background="White"
@@ -397,7 +440,122 @@
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
-									</Grid>
+
+										<Grid Grid.Row="5" Grid.Column="1" Margin="0, 5, 0, 0">
+											<Border BorderThickness="0, 1, 0, 0" BorderBrush="Black">
+												<StackPanel Spacing="1" Margin="0, 1, 0, 0">
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Saving Throw" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Deception" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Intimidation" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Performance" Classes="Ability"/>
+													</StackPanel>
+													<StackPanel Orientation="Horizontal" Classes="Ability">
+														<ToggleButton Classes="Ability"/>
+														<TextBox Classes="Ability"/>
+														<Label Content="Persuasion" Classes="Ability"/>
+													</StackPanel>
+												</StackPanel>
+											</Border>
+										</Grid>
+									</Grid><!--end of abilities-->
+
+									<!--prof bonus-->
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
+										<Border Background="White"
+												BorderThickness="2"
+												BorderBrush="Black"
+												Height="50"
+												Width="60"
+												Margin="25, 0, 0, 0"
+												CornerRadius="5">
+											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 8"/>
+										</Border>
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="35"
+												Width="200"
+												CornerRadius="0, 5, 5, 0">
+											<Label Content="Proficiency Bonus"
+												   VerticalAlignment="Center"
+												   HorizontalAlignment="Center"/>
+										</Border>
+									</StackPanel>
+
+									<!--passive perception-->
+									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
+										<Border Background="White"
+												BorderThickness="2"
+												BorderBrush="Black"
+												Height="50"
+												Width="60"
+												Margin="25, 0, 0, 0"
+												CornerRadius="5">
+											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 8"/>
+										</Border>
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="35"
+												Width="200"
+												CornerRadius="0, 5, 5, 0">
+											<Label Content="Passive Perception"
+												   VerticalAlignment="Center"
+												   HorizontalAlignment="Center"/>
+										</Border>
+									</StackPanel>
+
+									<!--weight-->
+									<StackPanel Orientation="Horizontal" Margin="14, 0, 0, 0">
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="30"
+												Width="70"
+												CornerRadius="5, 0, 0, 5">
+											<Label Content="Current Weight" FontSize="8" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+										</Border>
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="40"
+												Width="60"
+												CornerRadius="5">
+											<TextBox Classes="StatMod" IsReadOnly="False" Width="40" Margin="0, 0, 0, 4"/>
+										</Border>
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="40"
+												Width="60"
+												CornerRadius="5"
+												Margin="25, 0, 0, 0">
+											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 4"/>
+										</Border>
+										<Border Background="White"
+												BorderThickness="1"
+												BorderBrush="Black"
+												Height="30"
+												Width="70"
+												CornerRadius="0, 5, 5, 0">
+											<Label Content="Max Weight" FontSize="8" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+										</Border>
+									</StackPanel>
 								</StackPanel>
 							</Border>
 						</Border>
