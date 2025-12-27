@@ -153,27 +153,11 @@
 
 										<!--Strength-->
 										<Grid Grid.Row="0" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Strength"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Strength" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -196,27 +180,11 @@
 										</Grid>
 										<!--Dexterity-->
 										<Grid Grid.Row="1" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Dexterity"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Dexterity" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -250,27 +218,11 @@
 
 										<!--Constitution-->
 										<Grid Grid.Row="2" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Constitution"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Constitution" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -288,27 +240,11 @@
 
 										<!--Intelligence-->
 										<Grid Grid.Row="3" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Intelligence"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Intelligence" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -352,27 +288,11 @@
 
 										<!--Wisdom-->
 										<Grid Grid.Row="4" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Wisdom"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Wisdom" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -416,27 +336,11 @@
 
 										<!--Charisma-->
 										<Grid Grid.Row="5" Grid.Column="0" Margin="0, 5">
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="70" Width="80"
-													VerticalAlignment="Top"
-													CornerRadius="10"
-													Margin="3">
+											<Border Classes="Stat">
 												<TextBox Classes="StatMod"/>
 											</Border>
-											<Label Content="Charisma"
-												   HorizontalAlignment="Center"
-												   VerticalAlignment="Bottom"
-												   Padding="0"
-												   Margin="0, 0, 0, 3" FontSize="10"/>
-
-											<Border Background="White"
-													BorderThickness="2"
-													BorderBrush="Black"
-													Height="30" Width="35"
-													VerticalAlignment="Top"
-													CornerRadius="5">
+											<Label Content="Charisma" Classes="StatMod"/>
+											<Border Classes="StatScore">
 												<TextBox Classes="StatScore"/>
 											</Border>
 										</Grid>
@@ -476,18 +380,15 @@
 
 									<!--prof bonus-->
 									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
-										<Border Background="White"
-												BorderThickness="2"
-												BorderBrush="Black"
+										<Border Classes="Simple"
 												Height="50"
 												Width="60"
-												Margin="25, 0, 0, 0"
-												CornerRadius="5">
+												Margin="25, 0, 0, 0">
 											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 8"/>
 										</Border>
-										<Border Background="White"
+										<Border Classes="Simple"
+												Margin="0"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="35"
 												Width="200"
 												CornerRadius="0, 5, 5, 0">
@@ -499,18 +400,15 @@
 
 									<!--passive perception-->
 									<StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
-										<Border Background="White"
-												BorderThickness="2"
-												BorderBrush="Black"
+										<Border Classes="Simple"
 												Height="50"
 												Width="60"
-												Margin="25, 0, 0, 0"
-												CornerRadius="5">
+												Margin="25, 0, 0, 0">
 											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 8"/>
 										</Border>
-										<Border Background="White"
+										<Border Classes="Simple"
+												Margin="0"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="35"
 												Width="200"
 												CornerRadius="0, 5, 5, 0">
@@ -522,34 +420,33 @@
 
 									<!--weight-->
 									<StackPanel Orientation="Horizontal" Margin="14, 0, 0, 0">
-										<Border Background="White"
+										<Border Classes="Simple"
+												Margin="0"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="30"
 												Width="70"
 												CornerRadius="5, 0, 0, 5">
 											<Label Content="Current Weight" FontSize="8" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 										</Border>
-										<Border Background="White"
+										<Border Classes="Simple"
+												Margin="0"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="40"
 												Width="60"
 												CornerRadius="5">
 											<TextBox Classes="StatMod" IsReadOnly="False" Width="40" Margin="0, 0, 0, 4"/>
 										</Border>
-										<Border Background="White"
+										<Border Classes="Simple"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="40"
 												Width="60"
 												CornerRadius="5"
 												Margin="25, 0, 0, 0">
 											<TextBox Classes="StatMod" Width="40" Margin="0, 0, 0, 4"/>
 										</Border>
-										<Border Background="White"
+										<Border Classes="Simple"
+												Margin="0"
 												BorderThickness="1"
-												BorderBrush="Black"
 												Height="30"
 												Width="70"
 												CornerRadius="0, 5, 5, 0">
@@ -559,6 +456,159 @@
 								</StackPanel>
 							</Border>
 						</Border>
+
+						<!--middle column-->
+						<StackPanel Grid.Column="1">
+							<Border Background="LightGray" Margin="5">
+								<Border BorderBrush="White" BorderThickness="2" Margin="3">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition/>
+											<ColumnDefinition/>
+											<ColumnDefinition/>
+										</Grid.ColumnDefinitions>
+										<Grid.RowDefinitions>
+											<RowDefinition/>
+											<RowDefinition Height="2*"/>
+										</Grid.RowDefinitions>
+
+										<!--conditions-->
+										<Border Classes="Simple" Grid.Column="0">
+											<StackPanel>
+												<TextBox Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
+												<Label Content="Conditions" Classes="Simple" Margin="0"/>
+											</StackPanel>
+										</Border>
+
+										<!--health-->
+										<StackPanel Grid.Column="1">
+											<StackPanel Orientation="Horizontal">
+												<!--temp hp-->
+												<Border Classes="Simple"
+														Width="45"
+														Height="40"
+														VerticalAlignment="Top">
+													<StackPanel>
+														<TextBox Classes="StatScore"/>
+														<Label Content="Temp HP" Classes="Simple" Margin="0" FontSize="8"/>
+													</StackPanel>
+												</Border>
+
+												<!--max hp-->
+												<Border Classes="Simple"
+														Width="45"
+														Height="40"
+														VerticalAlignment="Top">
+													<StackPanel>
+														<TextBox Classes="StatScore"/>
+														<Label Content="Max HP" Classes="Simple" Margin="0" FontSize="8"/>
+													</StackPanel>
+												</Border>
+											</StackPanel>
+											<Border Classes="Simple">
+												<StackPanel>
+													<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+													<Label Content="Current Hp" Classes="Simple" Margin="0"/>
+												</StackPanel>
+											</Border>
+										</StackPanel>
+
+										<!--boons-->
+										<Border Classes="Simple" Grid.Column="2">
+											<StackPanel>
+												<TextBox Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
+												<Label Content="Boons" Classes="Simple" Margin="0"/>
+											</StackPanel>
+										</Border>
+
+										<Grid Grid.Column="0" Grid.Row="1">
+											<Grid.RowDefinitions>
+												<RowDefinition/>
+												<RowDefinition/>
+											</Grid.RowDefinitions>
+
+											<!--initiative-->
+											<Border Classes="Simple" Grid.Row="0">
+												<StackPanel>
+													<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+													<Label Content="Initiative" Classes="Simple" Margin="0" FontSize="10"/>
+												</StackPanel>
+											</Border>
+
+											<!--hit dice-->
+											<Border Classes="Simple" Grid.Row="1">
+												<StackPanel>
+													<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+													<Label Content="Hit Dice" Classes="Simple" Margin="0" FontSize="10"/>
+												</StackPanel>
+											</Border>
+										</Grid>
+
+										<!--armor class-->
+										<Border Classes="Simple" Grid.Column="1" Grid.Row="1">
+											<StackPanel>
+												<TextBox Classes="Simple"
+														 Margin="5, 5, 5, 0"
+														 Height="70" TextWrapping="Wrap"
+														 VerticalContentAlignment="Center"
+														 HorizontalContentAlignment="Center"
+														 FontSize="30"/>
+												<Label Content="Armor" Classes="Simple" Margin="0"/>
+												<Label Content="Class" Classes="Simple" Margin="0"/>
+											</StackPanel>
+										</Border>
+
+										<Grid Grid.Column="2" Grid.Row="1">
+											<Grid.RowDefinitions>
+												<RowDefinition/>
+												<RowDefinition/>
+											</Grid.RowDefinitions>
+
+											<!--speed-->
+											<Border Classes="Simple" Grid.Row="0">
+												<StackPanel>
+													<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+													<Label Content="Speed" Classes="Simple" Margin="0" FontSize="10"/>
+												</StackPanel>
+											</Border>
+
+											<!--Death Saves-->
+											<Border Classes="Simple" Grid.Row="1">
+												<StackPanel>
+													<Grid>
+														<Grid.ColumnDefinitions>
+															<ColumnDefinition/>
+															<ColumnDefinition/>
+														</Grid.ColumnDefinitions>
+														<Grid.RowDefinitions>
+															<RowDefinition/>
+															<RowDefinition/>
+														</Grid.RowDefinitions>
+
+														<!--success-->
+														<Label Content="Successes" Grid.Column="0" Grid.Row="0" Classes="Simple" Margin="0" FontSize="8" VerticalAlignment="Center"/>
+														<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+															<ToggleButton Classes="DeathSavesSuccesses"/>
+															<ToggleButton Classes="DeathSavesSuccesses"/>
+															<ToggleButton Classes="DeathSavesSuccesses"/>
+														</StackPanel>
+
+														<!--failure-->
+														<Label Content="Failures" Grid.Column="0" Grid.Row="1" Classes="Simple" Margin="0" FontSize="8" VerticalAlignment="Center"/>
+														<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+															<ToggleButton Classes="DeathSavesFailures"/>
+															<ToggleButton Classes="DeathSavesFailures"/>
+															<ToggleButton Classes="DeathSavesFailures"/>
+														</StackPanel>
+													</Grid>
+													<Label Content="Death Saves" Classes="Simple" Margin="3, 5, 3, 0" FontSize="10"/>
+												</StackPanel>
+											</Border>
+										</Grid>
+									</Grid>
+								</Border>
+							</Border>
+						</StackPanel>
 
 					</Grid>
 				</Grid>
