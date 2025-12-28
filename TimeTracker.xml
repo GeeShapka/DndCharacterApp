@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeTracker>
+    <ProjectName>DndCharacterApp</ProjectName>
+
+    <TimeEntries>
+        <Entry>
+            <Date>28-12-2025</Date>
+            <StartTime>01:32</StartTime>
+            <EndTime>01:36</EndTime>
+            <Notes>Added a time tracking file</Notes>
+        </Entry>
+    </TimeEntries>
+</TimeTracker>
