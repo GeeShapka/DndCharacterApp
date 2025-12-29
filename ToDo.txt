@@ -1,4 +1,16 @@
 - add variables to the ui elements
+	- cbprae
+	- all scores
+	- all mods
+	- all abilities txt and check
+	- pb
+	- pp
+	- weights
+	- all middle top area
+	
+- add comboAttackDamageTypes to player class
+- add charges to attacks and charges section
+
 
 
 

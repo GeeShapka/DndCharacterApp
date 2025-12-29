@@ -8,6 +8,11 @@
             <StartTime>01:32</StartTime>
             <EndTime>01:36</EndTime>
             <Notes>Added a time tracking file</Notes>
+        </Entry><Entry>
+            <Date>28-12-2025</Date>
+            <StartTime>20:08</StartTime>
+            <EndTime>21:56</EndTime>
+            <Notes>began adding attack/charges section</Notes>
         </Entry>
     </TimeEntries>
 </TimeTracker>

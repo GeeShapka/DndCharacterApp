@@ -3,6 +3,8 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		mc:Ignorable="d" d:DesignWidth="1080" d:DesignHeight="928"
+		xmlns:vm="clr-namespace:DndCharacterApp.ViewModel"
+		x:DataType="vm:CharacterSheetViewModel"
 		Width="1080"
 		Height="928"
 		x:Class="DndCharacterApp.UI.CharacterSheet"
@@ -606,6 +608,87 @@
 											</Border>
 										</Grid>
 									</Grid>
+								</Border>
+							</Border>
+
+							<!--attacks and Charges-->
+							<Border Background="LightGray" Margin="5">
+								<Border BorderBrush="White" BorderThickness="2" Margin="3">
+									<StackPanel>
+										<Grid Margin="3, 3, 3, 3">
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition/>
+												<ColumnDefinition Width="0.5*"/>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+											</Grid.ColumnDefinitions>
+											<Grid.RowDefinitions>
+												<RowDefinition Height="0.5*"/>
+												<RowDefinition/>
+												<RowDefinition/>
+												<RowDefinition/>
+												<RowDefinition/>
+												<RowDefinition/>
+											</Grid.RowDefinitions>
+
+											<Label Classes="AttackCharges" Content="Name" Grid.Column="0" Grid.Row="0"/>
+											<Label Classes="AttackCharges" Content="Atk Bonus" Grid.Column="1" Grid.Row="0"/>
+											<Label Classes="AttackCharges" Content="Damage" Grid.Column="2" Grid.Row="0"/>
+											<Label Classes="AttackCharges" Content="Type" Grid.Column="3" Grid.Row="0"/>
+
+											<TextBox x:Name="txtAttackOneName" Grid.Column="0" Grid.Row="1" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackOneAtkBonus" Grid.Column="1" Grid.Row="1" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackOneDamage" Grid.Column="2" Grid.Row="1" Classes="Simple" Margin="2"/>
+											<ComboBox x:Name="comboAttackOneDamageType" 
+														Grid.Column="3" Grid.Row="1" 
+														Classes="AttackCharges" 
+														ItemsSource="{Binding DamageTypes}" 
+														SelectedItem="{Binding ComboAttackOneDamageType}"/>
+
+											<TextBox x:Name="txtAttackTwoName" Grid.Column="0" Grid.Row="2" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackTwoAtkBonus" Grid.Column="1" Grid.Row="2" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackTwoDamage" Grid.Column="2" Grid.Row="2" Classes="Simple" Margin="2"/>
+											<ComboBox x:Name="comboAttackTwoDamageType" 
+														Grid.Column="3" Grid.Row="2" 
+														Classes="AttackCharges" 
+														ItemsSource="{Binding DamageTypes}" 
+														SelectedItem="{Binding ComboAttackTwoDamageType}"/>
+
+											<TextBox x:Name="txtAttackThreeName" Grid.Column="0" Grid.Row="3" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackThreeAtkBonus" Grid.Column="1" Grid.Row="3" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackThreeDamage" Grid.Column="2" Grid.Row="3" Classes="Simple" Margin="2"/>
+											<ComboBox x:Name="comboAttackThreeDamageType" 
+														Grid.Column="3" Grid.Row="3" 
+														Classes="AttackCharges" 
+														ItemsSource="{Binding DamageTypes}" 
+														SelectedItem="{Binding ComboAttackThreeDamageType}"/>
+
+											<TextBox x:Name="txtAttackFourName" Grid.Column="0" Grid.Row="4" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackFourAtkBous" Grid.Column="1" Grid.Row="4" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackFourDamage" Grid.Column="2" Grid.Row="4" Classes="Simple" Margin="2"/>
+											<ComboBox x:Name="comboAttackFourDamageType" 
+														Grid.Column="3" Grid.Row="4" 
+														Classes="AttackCharges" 
+														ItemsSource="{Binding DamageTypes}" 
+														SelectedItem="{Binding ComboAttackFourDamageType}"/>
+
+											<TextBox x:Name="txtAttackFiveName" Grid.Column="0" Grid.Row="5" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackFiveAtkBonus" Grid.Column="1" Grid.Row="5" Classes="Simple" Margin="2"/>
+											<TextBox x:Name="txtAttackFiveDamage" Grid.Column="2" Grid.Row="5" Classes="Simple" Margin="2"/>
+											<ComboBox x:Name="comboAttackFiveDamageType" 
+														Grid.Column="3" Grid.Row="5" 
+														Classes="AttackCharges" 
+														ItemsSource="{Binding DamageTypes}" 
+														SelectedItem="{Binding ComboAttackFiveDamageType}"/>
+										</Grid>
+
+
+
+										<!--ammo/charges here-->
+
+
+										<Label Content="Attacks &amp; Charges" Margin="5, 2, 5, 5" HorizontalAlignment="Center" FontSize="14" Padding="0"/>
+									</StackPanel>
 								</Border>
 							</Border>
 						</StackPanel>
