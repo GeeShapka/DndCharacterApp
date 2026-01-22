@@ -13,7 +13,7 @@ namespace DndCharacterApp.Objects.Player
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:39:40 PM
 	 */
-    internal partial class Player
+    internal partial class Player_Static
     {
         //methods
 
@@ -22,17 +22,17 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateStr()
         {
-            PlayerMods.Str = PlayerMods.ScoreToMod(ScoreStr);
+            PlayerMods_Static.Str = PlayerMods_Static.ScoreToMod(ScoreStr);
 
-            PlayerMods.StrSave = PlayerMods.Str;
-            if (PlayerMods.profStr) PlayerMods.StrSave += Prof;
-            if (PlayerMods.expStr) PlayerMods.StrSave += 2 * Prof;
-            PlayerMods.StrSave += PlayerMods.addStr;
+            PlayerMods_Static.StrSave = PlayerMods_Static.Str;
+            if (PlayerMods_Static.profStr) PlayerMods_Static.StrSave += Prof;
+            if (PlayerMods_Static.expStr) PlayerMods_Static.StrSave += 2 * Prof;
+            PlayerMods_Static.StrSave += PlayerMods_Static.addStr;
 
-            PlayerMods.Athletics = PlayerMods.Str;
-            if (PlayerMods.profAthletics) PlayerMods.Athletics += Prof;
-            if (PlayerMods.expAthletics) PlayerMods.Athletics += 2 * Prof;
-            PlayerMods.Athletics += PlayerMods.addAthletics;
+            PlayerMods_Static.Athletics = PlayerMods_Static.Str;
+            if (PlayerMods_Static.profAthletics) PlayerMods_Static.Athletics += Prof;
+            if (PlayerMods_Static.expAthletics) PlayerMods_Static.Athletics += 2 * Prof;
+            PlayerMods_Static.Athletics += PlayerMods_Static.addAthletics;
         }//end of UpdateStr
 
 
@@ -41,27 +41,27 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateDex()
         {
-            PlayerMods.Dex = PlayerMods.ScoreToMod(ScoreDex);
+            PlayerMods_Static.Dex = PlayerMods_Static.ScoreToMod(ScoreDex);
 
-            PlayerMods.DexSave = PlayerMods.Dex;
-            if (PlayerMods.profDex) PlayerMods.DexSave += Prof;
-            if (PlayerMods.expDex) PlayerMods.DexSave += 2 * Prof;
-            PlayerMods.DexSave += PlayerMods.addDex;
+            PlayerMods_Static.DexSave = PlayerMods_Static.Dex;
+            if (PlayerMods_Static.profDex) PlayerMods_Static.DexSave += Prof;
+            if (PlayerMods_Static.expDex) PlayerMods_Static.DexSave += 2 * Prof;
+            PlayerMods_Static.DexSave += PlayerMods_Static.addDex;
 
-            PlayerMods.Acrobatics = PlayerMods.Dex;
-            if (PlayerMods.profAcrobatics) PlayerMods.Acrobatics += Prof;
-            if (PlayerMods.expAcrobatics) PlayerMods.Acrobatics += 2 * Prof;
-            PlayerMods.Acrobatics += PlayerMods.addAcrobatics;
+            PlayerMods_Static.Acrobatics = PlayerMods_Static.Dex;
+            if (PlayerMods_Static.profAcrobatics) PlayerMods_Static.Acrobatics += Prof;
+            if (PlayerMods_Static.expAcrobatics) PlayerMods_Static.Acrobatics += 2 * Prof;
+            PlayerMods_Static.Acrobatics += PlayerMods_Static.addAcrobatics;
 
-            PlayerMods.SleightOfHand = PlayerMods.Dex;
-            if (PlayerMods.profSleightOfHand) PlayerMods.SleightOfHand += Prof;
-            if (PlayerMods.expSleightOfHand) PlayerMods.SleightOfHand += 2 * Prof;
-            PlayerMods.SleightOfHand += PlayerMods.addSleightOfHand;
+            PlayerMods_Static.SleightOfHand = PlayerMods_Static.Dex;
+            if (PlayerMods_Static.profSleightOfHand) PlayerMods_Static.SleightOfHand += Prof;
+            if (PlayerMods_Static.expSleightOfHand) PlayerMods_Static.SleightOfHand += 2 * Prof;
+            PlayerMods_Static.SleightOfHand += PlayerMods_Static.addSleightOfHand;
 
-            PlayerMods.Stealth = PlayerMods.Dex;
-            if (PlayerMods.profStealth) PlayerMods.Stealth += Prof;
-            if (PlayerMods.expStealth) PlayerMods.Stealth += 2 * Prof;
-            PlayerMods.Stealth += PlayerMods.addStealth;
+            PlayerMods_Static.Stealth = PlayerMods_Static.Dex;
+            if (PlayerMods_Static.profStealth) PlayerMods_Static.Stealth += Prof;
+            if (PlayerMods_Static.expStealth) PlayerMods_Static.Stealth += 2 * Prof;
+            PlayerMods_Static.Stealth += PlayerMods_Static.addStealth;
         }//end of UpdateDex
 
 
@@ -70,12 +70,12 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateCon()
         {
-            PlayerMods.Con = PlayerMods.ScoreToMod(ScoreCon);
+            PlayerMods_Static.Con = PlayerMods_Static.ScoreToMod(ScoreCon);
 
-            PlayerMods.ConSave = PlayerMods.Con;
-            if (PlayerMods.profCon) PlayerMods.ConSave += Prof;
-            if (PlayerMods.expCon) PlayerMods.ConSave += 2 * Prof;
-            PlayerMods.ConSave += PlayerMods.addCon;
+            PlayerMods_Static.ConSave = PlayerMods_Static.Con;
+            if (PlayerMods_Static.profCon) PlayerMods_Static.ConSave += Prof;
+            if (PlayerMods_Static.expCon) PlayerMods_Static.ConSave += 2 * Prof;
+            PlayerMods_Static.ConSave += PlayerMods_Static.addCon;
         }//end of UpdateCon
 
 
@@ -84,37 +84,37 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateInt()
         {
-            PlayerMods.Int = PlayerMods.ScoreToMod(ScoreInt);
+            PlayerMods_Static.Int = PlayerMods_Static.ScoreToMod(ScoreInt);
 
-            PlayerMods.IntSave = PlayerMods.Int;
-            if (PlayerMods.profInt) PlayerMods.IntSave += Prof;
-            if (PlayerMods.expInt) PlayerMods.IntSave += 2 * Prof;
-            PlayerMods.IntSave += PlayerMods.addInt;
+            PlayerMods_Static.IntSave = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profInt) PlayerMods_Static.IntSave += Prof;
+            if (PlayerMods_Static.expInt) PlayerMods_Static.IntSave += 2 * Prof;
+            PlayerMods_Static.IntSave += PlayerMods_Static.addInt;
 
-            PlayerMods.Arcana = PlayerMods.Int;
-            if (PlayerMods.profArcana) PlayerMods.Arcana += Prof;
-            if (PlayerMods.expArcana) PlayerMods.Arcana += 2 * Prof;
-            PlayerMods.Arcana += PlayerMods.addArcana;
+            PlayerMods_Static.Arcana = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profArcana) PlayerMods_Static.Arcana += Prof;
+            if (PlayerMods_Static.expArcana) PlayerMods_Static.Arcana += 2 * Prof;
+            PlayerMods_Static.Arcana += PlayerMods_Static.addArcana;
 
-            PlayerMods.History = PlayerMods.Int;
-            if (PlayerMods.profHistory) PlayerMods.History += Prof;
-            if (PlayerMods.expHistory) PlayerMods.History += 2 * Prof;
-            PlayerMods.History += PlayerMods.addHistory;
+            PlayerMods_Static.History = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profHistory) PlayerMods_Static.History += Prof;
+            if (PlayerMods_Static.expHistory) PlayerMods_Static.History += 2 * Prof;
+            PlayerMods_Static.History += PlayerMods_Static.addHistory;
 
-            PlayerMods.Investigation = PlayerMods.Int;
-            if (PlayerMods.profInvestigation) PlayerMods.Investigation += Prof;
-            if (PlayerMods.expInvestigation) PlayerMods.Investigation += 2 * Prof;
-            PlayerMods.Investigation += PlayerMods.addInvestigation;
+            PlayerMods_Static.Investigation = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profInvestigation) PlayerMods_Static.Investigation += Prof;
+            if (PlayerMods_Static.expInvestigation) PlayerMods_Static.Investigation += 2 * Prof;
+            PlayerMods_Static.Investigation += PlayerMods_Static.addInvestigation;
 
-            PlayerMods.Nature = PlayerMods.Int;
-            if (PlayerMods.profNature) PlayerMods.Nature += Prof;
-            if (PlayerMods.expNature) PlayerMods.Nature += 2 * Prof;
-            PlayerMods.Nature += PlayerMods.addNature;
+            PlayerMods_Static.Nature = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profNature) PlayerMods_Static.Nature += Prof;
+            if (PlayerMods_Static.expNature) PlayerMods_Static.Nature += 2 * Prof;
+            PlayerMods_Static.Nature += PlayerMods_Static.addNature;
 
-            PlayerMods.Religion = PlayerMods.Int;
-            if (PlayerMods.profReligion) PlayerMods.Religion += Prof;
-            if (PlayerMods.expReligion) PlayerMods.Religion += 2 * Prof;
-            PlayerMods.Religion += PlayerMods.addReligion;
+            PlayerMods_Static.Religion = PlayerMods_Static.Int;
+            if (PlayerMods_Static.profReligion) PlayerMods_Static.Religion += Prof;
+            if (PlayerMods_Static.expReligion) PlayerMods_Static.Religion += 2 * Prof;
+            PlayerMods_Static.Religion += PlayerMods_Static.addReligion;
         }//end of UpdateInt
 
 
@@ -123,37 +123,37 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateWis()
         {
-            PlayerMods.Wis = PlayerMods.ScoreToMod(ScoreWis);
+            PlayerMods_Static.Wis = PlayerMods_Static.ScoreToMod(ScoreWis);
 
-            PlayerMods.WisSave = PlayerMods.Wis;
-            if (PlayerMods.profWis) PlayerMods.WisSave += Prof;
-            if (PlayerMods.expWis) PlayerMods.WisSave += 2 * Prof;
-            PlayerMods.WisSave += PlayerMods.addWis;
+            PlayerMods_Static.WisSave = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profWis) PlayerMods_Static.WisSave += Prof;
+            if (PlayerMods_Static.expWis) PlayerMods_Static.WisSave += 2 * Prof;
+            PlayerMods_Static.WisSave += PlayerMods_Static.addWis;
 
-            PlayerMods.AnimalHandling = PlayerMods.Wis;
-            if (PlayerMods.profAnimalHandling) PlayerMods.AnimalHandling += Prof;
-            if (PlayerMods.expAnimalHandling) PlayerMods.AnimalHandling += 2 * Prof;
-            PlayerMods.AnimalHandling += PlayerMods.addAnimalHandling;
+            PlayerMods_Static.AnimalHandling = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profAnimalHandling) PlayerMods_Static.AnimalHandling += Prof;
+            if (PlayerMods_Static.expAnimalHandling) PlayerMods_Static.AnimalHandling += 2 * Prof;
+            PlayerMods_Static.AnimalHandling += PlayerMods_Static.addAnimalHandling;
 
-            PlayerMods.Insight = PlayerMods.Wis;
-            if (PlayerMods.profInsight) PlayerMods.Insight += Prof;
-            if (PlayerMods.expInsight) PlayerMods.Insight += 2 * Prof;
-            PlayerMods.Insight += PlayerMods.addInsight;
+            PlayerMods_Static.Insight = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profInsight) PlayerMods_Static.Insight += Prof;
+            if (PlayerMods_Static.expInsight) PlayerMods_Static.Insight += 2 * Prof;
+            PlayerMods_Static.Insight += PlayerMods_Static.addInsight;
 
-            PlayerMods.Medicine = PlayerMods.Wis;
-            if (PlayerMods.profMedicine) PlayerMods.Medicine += Prof;
-            if (PlayerMods.expMedicine) PlayerMods.Medicine += 2 * Prof;
-            PlayerMods.Medicine += PlayerMods.addMedicine;
+            PlayerMods_Static.Medicine = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profMedicine) PlayerMods_Static.Medicine += Prof;
+            if (PlayerMods_Static.expMedicine) PlayerMods_Static.Medicine += 2 * Prof;
+            PlayerMods_Static.Medicine += PlayerMods_Static.addMedicine;
 
-            PlayerMods.Perception = PlayerMods.Wis;
-            if (PlayerMods.profPerception) PlayerMods.Perception += Prof;
-            if (PlayerMods.expPerception) PlayerMods.Perception += 2 * Prof;
-            PlayerMods.Perception += PlayerMods.addPerception;
+            PlayerMods_Static.Perception = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profPerception) PlayerMods_Static.Perception += Prof;
+            if (PlayerMods_Static.expPerception) PlayerMods_Static.Perception += 2 * Prof;
+            PlayerMods_Static.Perception += PlayerMods_Static.addPerception;
 
-            PlayerMods.Survival = PlayerMods.Wis;
-            if (PlayerMods.profSurvival) PlayerMods.Survival += Prof;
-            if (PlayerMods.expSurvival) PlayerMods.Survival += 2 * Prof;
-            PlayerMods.Survival += PlayerMods.addSurvival;
+            PlayerMods_Static.Survival = PlayerMods_Static.Wis;
+            if (PlayerMods_Static.profSurvival) PlayerMods_Static.Survival += Prof;
+            if (PlayerMods_Static.expSurvival) PlayerMods_Static.Survival += 2 * Prof;
+            PlayerMods_Static.Survival += PlayerMods_Static.addSurvival;
         }//end of UpdateWis
 
 
@@ -162,32 +162,32 @@ namespace DndCharacterApp.Objects.Player
         /// </summary>
         public static void UpdateCha()
         {
-            PlayerMods.Cha = PlayerMods.ScoreToMod(ScoreCha);
+            PlayerMods_Static.Cha = PlayerMods_Static.ScoreToMod(ScoreCha);
 
-            PlayerMods.ChaSave = PlayerMods.Cha;
-            if (PlayerMods.profCha) PlayerMods.ChaSave += Prof;
-            if (PlayerMods.expCha) PlayerMods.ChaSave += 2 * Prof;
-            PlayerMods.ChaSave += PlayerMods.addCha;
+            PlayerMods_Static.ChaSave = PlayerMods_Static.Cha;
+            if (PlayerMods_Static.profCha) PlayerMods_Static.ChaSave += Prof;
+            if (PlayerMods_Static.expCha) PlayerMods_Static.ChaSave += 2 * Prof;
+            PlayerMods_Static.ChaSave += PlayerMods_Static.addCha;
 
-            PlayerMods.Deception = PlayerMods.Cha;
-            if (PlayerMods.profDeception) PlayerMods.Deception += Prof;
-            if (PlayerMods.expDeception) PlayerMods.Deception += 2 * Prof;
-            PlayerMods.Deception += PlayerMods.addDeception;
+            PlayerMods_Static.Deception = PlayerMods_Static.Cha;
+            if (PlayerMods_Static.profDeception) PlayerMods_Static.Deception += Prof;
+            if (PlayerMods_Static.expDeception) PlayerMods_Static.Deception += 2 * Prof;
+            PlayerMods_Static.Deception += PlayerMods_Static.addDeception;
 
-            PlayerMods.Intimidation = PlayerMods.Cha;
-            if (PlayerMods.profIntimidation) PlayerMods.Intimidation += Prof;
-            if (PlayerMods.expIntimidation) PlayerMods.Intimidation += 2 * Prof;
-            PlayerMods.Intimidation += PlayerMods.addIntimidation;
+            PlayerMods_Static.Intimidation = PlayerMods_Static.Cha;
+            if (PlayerMods_Static.profIntimidation) PlayerMods_Static.Intimidation += Prof;
+            if (PlayerMods_Static.expIntimidation) PlayerMods_Static.Intimidation += 2 * Prof;
+            PlayerMods_Static.Intimidation += PlayerMods_Static.addIntimidation;
 
-            PlayerMods.Performance = PlayerMods.Cha;
-            if (PlayerMods.profPerformance) PlayerMods.Performance += Prof;
-            if (PlayerMods.expPerformance) PlayerMods.Performance += 2 * Prof;
-            PlayerMods.Performance += PlayerMods.addPerformance;
+            PlayerMods_Static.Performance = PlayerMods_Static.Cha;
+            if (PlayerMods_Static.profPerformance) PlayerMods_Static.Performance += Prof;
+            if (PlayerMods_Static.expPerformance) PlayerMods_Static.Performance += 2 * Prof;
+            PlayerMods_Static.Performance += PlayerMods_Static.addPerformance;
 
-            PlayerMods.Persuasion = PlayerMods.Cha;
-            if (PlayerMods.profPersuasion) PlayerMods.Persuasion += Prof;
-            if (PlayerMods.expPersuasion) PlayerMods.Persuasion += 2 * Prof;
-            PlayerMods.Persuasion += PlayerMods.addPersuasion;
+            PlayerMods_Static.Persuasion = PlayerMods_Static.Cha;
+            if (PlayerMods_Static.profPersuasion) PlayerMods_Static.Persuasion += Prof;
+            if (PlayerMods_Static.expPersuasion) PlayerMods_Static.Persuasion += 2 * Prof;
+            PlayerMods_Static.Persuasion += PlayerMods_Static.addPersuasion;
         }//end of UpdateCha
 
 

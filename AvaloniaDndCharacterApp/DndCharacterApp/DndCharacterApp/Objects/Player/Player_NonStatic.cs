@@ -16,146 +16,20 @@ namespace DndCharacterApp.Objects.Player
 	{
 		public Player_NonStatic()
 		{
-			Name = Player.Name;
-			Xp = Player.Xp;
-			Level = Player.Level;
-			Hp = Player.Hp;
-			TempHp = Player.TempHp;
-			TotalHp = Player.TotalHp;
-			ArmorClass = Player.ArmorClass;
-			Prof = Player.Prof;
-			Alignment = Player.Alignment;
-			Background = Player.Background;
-			Race = Player.Race;
-			DruidLevels = Player.DruidLevels;
-			DruidSubclass = Player.DruidSubclass;
-			ScoreStr = Player.ScoreStr;
-			ScoreDex = Player.ScoreDex;
-			ScoreCon = Player.ScoreCon;
-			ScoreInt = Player.ScoreInt;
-			ScoreWis = Player.ScoreWis;
-			ScoreCha = Player.ScoreCha;
-			Speed = Player.Speed;
-			DeathSavesFail = Player.DeathSavesFail;
-			DeathSavesSuccess = Player.DeathSavesSuccess;
-			AttunementSlotsUsed = Player.AttunementSlotsUsed;
-			InitiativeBonus = Player.InitiativeBonus;
-			Age = Player.Age;
-			Weight = Player.Weight;
-			Height = Player.Height;
-			Skin = Player.Skin.ToString();
-			Eyes = Player.Eyes.ToString();
-			Hair = Player.Hair.ToString();
-
-			NotePad = Player.NotePad;
-
-			Str = PlayerMods.Str;
-			StrSave = PlayerMods.StrSave;
-			profStr = PlayerMods.profStr;
-			expStr = PlayerMods.expStr;
-			addStr = PlayerMods.addStr;
-			Athletics = PlayerMods.Athletics;
-			profAthletics = PlayerMods.profAthletics;
-			expAthletics = PlayerMods.expAthletics;
-			addAthletics = PlayerMods.addAthletics;
-			Dex = PlayerMods.Dex;
-			DexSave = PlayerMods.DexSave;
-			profDex = PlayerMods.profDex;
-			expDex = PlayerMods.expDex;
-			addDex = PlayerMods.addDex;
-			Acrobatics = PlayerMods.Acrobatics;
-			profAcrobatics = PlayerMods.profAcrobatics;
-			expAcrobatics = PlayerMods.expAcrobatics;
-			addAcrobatics = PlayerMods.addAcrobatics;
-			SleightOfHand = PlayerMods.SleightOfHand;
-			profSleightOfHand = PlayerMods.profSleightOfHand;
-			expSleightOfHand = PlayerMods.expSleightOfHand;
-			addSleightOfHand = PlayerMods.addSleightOfHand;
-			Stealth = PlayerMods.Stealth;
-			profStealth = PlayerMods.profStealth;
-			expStealth = PlayerMods.expStealth;
-			addStealth = PlayerMods.addStealth;
-			Con = PlayerMods.Con;
-			ConSave = PlayerMods.ConSave;
-			profCon = PlayerMods.profCon;
-			expCon = PlayerMods.expCon;
-			addCon = PlayerMods.addCon;
-			Int = PlayerMods.Int;
-			IntSave = PlayerMods.IntSave;
-			profInt = PlayerMods.profInt;
-			expInt = PlayerMods.expInt;
-			addInt = PlayerMods.addInt;
-			Arcana = PlayerMods.Arcana;
-			profArcana = PlayerMods.profArcana;
-			expArcana = PlayerMods.expArcana;
-			addArcana = PlayerMods.addArcana;
-			History = PlayerMods.History;
-			profHistory = PlayerMods.profHistory;
-			expHistory = PlayerMods.expHistory;
-			addHistory = PlayerMods.addHistory;
-			Investigation = PlayerMods.Investigation;
-			profInvestigation = PlayerMods.profInvestigation;
-			expInvestigation = PlayerMods.expInvestigation;
-			addInvestigation = PlayerMods.addInvestigation;
-			Nature = PlayerMods.Nature;
-			profNature = PlayerMods.profNature;
-			expNature = PlayerMods.expNature;
-			addNature = PlayerMods.addNature;
-			Religion = PlayerMods.Religion;
-			profReligion = PlayerMods.profReligion;
-			expReligion = PlayerMods.expReligion;
-			addReligion = PlayerMods.addReligion;
-			Wis = PlayerMods.Wis;
-			WisSave = PlayerMods.WisSave;
-			profWis = PlayerMods.profWis;
-			expWis = PlayerMods.expWis;
-			addWis = PlayerMods.addWis;
-			AnimalHandling = PlayerMods.AnimalHandling;
-			profAnimalHandling = PlayerMods.profAnimalHandling;
-			expAnimalHandling = PlayerMods.expAnimalHandling;
-			addAnimalHandling = PlayerMods.addAnimalHandling;
-			Insight = PlayerMods.Insight;
-			profInsight = PlayerMods.profInsight;
-			expInsight = PlayerMods.expInsight;
-			addInsight = PlayerMods.addInsight;
-			Medicine = PlayerMods.Medicine;
-			profMedicine = PlayerMods.profMedicine;
-			expMedicine = PlayerMods.expMedicine;
-			addMedicine = PlayerMods.addMedicine;
-			Perception = PlayerMods.Perception;
-			profPerception = PlayerMods.profPerception;
-			expPerception = PlayerMods.expPerception;
-			addPerception = PlayerMods.addPerception;
-			Survival = PlayerMods.Survival;
-			profSurvival = PlayerMods.profSurvival;
-			expSurvival = PlayerMods.expSurvival;
-			addSurvival = PlayerMods.addSurvival;
-			Cha = PlayerMods.Cha;
-			ChaSave = PlayerMods.ChaSave;
-			profCha = PlayerMods.profCha;
-			expCha = PlayerMods.expCha;
-			addCha = PlayerMods.addCha;
-			Deception = PlayerMods.Deception;
-			profDeception = PlayerMods.profDeception;
-			expDeception = PlayerMods.expDeception;
-			addDeception = PlayerMods.addDeception;
-			Intimidation = PlayerMods.Intimidation;
-			profIntimidation = PlayerMods.profIntimidation;
-			expIntimidation = PlayerMods.expIntimidation;
-			addIntimidation = PlayerMods.addIntimidation;
-			Performance = PlayerMods.Performance;
-			profPerformance = PlayerMods.profPerformance;
-			expPerformance = PlayerMods.expPerformance;
-			addPerformance = PlayerMods.addPerformance;
-			Persuasion = PlayerMods.Persuasion;
-			profPersuasion = PlayerMods.profPersuasion;
-			expPersuasion = PlayerMods.expPersuasion;
-			addPersuasion = PlayerMods.addPersuasion;
+			Name = string.Empty;
+			Alignment = string.Empty;
+			Background = string.Empty;
+			Race = string.Empty;
+			DruidSubclass = string.Empty;
+			Skin = string.Empty;
+			Eyes = string.Empty;
+			Hair = string.Empty;
+			NotePad = string.Empty;
 		}
 
-		public string? Name;
+		public int Id;
+		public string Name;
 		public int Xp;
-		public int Level;
 		public int Hp;
 		public int TempHp;
 		public int TotalHp;
@@ -165,7 +39,7 @@ namespace DndCharacterApp.Objects.Player
 		public string Background;
 		public string Race;
 		public int DruidLevels;
-		public string DruidSubclass = "";
+		public string DruidSubclass;
 		public int ScoreStr;
 		public int ScoreDex;
 		public int ScoreCon;
@@ -180,11 +54,11 @@ namespace DndCharacterApp.Objects.Player
 		public int Age;
 		public int Weight;
 		public int Height;
-		public string? Skin;
-		public string? Eyes;
-		public string? Hair;
+		public string Skin;
+		public string Eyes;
+		public string Hair;
 
-		public string? NotePad;
+		public string NotePad;
 
 		//player mods variables
 		// strength
@@ -324,11 +198,6 @@ namespace DndCharacterApp.Objects.Player
 		public bool profPersuasion;
 		public bool expPersuasion;
 		public int addPersuasion;
-
-
-
-
-
 	}//end of Player_NonStatic
 
 }//end of DndCharacterApp.Objects.Player

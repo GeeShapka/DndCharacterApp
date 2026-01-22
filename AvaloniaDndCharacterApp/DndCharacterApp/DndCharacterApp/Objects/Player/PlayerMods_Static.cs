@@ -13,7 +13,7 @@ namespace DndCharacterApp.Objects.Player
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 10/13/2025 8:27:05 PM
 	 */
-    internal static class PlayerMods
+    internal static class PlayerMods_Static
     {
         //variables as modifieres
 

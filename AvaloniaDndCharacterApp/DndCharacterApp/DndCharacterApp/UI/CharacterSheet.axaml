@@ -12,7 +12,9 @@
 
 	<DockPanel LastChildFill="True">
 		<Menu DockPanel.Dock="Top">
-			<MenuItem Header="File"/>
+			<MenuItem Header="File">
+				<MenuItem Header="_Save" Click="menuSave_Click"/>
+			</MenuItem>
 			<MenuItem Header="Edit"/>
 		</Menu>
 		<TabControl>

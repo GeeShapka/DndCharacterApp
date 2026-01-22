@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DndCharacterApp.Objects
+namespace DndCharacterApp.Objects.Misc
 {
     /*
 	 * FILE : DamageTypes.cs
