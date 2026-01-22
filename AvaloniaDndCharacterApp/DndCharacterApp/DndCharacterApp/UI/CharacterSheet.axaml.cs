@@ -16,7 +16,9 @@ namespace DndCharacterApp.UI
         public CharacterSheet()
         {
             InitializeComponent();
-            viewModel = new CharacterSheetViewModel();
+            DbConnectionFactory dbcf = new DbConnectionFactory("Data Source=players.db");
+            dbcf.Initialize();
+            viewModel = new CharacterSheetViewModel(dbcf);
             DataContext = viewModel;
         }
 

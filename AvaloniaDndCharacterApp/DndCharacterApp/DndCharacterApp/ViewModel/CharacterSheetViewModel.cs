@@ -19,8 +19,7 @@ namespace DndCharacterApp.ViewModel
     internal class CharacterSheetViewModel
     {
 		public ObservableCollection<Player_NonStatic> Players {  get; } = new ObservableCollection<Player_NonStatic>();
-        public DbConnectionFactory dbcf;
-        public SqliteDataBase db;
+        private readonly IDataBase _db;
 
         //damage types for attacks section
         public List<string> DamageTypes { get { return Objects.Misc.DamageTypes.DamageTypeList; } }
@@ -33,11 +32,9 @@ namespace DndCharacterApp.ViewModel
 
 
         //constructor
-        internal CharacterSheetViewModel()
+        internal CharacterSheetViewModel(DbConnectionFactory dbcf)
         {
-            dbcf = new DbConnectionFactory("Data Source=players.db");
-            dbcf.Initialize();
-            db = new SqliteDataBase(dbcf);
+            _db = new SqliteDataBase(dbcf);
         }
 
 
@@ -48,7 +45,7 @@ namespace DndCharacterApp.ViewModel
         /// <returns></returns>
         public async Task WriteToDb(Player_NonStatic p)
         {
-            p.Id = await db.InsertAsync(p);
+            p.Id = await _db.InsertAsync(p);
         }
 
 
@@ -60,7 +57,7 @@ namespace DndCharacterApp.ViewModel
         public async Task LoadAsync()
         {
             Players.Clear();
-            var players = await db.GetAllAsync();
+            var players = await _db.GetAllAsync();
 
             foreach (Player_NonStatic c in Players)
                 Players.Add(c);
