@@ -73,11 +73,11 @@ namespace DndCharacterApp.Objects.Player
         /// <param name="player"></param>
         public static void ImportStats(Player_NonStatic player)
 		{
-			Name = player.Name;
+			Name = player.CharacterName;
 			Xp = player.Xp;
-			Hp = player.Hp;
+			Hp = player.CurrentHp;
 			TempHp = player.TempHp;
-			TotalHp = player.TotalHp;
+			TotalHp = player.MaxHp;
 			ArmorClass = player.ArmorClass;
 			Prof = player.Prof;
 			Alignment = "";
@@ -85,7 +85,7 @@ namespace DndCharacterApp.Objects.Player
 			Background = player.Background;
 			Race = player.Race;
 			DruidLevels = player.DruidLevels;
-			DruidSubclass = player.DruidSubclass;
+			DruidSubclass = player.Class;
 			ScoreStr = player.ScoreStr;
 			ScoreDex = player.ScoreDex;
 			ScoreCon = player.ScoreCon;

@@ -19,7 +19,7 @@
 		</Menu>
 		<TabControl>
 			<TabItem Header="Main">
-				<ScrollViewer Background="#eeeeee">
+				<ScrollViewer Background="#eeeeee" Width="1080">
 					<Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="1080" Height="845" Background="White">
 
 						<!--split header and body-->
@@ -44,7 +44,7 @@
 										   FontWeight="Bold"/>
 									<Border BorderThickness="1" BorderBrush="Black">
 										<StackPanel>
-											<TextBox Margin="5" x:Name="txtCharacterName" Background="LightGray"/>
+											<TextBox Margin="5" x:Name="txtCharacterName" Background="LightGray" TextChanged="txtCharacterName_TextChanged"/>
 											<Label Content="Character Name"/>
 										</StackPanel>
 									</Border>
@@ -70,9 +70,9 @@
 												<ColumnDefinition/>
 												<ColumnDefinition/>
 											</Grid.ColumnDefinitions>
-											<TextBox Grid.Column="0" Classes="CBPRAE"/>
-											<TextBox Grid.Column="1" Classes="CBPRAE"/>
-											<TextBox Grid.Column="2" Classes="CBPRAE"/>
+											<TextBox x:Name="txtClass" Grid.Column="0" Classes="CBPRAE" TextChanged="txtClass_TextChanged"/>
+											<TextBox x:Name="txtBackground" Grid.Column="1" Classes="CBPRAE" TextChanged="txtBackground_TextChanged"/>
+											<TextBox x:Name="txtPlayerName" Grid.Column="2" Classes="CBPRAE" TextChanged="txtPlayerName_TextChanged"/>
 										</Grid>
 
 										<!--top labels-->
@@ -94,14 +94,14 @@
 												<ColumnDefinition/>
 												<ColumnDefinition/>
 											</Grid.ColumnDefinitions>
-											<TextBox Grid.Column="0" Classes="CBPRAE"/>
-											<TextBox Grid.Column="1" Classes="CBPRAE"/>
+											<TextBox x:Name="txtRace" Grid.Column="0" Classes="CBPRAE" TextChanged="txtRace_TextChanged"/>
+											<TextBox x:Name="txtAlignment" Grid.Column="1" Classes="CBPRAE" TextChanged="txtAlignment_TextChanged"/>
 											<Grid Grid.Column="2" Margin="0, 0, 5, 0">
 												<Grid.ColumnDefinitions>
 													<ColumnDefinition Width="5*"/>
 													<ColumnDefinition/>
 												</Grid.ColumnDefinitions>
-												<TextBox Grid.Column="0" Classes="CBPRAE"/>
+												<TextBox x:Name="txtExperiencePoints" Grid.Column="0" Classes="CBPRAE" TextChanged="txtExperiencePoints_TextChanged"/>
 												<Button Grid.Column="1"
 														Content="?"
 														HorizontalContentAlignment="Center"
@@ -496,7 +496,7 @@
 																Height="40"
 																VerticalAlignment="Top">
 															<StackPanel>
-																<TextBox Classes="StatScore"/>
+																<TextBox x:Name="txtTempHp" Classes="StatScore" TextChanged="txtTempHp_TextChanged"/>
 																<Label Content="Temp HP" Classes="Simple" Margin="0" FontSize="8"/>
 															</StackPanel>
 														</Border>
@@ -507,14 +507,14 @@
 																Height="40"
 																VerticalAlignment="Top">
 															<StackPanel>
-																<TextBox Classes="StatScore"/>
+																<TextBox x:Name="txtMaxHp" Classes="StatScore" TextChanged="txtMaxHp_TextChanged"/>
 																<Label Content="Max HP" Classes="Simple" Margin="0" FontSize="8"/>
 															</StackPanel>
 														</Border>
 													</StackPanel>
 													<Border Classes="Simple">
 														<StackPanel>
-															<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+															<TextBox x:Name="txtCurrentHp" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtCurrentHp_TextChanged"/>
 															<Label Content="Current Hp" Classes="Simple" Margin="0"/>
 														</StackPanel>
 													</Border>
@@ -523,7 +523,7 @@
 												<!--boons-->
 												<Border Classes="Simple" Grid.Column="2">
 													<StackPanel>
-														<TextBox Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
+														<TextBox x:Name="txtBoons" Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap" TextChanged="txtBoons_TextChanged"/>
 														<Label Content="Boons" Classes="Simple" Margin="0"/>
 													</StackPanel>
 												</Border>
@@ -537,7 +537,7 @@
 													<!--initiative-->
 													<Border Classes="Simple" Grid.Row="0">
 														<StackPanel>
-															<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+															<TextBox x:Name="txtInitiative" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtInitiative_TextChanged"/>
 															<Label Content="Initiative" Classes="Simple" Margin="0" FontSize="10"/>
 														</StackPanel>
 													</Border>
@@ -545,7 +545,7 @@
 													<!--hit dice-->
 													<Border Classes="Simple" Grid.Row="1">
 														<StackPanel>
-															<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+															<TextBox x:Name="txtHitDice" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtHitDice_TextChanged"/>
 															<Label Content="Hit Dice" Classes="Simple" Margin="0" FontSize="10"/>
 														</StackPanel>
 													</Border>
@@ -555,11 +555,12 @@
 												<Border Classes="Simple" Grid.Column="1" Grid.Row="1">
 													<StackPanel>
 														<TextBox Classes="Simple"
-																 Margin="5, 5, 5, 0"
+																 x:Name="txtArmorClass"
 																 Height="70" TextWrapping="Wrap"
 																 VerticalContentAlignment="Center"
 																 HorizontalContentAlignment="Center"
-																 FontSize="30"/>
+																 FontSize="30"
+																 TextChanged="txtArmorClass_TextChanged"/>
 														<Label Content="Armor" Classes="Simple" Margin="0"/>
 														<Label Content="Class" Classes="Simple" Margin="0"/>
 													</StackPanel>
@@ -574,7 +575,7 @@
 													<!--speed-->
 													<Border Classes="Simple" Grid.Row="0">
 														<StackPanel>
-															<TextBox Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
+															<TextBox x:Name="txtSpeed" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
 															<Label Content="Speed" Classes="Simple" Margin="0" FontSize="10"/>
 														</StackPanel>
 													</Border>

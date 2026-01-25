@@ -1,4 +1,23 @@
 txtCharacterName
+txtClass
+txtBackground
+txtPlayerName
+txtRace
+txtAlignment
+txtExperiencePoints
+
+
+txtTempHp
+txtMaxHp
+txtCurrentHp
+txtBoons
+txtInitiative
+txtHitDice
+txtArmorClass
+txtSpeed
+
+
+
 
 
 txtAttackOneName

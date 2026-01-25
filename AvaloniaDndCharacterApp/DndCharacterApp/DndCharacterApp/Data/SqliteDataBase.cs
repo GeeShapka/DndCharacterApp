@@ -45,7 +45,7 @@ namespace DndCharacterApp.Data
 
 
 
-        public async Task<Player_NonStatic?> GetByIdAsync(int id)
+        public async Task<Player_NonStatic?> GetByIdAsync(int id)//update to use data of creation and name as pk
         {
             using var connection = _factory.Create();
             using var cmd = connection.CreateCommand();
@@ -83,7 +83,7 @@ namespace DndCharacterApp.Data
             cmd.CommandText = "UPDATE characters SETname = $name WHERE id = $id;";
 
             Bind(cmd, c);
-            cmd.Parameters.AddWithValue("$id", c.Id);
+            //cmd.Parameters.AddWithValue("$id", c.Id);
 
             await cmd.ExecuteNonQueryAsync();
         }
@@ -105,7 +105,7 @@ namespace DndCharacterApp.Data
 
         private static void Bind(SqliteCommand cmd, Player_NonStatic c)
         {
-            cmd.Parameters.AddWithValue("$name", c.Name);
+            cmd.Parameters.AddWithValue("$name", c.CharacterName);
         }
 
 
@@ -115,7 +115,7 @@ namespace DndCharacterApp.Data
 			return new Player_NonStatic
 			{
 				//Id = r.GetInt32(r.GetOrdinal("id")),
-				Name = r.GetString(r.GetOrdinal("name")),
+				CharacterName = r.GetString(r.GetOrdinal("name")),
 			};
         }
 

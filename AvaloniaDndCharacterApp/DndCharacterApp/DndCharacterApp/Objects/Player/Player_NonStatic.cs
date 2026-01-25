@@ -16,30 +16,29 @@ namespace DndCharacterApp.Objects.Player
 	{
 		public Player_NonStatic()
 		{
-			Name = string.Empty;
+			CharacterName = string.Empty;
 			Alignment = string.Empty;
 			Background = string.Empty;
 			Race = string.Empty;
-			DruidSubclass = string.Empty;
+			Class = string.Empty;
 			Skin = string.Empty;
 			Eyes = string.Empty;
 			Hair = string.Empty;
 			NotePad = string.Empty;
 		}
 
-		public int Id;
-		public string Name;
+		public string CharacterName;
+		public long TimeCreated;
 		public int Xp;
-		public int Hp;
+		public int CurrentHp;
 		public int TempHp;
-		public int TotalHp;
+		public int MaxHp;
 		public int ArmorClass;
 		public int Prof;
 		public string Alignment;
 		public string Background;
 		public string Race;
-		public int DruidLevels;
-		public string DruidSubclass;
+		public string Class;
 		public int ScoreStr;
 		public int ScoreDex;
 		public int ScoreCon;
