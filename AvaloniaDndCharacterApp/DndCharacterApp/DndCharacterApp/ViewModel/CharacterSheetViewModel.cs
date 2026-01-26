@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using DndCharacterApp;
 using DndCharacterApp.Data;
 using DndCharacterApp.Objects.Player;
@@ -16,7 +19,7 @@ namespace DndCharacterApp.ViewModel
 	 * PROGRAMMER : George Shapka
 	 * FIRST VERSION : 12/28/2025 9:08:42 PM
 	 */
-    internal class CharacterSheetViewModel
+    internal partial class CharacterSheetViewModel
     {
 		public ObservableCollection<Player_NonStatic> Players {  get; } = new ObservableCollection<Player_NonStatic>();
         private readonly IDataBase _db;
@@ -29,6 +32,22 @@ namespace DndCharacterApp.ViewModel
 		public string ComboAttackThreeDamageType { get { return "smth"; } set { Player_Static.AttackThreeDamageType = value ?? string.Empty; } }
 		public string ComboAttackFourDamageType { get { return "smth"; } set { Player_Static.AttackFourDamageType = value ?? string.Empty; } }
 		public string ComboAttackFiveDamageType { get { return "smth"; } set { Player_Static.AttackFiveDamageType = value ?? string.Empty; } }
+
+        private string _tempHp = "";
+        public string TempHp
+        {
+            get { return _tempHp; }
+            set
+            {
+                if(SetProperty(ref _tempHp, value))
+                {
+                    UpdateCurrentPlayer(value, "TempHp");
+                }
+            }
+        }
+
+
+        public bool? SleightOfHand { get; set; }
 
 
 
@@ -66,76 +85,54 @@ namespace DndCharacterApp.ViewModel
                 Players.Add(c);
         }
 
+
+
+
+
+
+
         /// <summary>
         /// takes an object and the field it should populate<br/>
         /// and validates it is correct. if it is it goes into the<br/>
         /// player class and retruns true. if something is wrong it<br/>
         /// returns false
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="str"></param>
         /// <param name="field"></param>
         /// <returns>
         /// <b>True</b>: object inserted into player class
         /// <br/>
         /// <b>False</b>: object could not be inserted into player class
         /// </returns>
-        public bool UpdateCurrentPlayer(Object? obj, string field)
+        public bool UpdateCurrentPlayer(string? str, string field)
         {
             bool noError = false;
             switch (field)
             {
                 case "CharacterName":
-                    if(obj != null && obj is string)
+                    if(str != null)
                     {
-                        CurrentPlayer.CharacterName = (string)obj;
+                        CurrentPlayer.CharacterName = (string)str;
                         noError = true;
-                    }
-                    break;
-                case "Xp":
-                    int xp;
-                    if(obj is int)
-                    {
-                        xp = (int)obj;
-                        if(xp >= 0) { noError = true; }
-                    }
-                    break;
-                case "CurrentHp":
-                    int currentHp;
-                    if(obj is int)
-                    {
-                        currentHp = (int)obj;
-                        if(currentHp >= 0) { noError = true; }
                     }
                     break;
                 case "TempHp":
                     int tempHp;
-                    if(obj is int)
+                    if(int.TryParse(str, out tempHp))
                     {
-                        tempHp = (int)obj;
-                        if(tempHp >= 0) { noError = true; }
+                        ClearErrors(nameof(TempHp));
+                        CurrentPlayer.TempHp = tempHp;
+                        noError = true;
                     }
-                    break;
-                case "MaxHp":
-                    int maxHp;
-                    if(obj is int)
+                    else
                     {
-                        maxHp = (int)obj;
-                        if(maxHp >= 0) { noError = true; }
-                    }
-                    break;
-                case "ArmorClass":
-                    int armorClass;
-                    if(obj is int)
-                    {
-                        armorClass = (int)obj;
-                        if(armorClass >= -5) { noError = true; }
+                        AddError(nameof(TempHp), "");
                     }
                     break;
                 default:
                     break;
             }
             return noError;
-
         }
 
 

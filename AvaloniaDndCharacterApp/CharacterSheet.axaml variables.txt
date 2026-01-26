@@ -6,7 +6,34 @@ txtRace
 txtAlignment
 txtExperiencePoints
 
+txtStrengthModifier
+txtStrengthScore
+tglStrengthSavingThrow
+txtStrengthSavingThrow
+tglAthletics
+txtAthletics
+txtDexterityModifier
+txtDexterityScore
+tglDexteritySavingThrow
+txtDexteritySavingThrow
+tglAcrobatics
+txtAcrobatics
+tglSleightOfHand
+txtSleightOfHand
+tglStealth
+txtStealth
 
+
+
+
+
+
+
+
+
+
+
+txtConditions
 txtTempHp
 txtMaxHp
 txtCurrentHp

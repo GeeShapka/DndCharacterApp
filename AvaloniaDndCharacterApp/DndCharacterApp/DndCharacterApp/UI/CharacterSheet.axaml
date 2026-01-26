@@ -44,7 +44,7 @@
 										   FontWeight="Bold"/>
 									<Border BorderThickness="1" BorderBrush="Black">
 										<StackPanel>
-											<TextBox Margin="5" x:Name="txtCharacterName" Background="LightGray" TextChanged="txtCharacterName_TextChanged"/>
+											<TextBox Margin="5" Background="LightGray"/>
 											<Label Content="Character Name"/>
 										</StackPanel>
 									</Border>
@@ -70,9 +70,9 @@
 												<ColumnDefinition/>
 												<ColumnDefinition/>
 											</Grid.ColumnDefinitions>
-											<TextBox x:Name="txtClass" Grid.Column="0" Classes="CBPRAE" TextChanged="txtClass_TextChanged"/>
-											<TextBox x:Name="txtBackground" Grid.Column="1" Classes="CBPRAE" TextChanged="txtBackground_TextChanged"/>
-											<TextBox x:Name="txtPlayerName" Grid.Column="2" Classes="CBPRAE" TextChanged="txtPlayerName_TextChanged"/>
+											<TextBox x:Name="txtClass" Grid.Column="0" Classes="CBPRAE"/>
+											<TextBox x:Name="txtBackground" Grid.Column="1" Classes="CBPRAE"/>
+											<TextBox x:Name="txtPlayerName" Grid.Column="2" Classes="CBPRAE"/>
 										</Grid>
 
 										<!--top labels-->
@@ -94,14 +94,14 @@
 												<ColumnDefinition/>
 												<ColumnDefinition/>
 											</Grid.ColumnDefinitions>
-											<TextBox x:Name="txtRace" Grid.Column="0" Classes="CBPRAE" TextChanged="txtRace_TextChanged"/>
-											<TextBox x:Name="txtAlignment" Grid.Column="1" Classes="CBPRAE" TextChanged="txtAlignment_TextChanged"/>
+											<TextBox x:Name="txtRace" Grid.Column="0" Classes="CBPRAE"/>
+											<TextBox x:Name="txtAlignment" Grid.Column="1" Classes="CBPRAE"/>
 											<Grid Grid.Column="2" Margin="0, 0, 5, 0">
 												<Grid.ColumnDefinitions>
 													<ColumnDefinition Width="5*"/>
 													<ColumnDefinition/>
 												</Grid.ColumnDefinitions>
-												<TextBox x:Name="txtExperiencePoints" Grid.Column="0" Classes="CBPRAE" TextChanged="txtExperiencePoints_TextChanged"/>
+												<TextBox x:Name="txtExperiencePoints" Grid.Column="0" Classes="CBPRAE"/>
 												<Button Grid.Column="1"
 														Content="?"
 														HorizontalContentAlignment="Center"
@@ -161,11 +161,11 @@
 												<!--Strength-->
 												<Grid Grid.Row="0" Grid.Column="0" Margin="0, 5">
 													<Border Classes="Stat">
-														<TextBox Classes="StatMod"/>
+														<TextBox x:Name="txtStrengthModifier" Classes="StatMod"/>
 													</Border>
 													<Label Content="Strength" Classes="StatMod"/>
 													<Border Classes="StatScore">
-														<TextBox Classes="StatScore"/>
+														<TextBox x:Name="txtStrengthScore" Classes="StatScore"/>
 													</Border>
 												</Grid>
 
@@ -482,7 +482,7 @@
 												<!--conditions-->
 												<Border Classes="Simple" Grid.Column="0">
 													<StackPanel>
-														<TextBox Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
+														<TextBox x:Name="txtConditions" Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
 														<Label Content="Conditions" Classes="Simple" Margin="0"/>
 													</StackPanel>
 												</Border>
@@ -496,7 +496,7 @@
 																Height="40"
 																VerticalAlignment="Top">
 															<StackPanel>
-																<TextBox x:Name="txtTempHp" Classes="StatScore" TextChanged="txtTempHp_TextChanged"/>
+																<TextBox Text="{Binding TempHp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Classes="StatScore"/>
 																<Label Content="Temp HP" Classes="Simple" Margin="0" FontSize="8"/>
 															</StackPanel>
 														</Border>
@@ -507,14 +507,14 @@
 																Height="40"
 																VerticalAlignment="Top">
 															<StackPanel>
-																<TextBox x:Name="txtMaxHp" Classes="StatScore" TextChanged="txtMaxHp_TextChanged"/>
+																<TextBox x:Name="txtMaxHp" Classes="StatScore"/>
 																<Label Content="Max HP" Classes="Simple" Margin="0" FontSize="8"/>
 															</StackPanel>
 														</Border>
 													</StackPanel>
 													<Border Classes="Simple">
 														<StackPanel>
-															<TextBox x:Name="txtCurrentHp" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtCurrentHp_TextChanged"/>
+															<TextBox x:Name="txtCurrentHp" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
 															<Label Content="Current Hp" Classes="Simple" Margin="0"/>
 														</StackPanel>
 													</Border>
@@ -523,7 +523,7 @@
 												<!--boons-->
 												<Border Classes="Simple" Grid.Column="2">
 													<StackPanel>
-														<TextBox x:Name="txtBoons" Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap" TextChanged="txtBoons_TextChanged"/>
+														<TextBox x:Name="txtBoons" Classes="Simple" Margin="5, 5, 5, 0" Height="80" TextWrapping="Wrap"/>
 														<Label Content="Boons" Classes="Simple" Margin="0"/>
 													</StackPanel>
 												</Border>
@@ -537,7 +537,7 @@
 													<!--initiative-->
 													<Border Classes="Simple" Grid.Row="0">
 														<StackPanel>
-															<TextBox x:Name="txtInitiative" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtInitiative_TextChanged"/>
+															<TextBox x:Name="txtInitiative" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
 															<Label Content="Initiative" Classes="Simple" Margin="0" FontSize="10"/>
 														</StackPanel>
 													</Border>
@@ -545,7 +545,7 @@
 													<!--hit dice-->
 													<Border Classes="Simple" Grid.Row="1">
 														<StackPanel>
-															<TextBox x:Name="txtHitDice" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" TextChanged="txtHitDice_TextChanged"/>
+															<TextBox x:Name="txtHitDice" Classes="Simple" Margin="5, 5, 5, 0" HorizontalContentAlignment="Center"/>
 															<Label Content="Hit Dice" Classes="Simple" Margin="0" FontSize="10"/>
 														</StackPanel>
 													</Border>
@@ -559,8 +559,7 @@
 																 Height="70" TextWrapping="Wrap"
 																 VerticalContentAlignment="Center"
 																 HorizontalContentAlignment="Center"
-																 FontSize="30"
-																 TextChanged="txtArmorClass_TextChanged"/>
+																 FontSize="30"/>
 														<Label Content="Armor" Classes="Simple" Margin="0"/>
 														<Label Content="Class" Classes="Simple" Margin="0"/>
 													</StackPanel>

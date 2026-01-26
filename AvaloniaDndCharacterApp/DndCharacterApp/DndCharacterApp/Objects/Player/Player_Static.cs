@@ -84,7 +84,6 @@ namespace DndCharacterApp.Objects.Player
 			Alignment = player.Alignment;
 			Background = player.Background;
 			Race = player.Race;
-			DruidLevels = player.DruidLevels;
 			DruidSubclass = player.Class;
 			ScoreStr = player.ScoreStr;
 			ScoreDex = player.ScoreDex;

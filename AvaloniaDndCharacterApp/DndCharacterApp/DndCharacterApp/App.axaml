@@ -167,5 +167,13 @@
 			<Setter Property="FontSize" Value="10"/>
 			<Setter Property="HorizontalAlignment" Value="Stretch"/>
 		</Style>
+		<Style Selector="TextBox:error">
+			<Setter Property="Foreground" Value="Red"/>
+		</Style>
+		<Style Selector="DataValidationErrors">
+			<Setter Property="ErrorTemplate">
+				<DataTemplate x:DataType="{x:Null}"/>
+			</Setter>
+		</Style>
 	</Application.Styles>
 </Application>
